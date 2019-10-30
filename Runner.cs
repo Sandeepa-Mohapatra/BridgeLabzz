@@ -62,6 +62,22 @@ namespace Functional
                     Factors g = new Factors();
                     g.FindFactors();
                     break;
+                case 8:
+                    CuponNum k = new CuponNum();
+                    k.Couponno();
+                    break;
+                case 9:
+                    Gambler l = new Gambler();
+                    l.GamblerG();
+                    break;
+                case 10:
+                    TripleSum m = new TripleSum();
+                    m.ThreeSum();
+                    break;
+                case 11:
+                    Distance n = new Distance();
+                    n.FindDistance();
+                    break;
 
 
 
