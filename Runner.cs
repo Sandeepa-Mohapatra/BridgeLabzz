@@ -18,7 +18,11 @@ namespace Functional
             Console.WriteLine("Cheak wheather the year is leap year or not(4)");
             Console.WriteLine("Power of 2(5)");
             Console.WriteLine("Find nth Harmonic no(6)");
-            Console.WriteLine("Find the Factor of a no");
+            Console.WriteLine("Find the Factor of a no(7)");
+            Console.WriteLine("Generate Distinct Cupon no.(8)");
+            Console.WriteLine("Gambler Game(9)");
+            Console.WriteLine("Triple Sum(10)");
+            Console.WriteLine("Find Distance(11)");
 
 
             int p = int.Parse(Console.ReadLine());
