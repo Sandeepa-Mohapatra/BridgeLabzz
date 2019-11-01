@@ -15,7 +15,7 @@ namespace Functional
             h1 = t1.Hour;
             min1 = t1.Minute;
             sec1 = t1.Second;
-           // Console.WriteLine(h1+""+min1);
+          
            
         }
         public void Stop()
@@ -25,16 +25,9 @@ namespace Functional
             min2 = t2.Minute;
             sec2 = t2.Second;
             Console.WriteLine("difference");
-            Console.WriteLine("{0},{1},{2}", (h2 - h1), (min2 - min1), (sec2 - sec1));
+            Console.WriteLine("The Elaps time is {0}hr {1}min {2}sec", (h2 - h1), (min2 - min1), (sec2 - sec1));
         }
-        //public void ElapsedTime()
-        //{
-        //    h = h2 - h1;
-        //    m = min2 - min1;
-        //    Console.WriteLine(h+""+ m);
-
-
-        //}
+        
 
 
     }
