@@ -1,0 +1,14 @@
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp3.0\DataStructure.exe
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp3.0\DataStructure.deps.json
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp3.0\DataStructure.runtimeconfig.json
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp3.0\DataStructure.runtimeconfig.dev.json
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp3.0\DataStructure.dll
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp3.0\DataStructure.pdb
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp3.0\DataStructure.csprojAssemblyReference.cache
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp3.0\DataStructure.AssemblyInfoInputs.cache
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp3.0\DataStructure.AssemblyInfo.cs
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp3.0\DataStructure.dll
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp3.0\DataStructure.pdb
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp3.0\DocumentFormat.OpenXml.dll
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp3.0\System.IO.Packaging.dll
+C:\Users\COMPUTER\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp3.0\DataStructure.csproj.CopyComplete
