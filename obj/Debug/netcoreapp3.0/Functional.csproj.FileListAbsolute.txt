@@ -1,0 +1,11 @@
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.0\Functional.csprojAssemblyReference.cache
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.0\Functional.AssemblyInfoInputs.cache
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.0\Functional.AssemblyInfo.cs
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\bin\Debug\netcoreapp3.0\Functional.exe
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\bin\Debug\netcoreapp3.0\Functional.deps.json
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\bin\Debug\netcoreapp3.0\Functional.runtimeconfig.json
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\bin\Debug\netcoreapp3.0\Functional.runtimeconfig.dev.json
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\bin\Debug\netcoreapp3.0\Functional.dll
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\bin\Debug\netcoreapp3.0\Functional.pdb
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.0\Functional.dll
+C:\Users\COMPUTER\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.0\Functional.pdb
