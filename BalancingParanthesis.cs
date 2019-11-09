@@ -16,12 +16,12 @@ namespace DataStructure
 
                 if (item[i] == '(')
                 {
-                    //System.out.println("m");
+                    
                     u.Push('(');
                 }
                 else if (item[i] == ')')
                 {
-                    //System.out.println("m");
+                    
                     u.Pop();
                 }
             }

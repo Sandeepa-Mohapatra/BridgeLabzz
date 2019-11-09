@@ -59,6 +59,20 @@ namespace DataStructure
                     //This will call the method to perform the operation 
                     f.Check();
                     break;
+                case 6:
+                    Hashing obj = new Hashing();
+                    obj.Hash(77);
+                    obj.Hash(44);
+                    obj.Hash(55);
+                    obj.Hash(26);
+                    obj.Hash(93);
+                    obj.Hash(17);
+                    obj.Hash(31);
+                    obj.Hash(20);
+                    obj.Hash(54);
+                    obj.Display();
+
+                    break;
             }
         }
     }
