@@ -17,9 +17,13 @@ namespace DataStructure
     class Utility
     {
         Node head;
+<<<<<<< HEAD
         Node Front;
         Node Rear;
 
+=======
+    //This method will insert words to the linked list
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
         public void InsertString(String data)
         {
 
@@ -27,6 +31,7 @@ namespace DataStructure
             node.data = data;
             node.next = null;
             if (head == null)
+<<<<<<< HEAD
             {
                 head = node;
             }
@@ -50,6 +55,8 @@ namespace DataStructure
             node.idata = data;
             node.next = null;
             if (head == null)
+=======
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
             {
                 head = node;
             }
@@ -62,10 +69,17 @@ namespace DataStructure
                 }
                 n.next = node;
             }
+<<<<<<< HEAD
 
 
         }
         public void InsertAtPosition(int data)
+        {
+
+=======
+         }
+    //This method will insert numbers to the linked list
+        public void InsertInt(int data)
         {
 
             Node node = new Node();
@@ -80,7 +94,35 @@ namespace DataStructure
                 Node n = head;
                 while (n.next != null)
                 {
+                    n = n.next;
+                }
+                n.next = node;
+            }
+
+
+        }
+        //This method will insert numbers to the linked list in sorted position
+        public void InsertAtPosition(int data)
+        {
+
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
+            Node node = new Node();
+            node.idata = data;
+            node.next = null;
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node n = head;
+                while (n.next != null)
+                {
+<<<<<<< HEAD
                     if (n.next.idata > data)
+=======
+                    if(n.next.idata>data)
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
                     {
                         if (n.idata < data)
                         {
@@ -95,6 +137,11 @@ namespace DataStructure
                 n.next = node;
             }
         }
+<<<<<<< HEAD
+=======
+        
+        //This method will Disply words in linked list
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
         public void ShowS()
         {
             Node node = head;
@@ -105,6 +152,11 @@ namespace DataStructure
             }
             Console.WriteLine(node.data);
         }
+<<<<<<< HEAD
+=======
+        
+        //This method will Disply numbers in linked list
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
         public void ShowI()
         {
             Node node = head;
@@ -115,7 +167,11 @@ namespace DataStructure
             }
             Console.WriteLine(node.idata);
         }
+<<<<<<< HEAD
 
+=======
+        //This method will search word in linked list
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
         public int SearchingString(String item)
         {
             int count = 0;
@@ -142,9 +198,17 @@ namespace DataStructure
 
             return 0;
         }
+<<<<<<< HEAD
         public int SearchingInt(int item)
         {
 
+=======
+        
+        //This method will search number in linked list
+        public int SearchingInt(int item)
+        {
+            
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
             Node t = head;
             int count = 0;
             if (head.idata == null)
@@ -165,17 +229,29 @@ namespace DataStructure
                     count++;
 
                 }
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
             }
 
             Console.WriteLine("Your element is not in the list");
             return 0;
+<<<<<<< HEAD
 
 
         }
 
 
+=======
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
 
+
+        }
+       
+        
+    //Delete node
         public void deletAt(int index)
         {
             if (index == 0)
@@ -194,7 +270,11 @@ namespace DataStructure
                 n.next = n1.next;
             }
         }
+<<<<<<< HEAD
 
+=======
+     ////This method will sort the elements
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
         public int[] BubbleSortI(int[] a)
         {
             int temp;
@@ -212,6 +292,7 @@ namespace DataStructure
             }
             return a;
         }
+<<<<<<< HEAD
         //Stack Methods
         int top;
         char[] ch = new char[200];
@@ -348,5 +429,8 @@ namespace DataStructure
             return c ;
         }
     }    
+=======
+    }
+>>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
 }
 
