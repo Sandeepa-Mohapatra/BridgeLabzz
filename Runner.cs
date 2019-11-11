@@ -23,7 +23,10 @@ namespace DataStructure
             Console.WriteLine("Cash Counter(4)");
             Console.WriteLine("Palindrom Checking(5)");
             Console.WriteLine("Hashing Function to search a number(6)");
+<<<<<<< HEAD
             Console.WriteLine("Calender(7)");
+=======
+>>>>>>> ad551aae1eb3e71dccdac85f1036e53744ee0d7c
 
 
 
@@ -76,6 +79,7 @@ namespace DataStructure
                     obj.Display();
 
                     break;
+<<<<<<< HEAD
                 case 7:
                     Calender g = new Calender();
                     g.PrintCalender();
@@ -90,6 +94,8 @@ namespace DataStructure
                     BinarySearchTree j = new BinarySearchTree();
                     j.BinaryTree();
                     break;
+=======
+>>>>>>> ad551aae1eb3e71dccdac85f1036e53744ee0d7c
 
             }
         }
