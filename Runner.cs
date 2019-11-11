@@ -18,13 +18,13 @@ namespace DataStructure
             Console.WriteLine("Enter the no of the program which you want to run from the given programs");
             Console.WriteLine("UnSorted List(1)");
             Console.WriteLine("Ordered List(2)");
-<<<<<<< HEAD
+
             Console.WriteLine("Balancing Pranthesis(3)");
             Console.WriteLine("Cash Counter(4)");
             Console.WriteLine("Palindrom Checking(5)");
             Console.WriteLine("Hashing Function to search a number(6)");
-=======
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
+            Console.WriteLine("Calender(7)");
+
 
 
             int p = int.Parse(Console.ReadLine());
@@ -42,7 +42,6 @@ namespace DataStructure
                     //This will call the method to perform the operation 
                     b.OperationOL();
                     break;
-<<<<<<< HEAD
                 case 3:
                     //The object of the class is created
                     Console.WriteLine("Enter the Expression");
@@ -77,8 +76,21 @@ namespace DataStructure
                     obj.Display();
 
                     break;
-=======
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
+                case 7:
+                    Calender g = new Calender();
+                    g.PrintCalender();
+                    break;
+                case 8:
+                    Prime2DArray h = new Prime2DArray();
+                    Utility u = new Utility();
+                    int[,] ar=h.PrintArray();
+                    u.Display(ar);
+                    break;
+                case 9:
+                    BinarySearchTree j = new BinarySearchTree();
+                    j.BinaryTree();
+                    break;
+
             }
         }
     }

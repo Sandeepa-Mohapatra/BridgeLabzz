@@ -18,10 +18,8 @@ namespace DataStructure
         internal Node next;
         //Declaring integer type data
         internal int idata;
-<<<<<<< HEAD
+
         internal char cdata;
-=======
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
 
     }
 }

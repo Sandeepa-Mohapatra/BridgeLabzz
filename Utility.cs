@@ -17,13 +17,9 @@ namespace DataStructure
     class Utility
     {
         Node head;
-<<<<<<< HEAD
         Node Front;
         Node Rear;
 
-=======
-    //This method will insert words to the linked list
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
         public void InsertString(String data)
         {
 
@@ -31,7 +27,6 @@ namespace DataStructure
             node.data = data;
             node.next = null;
             if (head == null)
-<<<<<<< HEAD
             {
                 head = node;
             }
@@ -55,37 +50,6 @@ namespace DataStructure
             node.idata = data;
             node.next = null;
             if (head == null)
-=======
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
-            {
-                head = node;
-            }
-            else
-            {
-                Node n = head;
-                while (n.next != null)
-                {
-                    n = n.next;
-                }
-                n.next = node;
-            }
-<<<<<<< HEAD
-
-
-        }
-        public void InsertAtPosition(int data)
-        {
-
-=======
-         }
-    //This method will insert numbers to the linked list
-        public void InsertInt(int data)
-        {
-
-            Node node = new Node();
-            node.idata = data;
-            node.next = null;
-            if (head == null)
             {
                 head = node;
             }
@@ -101,11 +65,9 @@ namespace DataStructure
 
 
         }
-        //This method will insert numbers to the linked list in sorted position
         public void InsertAtPosition(int data)
         {
 
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
             Node node = new Node();
             node.idata = data;
             node.next = null;
@@ -118,11 +80,7 @@ namespace DataStructure
                 Node n = head;
                 while (n.next != null)
                 {
-<<<<<<< HEAD
                     if (n.next.idata > data)
-=======
-                    if(n.next.idata>data)
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
                     {
                         if (n.idata < data)
                         {
@@ -137,11 +95,6 @@ namespace DataStructure
                 n.next = node;
             }
         }
-<<<<<<< HEAD
-=======
-        
-        //This method will Disply words in linked list
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
         public void ShowS()
         {
             Node node = head;
@@ -152,11 +105,6 @@ namespace DataStructure
             }
             Console.WriteLine(node.data);
         }
-<<<<<<< HEAD
-=======
-        
-        //This method will Disply numbers in linked list
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
         public void ShowI()
         {
             Node node = head;
@@ -167,11 +115,7 @@ namespace DataStructure
             }
             Console.WriteLine(node.idata);
         }
-<<<<<<< HEAD
 
-=======
-        //This method will search word in linked list
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
         public int SearchingString(String item)
         {
             int count = 0;
@@ -198,17 +142,9 @@ namespace DataStructure
 
             return 0;
         }
-<<<<<<< HEAD
         public int SearchingInt(int item)
         {
 
-=======
-        
-        //This method will search number in linked list
-        public int SearchingInt(int item)
-        {
-            
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
             Node t = head;
             int count = 0;
             if (head.idata == null)
@@ -229,29 +165,17 @@ namespace DataStructure
                     count++;
 
                 }
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
             }
 
             Console.WriteLine("Your element is not in the list");
             return 0;
-<<<<<<< HEAD
 
 
         }
 
 
-=======
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
 
-
-        }
-       
-        
-    //Delete node
         public void deletAt(int index)
         {
             if (index == 0)
@@ -270,11 +194,7 @@ namespace DataStructure
                 n.next = n1.next;
             }
         }
-<<<<<<< HEAD
 
-=======
-     ////This method will sort the elements
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
         public int[] BubbleSortI(int[] a)
         {
             int temp;
@@ -292,7 +212,6 @@ namespace DataStructure
             }
             return a;
         }
-<<<<<<< HEAD
         //Stack Methods
         int top;
         char[] ch = new char[200];
@@ -428,9 +347,93 @@ namespace DataStructure
 
             return c ;
         }
+        public int FindDay(int d, int m, int y)
+        {
+            if (d <= 31 && m <= 12)
+            {
+                double y0 = y - ((14 - m) / 12);
+                double x = y0 + (y0 / 4) - (y0 / 100) + (y0 / 400);
+                double m0 = m + 12 * ((14 - m) / 12) - 2;
+                double d0 = (d + x + 31 * m0 / 12) % 7;
+                int s = (int)Math.Round(d0) - 1;
+                return s;
+                
+            }
+            return -1;
+
+        }
+        public Boolean ChkPrime(int j)
+        {
+            
+                int a = 0;
+                for (int i = 1; i <= j; i++)
+                {
+
+                    if (j % i == 0)
+                    {
+                        a++;
+                    }
+
+                }
+                if (a == 2)
+                {
+                return true;
+                }
+
+            return false;
+            
+        }
+
+        public void Display(int[,] arr)
+        {
+            Console.WriteLine("Prime 2D array");
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 30; j++)
+                {
+                    Console.Write(arr[i, j] + "  ");
+                }
+                Console.WriteLine();
+            }
+        }
+        public static int CountBinaryTree(int numberOfElements)
+        {
+
+
+            int numerator = 0;
+            int denominator = 0;
+
+            ////to count no of binary trees for given no of elements
+            numerator = Factorial(2 * numberOfElements);
+            denominator = Factorial(numberOfElements + 1) * Factorial(numberOfElements);
+
+            return numerator / denominator;
+
+
+        }
+        public static int Factorial(int no)
+        {
+            int f = no;
+            while(no>1)
+            {
+                f = f * (no - 1);
+                no--;
+
+            }
+            return f;
+        }
+        public static Boolean IsNum(String n)
+        {
+            for(int i=0;i<n.Length;i++)
+            {
+                if(char.IsDigit(n[i])==false)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }    
-=======
-    }
->>>>>>> 23e098222022032d178cbe9ae869f7aaf5d96801
 }
 

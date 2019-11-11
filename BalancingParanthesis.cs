@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*************************************Utility*********************************************/
+/*Read an Arithmetic Expression .Write a Stack Class to push open parenthesis “(“ and pop closed
+parenthesis “)”. At the End of the Expression if the Stack is Empty then the Arithmetic Expression
+is Balanced.
+<<Author : Sandeepa Mohapatra>>
+ */
+/**********************************************************************************************/
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
