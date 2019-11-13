@@ -1,10 +1,15 @@
-﻿
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=Runner.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
+
 
 namespace ObjectOrientedPrograms
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
+    
     class Runner
     {
         /// <summary>
@@ -20,6 +25,7 @@ namespace ObjectOrientedPrograms
             switch(n)
             {
                 case 1:
+                    ///Object is created and calling the method to perform the total operation
                     Inventory_Management.DisplayData a = new Inventory_Management.DisplayData();
                     a.Display();
                     break;
