@@ -1,32 +1,29 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file=InventoryModel.cs" company="Bridgelabz">
+// <copyright file=StockModel.cs" company="Bridgelabz">
 //   Copyright © 2019 Company="BridgeLabz"
 // </copyright>
 // <creator name="Sandeepa Mohapatra"/>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace ObjectOrientedPrograms.Inventory_Management
+namespace ObjectOrientedPrograms.StockReport
 {
-   /// <summary>
-   /// Class to get and set data
-   /// </summary>
-    class InventoryModel
+    class StockModel
     {
-        
-        public string Name
+        public string Stockname
         {
             get;
             set;
         }
-        public int PricePerKg
+        public int Numberofshare
         {
             get;
             set;
         }
-        public int Weight
+        public int Priceofshare
         {
             get;
             set;
         }
     }
+    
 }
