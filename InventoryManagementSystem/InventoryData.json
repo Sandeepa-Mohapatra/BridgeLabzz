@@ -1,0 +1,41 @@
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=InventoryData.json" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
+
+{
+  "AccountList": [
+    {
+      "Name": "BrownRice",
+      "PricePerKg": 70,
+      "Weight": 100
+    },
+    {
+      "Name": "White",
+      "PricePerKg": 30,
+      "Weight": 500
+    },
+    {
+      "Name": "Moong",
+      "PricePerKg": 42,
+      "Weight": 70
+    },
+    {
+      "Name": "hgj",
+      "PricePerKg": 65,
+      "Weight": 34
+    },
+    {
+      "Name": "Basumati",
+      "PricePerKg": 50,
+      "Weight": 5
+    },
+    {
+      "Name": "Soup",
+      "PricePerKg": 90,
+      "Weight": 3
+    }
+  ]
+}

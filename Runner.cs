@@ -39,6 +39,14 @@ namespace ObjectOrientedPrograms
                     StockReport.StockDisplay c = new StockReport.StockDisplay();
                     c.Display();
                     break;
+                case 4:
+                    InventoryManagementSystem.InventoryManager d = new InventoryManagementSystem.InventoryManager();
+                    d.Operation();
+                    //foreach (var i in d1)
+                    //{
+                    //    Console.WriteLine(i.Name);
+                    //}
+                    break;
             }
 
         }
