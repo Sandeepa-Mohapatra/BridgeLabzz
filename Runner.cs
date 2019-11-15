@@ -23,6 +23,7 @@ namespace ObjectOrientedPrograms
             Console.WriteLine("Inventory Data Management(1)");
             Console.WriteLine("Replace Strings(2)");
             Console.WriteLine("Stock Report(3)");
+            Console.WriteLine("Inventory Manegement System(4)");
             int n = int.Parse(Console.ReadLine());
             switch (n)
             {
@@ -42,10 +43,6 @@ namespace ObjectOrientedPrograms
                 case 4:
                     InventoryManagementSystem.InventoryManager d = new InventoryManagementSystem.InventoryManager();
                     d.Operation();
-                    //foreach (var i in d1)
-                    //{
-                    //    Console.WriteLine(i.Name);
-                    //}
                     break;
             }
 
