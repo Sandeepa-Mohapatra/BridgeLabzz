@@ -24,6 +24,10 @@ namespace ObjectOrientedPrograms
             Console.WriteLine("Replace Strings(2)");
             Console.WriteLine("Stock Report(3)");
             Console.WriteLine("Inventory Manegement System(4)");
+            Console.WriteLine("Commercial data processing(5)");
+            Console.WriteLine("LinkedList(6)");
+            Console.WriteLine("Deck Of Cards(7)");
+            Console.WriteLine("Address Book(8)");
             int n = int.Parse(Console.ReadLine());
             switch (n)
             {
@@ -43,6 +47,22 @@ namespace ObjectOrientedPrograms
                 case 4:
                     InventoryManagementSystem.InventoryManager d = new InventoryManagementSystem.InventoryManager();
                     d.Operation();
+                    break;
+                case 5:
+                    CommercialDataProcessing.UserInputOptions e = new CommercialDataProcessing.UserInputOptions();
+                    e.GetInputs();
+                    break;
+                case 6:
+                    LinkedList.UserMaintainance f = new LinkedList.UserMaintainance();
+                    f.MaintainDetails();
+                    break;
+                case 7:
+                    DeckOfCard.StartDistributing g = new DeckOfCard.StartDistributing();
+                    g.Distributing();
+                    break;
+                case 8:
+                    AddressBook.UserAddress h = new AddressBook.UserAddress();
+                    h.Operation();
                     break;
             }
 

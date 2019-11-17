@@ -20,7 +20,8 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
             //Options for user
             Console.WriteLine("Enter what Operation you want to perform");
             Console.WriteLine("Add Item(1)");
-            Console.WriteLine("Calculate the total parice(2)");
+            Console.WriteLine("Delete Data(2)");
+            Console.WriteLine("Calculate the total parice(3)");
             //Taking the option as input
             int n=int.Parse(Console.ReadLine());
             //Creating object
@@ -34,6 +35,11 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
                     break;
 
                 case 2:
+                    a.Delete();
+                    Console.WriteLine("Item deleted Properly.....");
+                    Console.WriteLine("Thank you.....");
+                    break;
+                case 3:
                     Console.WriteLine("Here you go....");
                     a.Display();
                     Console.WriteLine("Thank you.....");

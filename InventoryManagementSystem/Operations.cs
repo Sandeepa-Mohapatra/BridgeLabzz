@@ -44,6 +44,26 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
                 Console.WriteLine(i.Name + "\t" + i.Weight + "\t" + i.PricePerKg + "\t" + (i.Weight * i.PricePerKg));
             }
         }
+        public void Delete()
+        {
+            Console.WriteLine("Enter the Name Which Data You Want to delete:");
+            string name = Console.ReadLine();
+            var data = JsonReadfile.Read();
+            List<InventoryModel> account = data.AccountList;
+            ////Searching and delting the data which have been enter by user.
+            foreach (InventoryModel item in account)
+            {
+                if (item.Name.Equals(name))
+                {
+                    account.Remove(item);
+                    break;
+                }
+
+            }
+            /////Write in the file
+            JsonWrite.Write(data);
+            
+        }
 
     }
 }
