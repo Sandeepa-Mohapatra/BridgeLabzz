@@ -5,7 +5,6 @@
 // <creator name="Sandeepa Mohapatra"/>
 // --------------------------------------------------------------------------------------------------------------------
 
-
 namespace ObjectOrientedPrograms.DeckOfCard
 {
     using System;
@@ -44,7 +43,6 @@ namespace ObjectOrientedPrograms.DeckOfCard
                string temp = arr[i];
                arr[i] = arr[ran];
                arr[ran] = temp;         
-
             }
             int l = 0;
             //Distributing among 4 person and displaying
@@ -67,9 +65,6 @@ namespace ObjectOrientedPrograms.DeckOfCard
                 Console.WriteLine();
                 count1++;
             }
-            
-            
-
         }
     }
 }
