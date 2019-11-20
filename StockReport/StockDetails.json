@@ -1,0 +1,34 @@
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=StockDetails.json" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
+
+[
+  {
+    "stockname": "Raymond",
+    "numberofshare": "30",
+    "priceofshare": "900000"
+  },
+
+  {
+    "Stockname": "Digjam",
+    "Numberofshare": "40",
+    "Priceofshare": "700000"
+  },
+
+  {
+    "Stockname": "Vimal",
+    "Numberofshare": "50",
+    "Priceofshare": "200000"
+  },
+
+  {
+    "Stockname": "OCM",
+    "Numberofshare": "70",
+    "Priceofshare": "300000"
+  }
+]
+
+

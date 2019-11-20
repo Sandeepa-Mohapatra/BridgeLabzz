@@ -1,0 +1,29 @@
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=Inventory.json" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
+
+[
+  {
+    "Name": "BrownRice",
+    "Weight": 100,
+    "PricePerKg": 70
+  },
+
+
+  {
+    "Name": "White",
+    "Weight": 500,
+    "PricePerKg": 30
+  },
+
+
+  {
+    "Name": "Moong",
+    "Weight": 70,
+    "PricePerKg": 42
+  }
+
+]
