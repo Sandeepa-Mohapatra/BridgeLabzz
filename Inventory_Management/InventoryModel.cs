@@ -11,8 +11,7 @@ namespace ObjectOrientedPrograms.Inventory_Management
    /// Class to get and set data
    /// </summary>
     class InventoryModel
-    {
-        
+    {       
         public string Name
         {
             get;

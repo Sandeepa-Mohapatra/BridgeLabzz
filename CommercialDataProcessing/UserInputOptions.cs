@@ -3,8 +3,7 @@
  //   Copyright © 2019 Company="BridgeLabz"
  // </copyright>
  // <creator name="Sandeepa Mohapatra">
- // --------------------------------------------------------------------------------------------------------------------using System;
-    
+ // --------------------------------------------------------------------------------------------------------------------   
 
 namespace ObjectOrientedPrograms.CommercialDataProcessing
 {
@@ -65,16 +64,13 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
                             case 5:
                                 AccountOperation displayaccount = new AccountOperation();
                                 displayaccount.DisplayParticularAccount();
-                                break;
-                            
+                                break;                            
                         }
                         Console.WriteLine("Do you want to Continue then Press Y");
                         choice = Convert.ToChar(Console.ReadLine());
                     }
                     while (choice == 'y');
-
                 }
-
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);

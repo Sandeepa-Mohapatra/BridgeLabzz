@@ -12,10 +12,8 @@ namespace ObjectOrientedPrograms.LinkedList
     using System.Text;
      class JsonRead
      {
-        //Encapsulation concept is used here
-        
+        //Encapsulation concept is used here        
         private List<CompanyModel> file = new List<CompanyModel>();
         public List<CompanyModel> File { get; set; }
-
      }
 }

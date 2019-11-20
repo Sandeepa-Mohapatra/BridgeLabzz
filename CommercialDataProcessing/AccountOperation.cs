@@ -10,7 +10,6 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
     using System;
     using System.Collections.Generic;
     using System.Text;
-
     /// <summary>
     /// Class for Account Operation
     /// </summary>
@@ -28,9 +27,7 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
             {
                 Console.WriteLine(" ");
                 Console.WriteLine(" Account Name : " + account.AccountName + "\n Share Number : " + account.ShareNumber + " \n Stock Price :" + account.StockPrice);
-                //            Console.WriteLine("Total Stocks Price of " +  + " = " + (rice.Weight * rice.PricePerKg));
                 Console.WriteLine(" ");
-
                 sum += account.StockPrice;
             }
             Console.WriteLine("Total Value of Accounts store in Database - Rs. " + sum);
@@ -43,14 +40,10 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
             string accountname;
             while (true)
             {
-
                 Console.WriteLine("Enter the Account Name For which you want to Buy");
                 accountname = Console.ReadLine();
-
-
                 NewAccount newAccount = JsonReadfile.Read();
                 List<AccountClass> accountlist = newAccount.AccountList;
-
                 foreach (AccountClass name in accountlist)
                 {
                     if (name.AccountName.Equals(accountname))
@@ -72,32 +65,23 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
             {
                 Console.WriteLine("Enter the Account Name For which you want to Buy");
                 accountname = Console.ReadLine();
-
-
                 NewAccount newAccount = JsonReadfile.Read();
                 List<AccountClass> accountlist = newAccount.AccountList;
-
                 foreach (AccountClass name in accountlist)
                 {
                     if (name.AccountName.Equals(accountname))
                     {
                         Console.WriteLine("Enter the Number Share you want to buy");
                         int number = Convert.ToInt32(Console.ReadLine());
-
                         Console.WriteLine("Enter the Stock Price you want to buy");
                         double price = Convert.ToDouble(Console.ReadLine());
-
                         name.ShareNumber = name.ShareNumber + number;
-
                         name.StockPrice = name.StockPrice + price;
-
                     }
                     WriteToFile.WriteDataToFile(newAccount);
-
                 }
                 Console.WriteLine(accountname + " had Successfully Buy their Share and Stock Price");
                 break;
-
             }
         }
         /// <summary>
@@ -110,28 +94,20 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
             {
                 Console.WriteLine("Enter the Account Name For wich you want to Sell");
                 accountname = Console.ReadLine();
-
-
                 NewAccount newAccount = JsonReadfile.Read();
                 List<AccountClass> accountlist = newAccount.AccountList;
-
                 foreach (AccountClass name in accountlist)
                 {
                     if (name.AccountName.Equals(accountname))
                     {
                         Console.WriteLine("Enter the Share you want to Sell");
                         int number = Convert.ToInt32(Console.ReadLine());
-
-                        Console.WriteLine("Enter the Stock you want to Sell");
+                        Console.WriteLine("Enter the price");
                         double price = Convert.ToDouble(Console.ReadLine());
-
                         name.ShareNumber = name.ShareNumber - number;
-
                         name.StockPrice = name.StockPrice - price;
-
                     }
                     WriteToFile.WriteDataToFile(newAccount);
-
                 }
             }
         }

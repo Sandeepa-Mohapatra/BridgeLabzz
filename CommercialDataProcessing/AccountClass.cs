@@ -27,7 +27,6 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
             /// The stockprice
             /// </summary>
             private double stockprice;
-
             /// <summary>
             /// Gets or sets the name of the account.
             /// </summary>
@@ -73,7 +72,6 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
                 this.sharenumber = sharenumber;
                 this.stockprice = stockprice;
             }
-
             /// <summary>
             /// Creates the account object.
             /// </summary>
@@ -88,7 +86,6 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
                 WriteToFile.WriteDataToFile(newAccount);
                 Console.WriteLine("Account Had Been Sucufully Created");
             }
-
         }
     }
 

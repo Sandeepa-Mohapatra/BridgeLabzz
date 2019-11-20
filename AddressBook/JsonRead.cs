@@ -12,10 +12,8 @@ namespace ObjectOrientedPrograms.AddressBook
     using System.Text;
     class JsonRead
     {
-        //Encapsulation concept is used here
-        
+        //Encapsulation concept is used here        
         private List<AddressBookModel> addressList = new List<AddressBookModel>();
         public List<AddressBookModel> AddressList { get; set; }
-
     }
 }

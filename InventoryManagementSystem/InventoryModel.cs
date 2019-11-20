@@ -12,7 +12,6 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
     using System;
     using System.Collections.Generic;
     using System.Text;
-
     class InventoryModel
     {
         private string name;
@@ -24,8 +23,7 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
             this.name = name;
             this.weight = weight;
             this.price = price;
-        }
-       
+        }       
         //Getting and setting values
         public string Name
         {
@@ -59,8 +57,7 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
             data.AccountList.Add(model);
             /// At last Writting the modified data to the file
             JsonWrite.Write(data);
-        }
-        
+        }        
     }
 }
 

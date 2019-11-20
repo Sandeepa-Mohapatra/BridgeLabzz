@@ -10,8 +10,7 @@ namespace ObjectOrientedPrograms.Inventory_Management
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using Newtonsoft.Json;
-    
+    using Newtonsoft.Json;    
     /// <summary>
     /// Class to fetch data and display
     /// </summary>
@@ -35,7 +34,6 @@ namespace ObjectOrientedPrograms.Inventory_Management
             {
                 Console.WriteLine(i.Name+"\t"+i.Weight+"\t"+i.PricePerKg + "\t"+(i.Weight*i.PricePerKg));
             }
-        }
-        
+        }        
     }
 }

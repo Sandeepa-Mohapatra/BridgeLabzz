@@ -7,7 +7,7 @@
       
 namespace ObjectOrientedPrograms.CommercialDataProcessing
 {
-    using System;
+        using System;
         using System.Collections.Generic;
         using System.Text;
         using Newtonsoft.Json;
@@ -16,8 +16,7 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
     /// class for write the contents into file
     /// </summary>
     class WriteToFile
-    {
-        
+    {        
             /// <summary>
             /// Writes to file.
             /// </summary>

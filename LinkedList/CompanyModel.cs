@@ -10,7 +10,6 @@ namespace ObjectOrientedPrograms.LinkedList
     using System;
     using System.Collections.Generic;
     using System.Text;
-
     class CompanyModel
     {
         private string name;
@@ -23,7 +22,6 @@ namespace ObjectOrientedPrograms.LinkedList
             this.share = share;
             this.price = price;
         }
-
         public String Companyname
         {
             
@@ -42,7 +40,6 @@ namespace ObjectOrientedPrograms.LinkedList
             get { return this.price; }
             set { this.price = value; }
         }
-
         public static void CreateObject(String name,int share,int price)
         {
             CompanyModel c = new CompanyModel(name,  share,  price);

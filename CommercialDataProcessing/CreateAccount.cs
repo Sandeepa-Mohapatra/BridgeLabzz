@@ -4,9 +4,6 @@
 // </copyright>
 // <creator name="Sandeepa Mohapatra">
 // --------------------------------------------------------------------------------------------------------------------
-    
-
-    
 
 namespace ObjectOrientedPrograms.CommercialDataProcessing
 {
@@ -26,18 +23,12 @@ namespace ObjectOrientedPrograms.CommercialDataProcessing
                 string accountname = null;
                 int sharenumber = 0;
                 double stockprice = 0;
-
                 Console.WriteLine("Enter Name to Create an new Account");
                 accountname = Console.ReadLine();
-                
                 sharenumber = 0;
                 stockprice = 0;
-
                 AccountClass.CreateAccountObject(accountname, sharenumber, stockprice);
-
                 Console.WriteLine("New Account has Been Created with Name as -" + accountname);
-
-
             }
         }
     }

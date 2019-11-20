@@ -5,7 +5,6 @@
 // <creator name="Sandeepa Mohapatra"/>
 // --------------------------------------------------------------------------------------------------------------------
 
-
 namespace ObjectOrientedPrograms.LinkedList
 {
     using System;
@@ -20,11 +19,9 @@ namespace ObjectOrientedPrograms.LinkedList
             foreach(var i in data.File)
             {
                 u.Insert(i.Numberofshare);
-            }
-           
+            }           
             AddItems a = new AddItems();
             a.Add();
-
         }
     }
 }

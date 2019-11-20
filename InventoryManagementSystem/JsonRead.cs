@@ -12,10 +12,8 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
     using System.Text;
     class JsonRead
     {
-        //Encapsulation concept is used here
-        
+        //Encapsulation concept is used here        
         private List<InventoryModel> accountList = new List<InventoryModel>();
         public List<InventoryModel> AccountList { get; set; }
-
     }
 }

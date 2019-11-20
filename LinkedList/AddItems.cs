@@ -10,7 +10,6 @@ namespace ObjectOrientedPrograms.LinkedList
     using System;
     using System.Collections.Generic;
     using System.Text;
-
     class AddItems
     {
         public void Add()
@@ -26,7 +25,6 @@ namespace ObjectOrientedPrograms.LinkedList
             
             ///Passing the values to create object
             CompanyModel.CreateObject(n, s, p);
-
         }
     }
 }

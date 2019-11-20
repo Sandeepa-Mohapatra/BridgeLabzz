@@ -26,8 +26,7 @@ namespace ObjectOrientedPrograms.LinkedList
             //Write data to file
             stream.Write(write);
             //closing
-            stream.Close();
-            
+            stream.Close();            
         }
     }
 }

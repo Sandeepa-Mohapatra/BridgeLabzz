@@ -5,11 +5,9 @@
 // <creator name="Sandeepa Mohapatra"/>
 // --------------------------------------------------------------------------------------------------------------------
 
-
 namespace ObjectOrientedPrograms
 {
     using System;
-
     class Runner
     {
         /// <summary>
@@ -28,6 +26,7 @@ namespace ObjectOrientedPrograms
             Console.WriteLine("LinkedList(6)");
             Console.WriteLine("Deck Of Cards(7)");
             Console.WriteLine("Address Book(8)");
+            Console.WriteLine("Delegate Implementation(9)");
             int n = int.Parse(Console.ReadLine());
             switch (n)
             {
@@ -64,9 +63,11 @@ namespace ObjectOrientedPrograms
                     AddressBook.UserAddress h = new AddressBook.UserAddress();
                     h.Operation();
                     break;
+                case 9:
+                    Delegates.DelegateP j = new Delegates.DelegateP();
+                    j.Method(j);
+                    break;
             }
-
         }
-
     }
 }

@@ -37,8 +37,6 @@ namespace ObjectOrientedPrograms.AddressBook
             Display d = new Display();
             ///Calling display method to display the new list
             d.DisplayList();
-
-
         }
     }
 }

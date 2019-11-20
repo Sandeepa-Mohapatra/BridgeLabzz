@@ -44,10 +44,7 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
                     a.Display();
                     Console.WriteLine("Thank you.....");
                     break;
-            }
-           
-        }
-        
-    }
-    
+            }           
+        }        
+    }    
 }

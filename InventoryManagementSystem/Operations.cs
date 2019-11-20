@@ -25,8 +25,7 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
             Console.WriteLine("Enter Price per kg");
             int p= int.Parse(Console.ReadLine());
             ///Passing the values to create object
-            InventoryModel.CreateObject(s, w, p);
-  
+            InventoryModel.CreateObject(s, w, p);  
         }
         public void Display()
         {
@@ -61,9 +60,7 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
 
             }
             /////Write in the file
-            JsonWrite.Write(data);
-            
+            JsonWrite.Write(data);            
         }
-
     }
 }

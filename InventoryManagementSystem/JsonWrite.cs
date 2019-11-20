@@ -26,8 +26,7 @@ namespace ObjectOrientedPrograms.InventoryManagementSystem
             //Write data to file
             stream.Write(write);
             //closing
-            stream.Close();
-            
+            stream.Close();            
         }
     }
 }

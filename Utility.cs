@@ -25,7 +25,6 @@ namespace ObjectOrientedPrograms
                     }
                     n.next = node;
                 }
-
         }
         public void Show()
         {

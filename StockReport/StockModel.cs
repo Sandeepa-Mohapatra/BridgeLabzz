@@ -24,6 +24,5 @@ namespace ObjectOrientedPrograms.StockReport
             get;
             set;
         }
-    }
-    
+    }    
 }
