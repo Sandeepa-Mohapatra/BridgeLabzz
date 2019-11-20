@@ -1,10 +1,18 @@
-﻿
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=Runner.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
+
 namespace DesignPtternPrograms
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
-
+    /// <summary>
+    /// Class which contain Main method
+    /// </summary>
     class Runner
     {
         static void Main(String[] args)
