@@ -1,0 +1,10 @@
+C:\Users\BridgeLabs\source\repos\ConsoleApp6\bin\Debug\netcoreapp2.1\DesignPtternPrograms.deps.json
+C:\Users\BridgeLabs\source\repos\ConsoleApp6\bin\Debug\netcoreapp2.1\DesignPtternPrograms.runtimeconfig.json
+C:\Users\BridgeLabs\source\repos\ConsoleApp6\bin\Debug\netcoreapp2.1\DesignPtternPrograms.runtimeconfig.dev.json
+C:\Users\BridgeLabs\source\repos\ConsoleApp6\bin\Debug\netcoreapp2.1\DesignPtternPrograms.dll
+C:\Users\BridgeLabs\source\repos\ConsoleApp6\bin\Debug\netcoreapp2.1\DesignPtternPrograms.pdb
+C:\Users\BridgeLabs\source\repos\ConsoleApp6\obj\Debug\netcoreapp2.1\DesignPtternPrograms.csprojAssemblyReference.cache
+C:\Users\BridgeLabs\source\repos\ConsoleApp6\obj\Debug\netcoreapp2.1\DesignPtternPrograms.AssemblyInfoInputs.cache
+C:\Users\BridgeLabs\source\repos\ConsoleApp6\obj\Debug\netcoreapp2.1\DesignPtternPrograms.AssemblyInfo.cs
+C:\Users\BridgeLabs\source\repos\ConsoleApp6\obj\Debug\netcoreapp2.1\DesignPtternPrograms.dll
+C:\Users\BridgeLabs\source\repos\ConsoleApp6\obj\Debug\netcoreapp2.1\DesignPtternPrograms.pdb
