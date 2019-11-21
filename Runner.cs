@@ -21,6 +21,7 @@ namespace DesignPtternPrograms
             Console.WriteLine("Singleton pattern(1)");
             Console.WriteLine("Factory Pattern(2)");
             Console.WriteLine("Adaptor Pattern(3)");
+            Console.WriteLine("Prototype Pattern(4)");
             int n = int.Parse(Console.ReadLine());
             switch(n)
             {
@@ -39,6 +40,23 @@ namespace DesignPtternPrograms
                     Adapter.ITarget c = new Adapter.AdapterC();
                     Adapter.Client d = new Adapter.Client(c);
                     d.ShowName();
+                    break;
+                case 4:
+                    Prototype.Developer dev = new Prototype.Developer();
+                    dev.Name = "Sanna";
+                    dev.Designation = "Team Leader";
+                    Prototype.Developer devCopy = (Prototype.Developer)dev.Clone();
+                    devCopy.Name = "San";
+                    Console.WriteLine(dev.GetDetails());
+                    Console.WriteLine(devCopy.GetDetails());
+
+                    Prototype.Tester tst = new Prototype.Tester();
+                    tst.Name = "Maan";
+                    tst.Designation = "Network Test Engineer";
+                    Prototype.Tester tstCopy = (Prototype.Tester)tst.Clone();
+                    tstCopy.Name = "Naina";
+                    Console.WriteLine(tst.GetDetails());
+                    Console.WriteLine(tstCopy.GetDetails());
                     break;
             }
         }
