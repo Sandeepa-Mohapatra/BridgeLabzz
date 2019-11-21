@@ -19,12 +19,20 @@ namespace DesignPtternPrograms
         {
             Console.WriteLine("Enter which program you want to see");
             Console.WriteLine("Singleton pattern(1)");
+            Console.WriteLine("Factory Pasttern(2)");
             int n = int.Parse(Console.ReadLine());
             switch(n)
             {
                 case 1:
                     SingleTon.SingletonMain a = new SingleTon.SingletonMain();
                     a.Method();
+                    break;
+                case 2:
+                    Factory.StuffFactory b = new Factory.CreatStuffFactory();
+                    Factory.IFactory Book = b.GetFactory("Book");
+                    Book.Count(100);
+                    Factory.IFactory Pen = b.GetFactory("Pen");
+                    Pen.Count(50);
                     break;
             }
         }
