@@ -19,7 +19,8 @@ namespace DesignPtternPrograms
         {
             Console.WriteLine("Enter which program you want to see");
             Console.WriteLine("Singleton pattern(1)");
-            Console.WriteLine("Factory Pasttern(2)");
+            Console.WriteLine("Factory Pattern(2)");
+            Console.WriteLine("Adaptor Pattern(3)");
             int n = int.Parse(Console.ReadLine());
             switch(n)
             {
@@ -33,6 +34,11 @@ namespace DesignPtternPrograms
                     Book.Count(100);
                     Factory.IFactory Pen = b.GetFactory("Pen");
                     Pen.Count(50);
+                    break;
+                case 3:
+                    Adapter.ITarget c = new Adapter.AdapterC();
+                    Adapter.Client d = new Adapter.Client(c);
+                    d.ShowName();
                     break;
             }
         }
