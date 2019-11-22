@@ -22,6 +22,7 @@ namespace DesignPtternPrograms
             Console.WriteLine("Factory Pattern(2)");
             Console.WriteLine("Adaptor Pattern(3)");
             Console.WriteLine("Prototype Pattern(4)");
+            Console.WriteLine("Observer Pattern(5)");
             int n = int.Parse(Console.ReadLine());
             switch(n)
             {
@@ -57,6 +58,21 @@ namespace DesignPtternPrograms
                     tstCopy.Name = "Naina";
                     Console.WriteLine(tst.GetDetails());
                     Console.WriteLine(tstCopy.GetDetails());
+                    break;
+                case 5:
+                    ObserverPattern.ConcreteSubject s = new ObserverPattern.ConcreteSubject();                    
+                    ObserverPattern.IObserver s2 = new ObserverPattern.ConcreteObserver(s);
+                    s.Attach(s2);
+                    String s3 = "one";
+                    s.SetState(s3);
+                    ObserverPattern.IObserver s4 = new ObserverPattern.ConcreteObserver(s);
+                    s.Attach(s4);
+                    String s5 = "two";
+                    s.SetState(s5);
+                    ObserverPattern.IObserver s6 = new ObserverPattern.ConcreteObserver(s);
+                    s.Attach(s4);
+                    String s7 = "three";
+                    s.SetState(s7);
                     break;
             }
         }
