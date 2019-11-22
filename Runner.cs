@@ -23,8 +23,10 @@ namespace DesignPtternPrograms
             Console.WriteLine("Adaptor Pattern(3)");
             Console.WriteLine("Prototype Pattern(4)");
             Console.WriteLine("Observer Pattern(5)");
+            Console.WriteLine("Command Pattern(6)");
+            Console.WriteLine("Strategy Pattern(7)");
             int n = int.Parse(Console.ReadLine());
-            switch(n)
+            switch (n)
             {
                 case 1:
                     SingleTon.SingletonMain a = new SingleTon.SingletonMain();
@@ -60,7 +62,7 @@ namespace DesignPtternPrograms
                     Console.WriteLine(tstCopy.GetDetails());
                     break;
                 case 5:
-                    ObserverPattern.ConcreteSubject s = new ObserverPattern.ConcreteSubject();                    
+                    ObserverPattern.ConcreteSubject s = new ObserverPattern.ConcreteSubject();
                     ObserverPattern.IObserver s2 = new ObserverPattern.ConcreteObserver(s);
                     s.Attach(s2);
                     String s3 = "one";
@@ -73,6 +75,20 @@ namespace DesignPtternPrograms
                     s.Attach(s4);
                     String s7 = "three";
                     s.SetState(s7);
+                    break;
+                case 6:
+                    Command.Client e = new Command.Client();
+                    e.RunCommand();
+                    break;
+                case 7:
+                    Strategy.Client f = new Strategy.Client();
+                    Console.WriteLine("This is the normal way ");
+                    f.SetStrategy(new Strategy.ConcretStrategy1());
+                    f.Display();
+                    Console.WriteLine();
+                    Console.WriteLine("This is using Math.Pow");
+                    f.SetStrategy(new Strategy.ConcretStrategy2());
+                    f.Display();
                     break;
             }
         }
