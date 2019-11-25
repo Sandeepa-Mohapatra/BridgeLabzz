@@ -9,6 +9,8 @@ namespace DesignPtternPrograms
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Reflection;
     using System.Text;
     /// <summary>
     /// Class which contain Main method
@@ -25,6 +27,9 @@ namespace DesignPtternPrograms
             Console.WriteLine("Observer Pattern(5)");
             Console.WriteLine("Command Pattern(6)");
             Console.WriteLine("Strategy Pattern(7)");
+            Console.WriteLine("Dependency Injection(8)");
+            Console.WriteLine("Reflection(9)");
+            Console.WriteLine("Annotation(10)");
             int n = int.Parse(Console.ReadLine());
             switch (n)
             {
@@ -89,6 +94,30 @@ namespace DesignPtternPrograms
                     Console.WriteLine("This is using Math.Pow");
                     f.SetStrategy(new Strategy.ConcretStrategy2());
                     f.Display();
+                    break;
+                case 8:
+                    Dependency_Injection.DependencyMain g = new Dependency_Injection.DependencyMain();
+                    g.Choice();
+                    break;
+                case 9:
+                    Reflection.ReflectionP h = new Reflection.ReflectionP();
+                    h.Show();
+                    break;
+                case 10:
+                    Annotation j = new Annotation();
+                    j.Name="San";
+                    var context = new ValidationContext(j, null, null);
+                    bool IsValid = Validator.TryValidateObject(j, context, null, true);
+                    Console.Write("Your entered name is : ");
+                    if (IsValid)
+                    {
+                        Console.WriteLine("valid");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid");
+                    }
+                    Console.Read();                   
                     break;
             }
         }
