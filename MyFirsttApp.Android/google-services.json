@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "98120135143",
+    "firebase_url": "https://fundoo-bf896.firebaseio.com",
+    "project_id": "fundoo-bf896",
+    "storage_bucket": "fundoo-bf896.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98120135143:android:466dc3fa6f72f3e52f0d42",
+        "android_client_info": {
+          "package_name": "com.companyname.myfirsttapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98120135143-t85no4egq3tsol1s69flk8unk3fal09g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3XZ74CY_lUxxdDwhIykjy_0HNqR54Ok4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98120135143-t85no4egq3tsol1s69flk8unk3fal09g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

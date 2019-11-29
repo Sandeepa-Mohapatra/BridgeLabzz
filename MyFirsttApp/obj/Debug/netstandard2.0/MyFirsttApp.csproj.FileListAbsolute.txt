@@ -1,0 +1,13 @@
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\bin\Debug\netstandard2.0\MyFirsttApp.deps.json
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\bin\Debug\netstandard2.0\MyFirsttApp.dll
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\bin\Debug\netstandard2.0\ref\MyFirsttApp.dll
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\bin\Debug\netstandard2.0\MyFirsttApp.pdb
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\obj\Debug\netstandard2.0\MyFirsttApp.csprojAssemblyReference.cache
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\obj\Debug\netstandard2.0\MyFirsttApp.AssemblyInfoInputs.cache
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\obj\Debug\netstandard2.0\MyFirsttApp.AssemblyInfo.cs
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\obj\Debug\netstandard2.0\MyFirsttApp.dll
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\obj\Debug\netstandard2.0\ref\MyFirsttApp.dll
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\obj\Debug\netstandard2.0\MyFirsttApp.pdb
+C:\Users\BridgeLabs\source\repos\MyFirsttApp\MyFirsttApp\obj\Debug\netstandard2.0\XamlC.stamp
