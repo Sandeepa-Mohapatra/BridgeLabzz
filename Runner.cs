@@ -117,7 +117,10 @@ namespace DesignPtternPrograms
                     {
                         Console.WriteLine("Invalid");
                     }
-                    Console.Read();                   
+                    
+                    j.Multiply(10, 49);
+                    int result=j.Multiply(new List<int>(){ 10,20,40,50});
+                    Console.WriteLine("Total multiplication of all numbers in the list is: {0}",result);
                     break;
             }
         }
