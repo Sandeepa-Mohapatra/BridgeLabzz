@@ -1,0 +1,15 @@
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\bin\Debug\netstandard2.1\FundooApp.deps.json
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\bin\Debug\netstandard2.1\FundooApp.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\bin\Debug\netstandard2.1\ref\FundooApp.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\bin\Debug\netstandard2.1\FundooApp.pdb
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.csprojAssemblyReference.cache
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\App.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\MainPage.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\LoginPage.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.AssemblyInfoInputs.cache
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.AssemblyInfo.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\XamlC.stamp
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\ref\FundooApp.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.pdb
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\Dashboard.xaml.g.cs
