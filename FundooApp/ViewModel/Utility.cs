@@ -38,10 +38,7 @@ namespace FundooApp.ViewModel
             string token = await DependencyService.Get<Interfaces.IFirebaseAuthentictor>().LoginWithEmailPassword(email, password);
             return token;
         }
-        //public async void Login()
-        //{
-        //    //if (string.IsNullOrEmpty(Email) || string.IsNullOrEmpty(Password))
-        //    //    await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
-        //}
+        
+        
     }
 }

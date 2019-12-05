@@ -28,12 +28,7 @@ namespace FundooApp.Droid.UserServices
             return userid;
         }
 
-        //async Task<string> AddEmailWithPassword(string email, string password)
-        //{
-        //    var user = FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(email, password);
-        //    var token = user.usi
-        //}
-
+        
         public static string PackageName { get; }
 
         async Task<string> IFirebaseAuthentictor.AddEmailWithPassword(string email, string password)
