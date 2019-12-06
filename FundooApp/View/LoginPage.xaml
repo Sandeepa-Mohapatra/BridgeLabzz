@@ -7,26 +7,55 @@
              x:Class="FundooApp.View.LoginPage">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout BackgroundColor="#1B1BC3" Margin="0,0,0,60">
+            <StackLayout 
+                BackgroundColor="#1B1BC3" 
+                Margin="0,0,0,60">
                 <Image
                     Source="img3.png"
                     WidthRequest="60"
                     HorizontalOptions="Center" 
                     Margin="0,20,0,0"/>
-                <Label Text="FUNDOO APP" FontSize="Large"  FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White" Margin="10,20,20,60"/>
+                <Label
+                    Text="FUNDOO APP"
+                    FontSize="Large" 
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center" 
+                    TextColor="White"
+                    Margin="10,20,20,60"/>
             </StackLayout>
             <StackLayout>
-                <Entry Placeholder="UserId*" x:Name="EmailId" Margin="0,0,0,20"/>
-                <Entry Placeholder="Password*" x:Name="Password" IsPassword="True" Margin="0,0,0,50"/>
+                <Entry
+                    Placeholder="UserId*"
+                    x:Name="EmailId" 
+                    Margin="0,0,0,20"/>
+                <Entry
+                    Placeholder="Password*"
+                    x:Name="Password" 
+                    IsPassword="True"
+                    Margin="0,0,0,50"/>
             </StackLayout>
             <StackLayout>
-                <Button Text="LogIn" Clicked="LogIn_btn" BackgroundColor="#1B1BC3" TextColor="White" FontAttributes="Bold" WidthRequest="150"/>
-                <Label Text="Forgot Password?" FontSize="Body" FontAttributes="Bold" HorizontalTextAlignment="End" Margin="0,20,0,40">
+                <Button 
+                    Text="LogIn" Clicked="LogIn_btn" 
+                    BackgroundColor="#1B1BC3" 
+                    TextColor="White" 
+                    FontAttributes="Bold"
+                    WidthRequest="150"/>
+                <Label 
+                    Text="Forgot Password?"
+                    FontSize="Body"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="End" 
+                    Margin="0,20,0,40">
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Forgot Password?" TextColor="Blue" TextDecorations="Underline">
+                            <Span 
+                                Text="Forgot Password?"
+                                TextColor="Blue" 
+                                TextDecorations="Underline">
                                 <Span.GestureRecognizers>
-                                    <TapGestureRecognizer CommandParameter="https://xamarin.com" />
+                                    <TapGestureRecognizer 
+                                        CommandParameter="https://xamarin.com" />
                                 </Span.GestureRecognizers>
                             </Span>
                         </FormattedString>
@@ -34,10 +63,21 @@
                 </Label>
             </StackLayout>
             <StackLayout>
-                <Label Text="OR" TextColor="Gray" Margin="0,20,0,20" HorizontalOptions="Center"/>
+                <Label 
+                    Text="OR" 
+                    TextColor="Gray"
+                    Margin="0,20,0,20"
+                    HorizontalOptions="Center"/>
             </StackLayout>
             <StackLayout>
-                <Button Text="Create an account" Clicked="Registration_btn" BackgroundColor="#1B1BC3" WidthRequest="100" TextColor="White" FontAttributes="Bold" Margin="0,20,0,0"/>
+                <Button 
+                    Text="Create an account" 
+                    Clicked="Registration_btn" 
+                    BackgroundColor="#1B1BC3"
+                    WidthRequest="100" 
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Margin="0,20,0,0"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

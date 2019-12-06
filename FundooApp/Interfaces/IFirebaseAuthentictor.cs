@@ -5,10 +5,29 @@ using System.Threading.Tasks;
 
 namespace FundooApp.Interfaces
 {
-  public  interface IFirebaseAuthentictor
+    /// <summary>
+    /// Interface for authentication
+    /// </summary>
+    public interface IFirebaseAuthentictor
     {
-      public  Task<string> AddEmailWithPassword(string email, string password);
-      string User();
-      public  Task<string> LoginWithEmailPassword(string email, string password);
+        /// <summary>
+        /// Adds the email with password.
+        /// </summary>
+        /// <param name="email">EmailId</param>
+        /// <param name="password">Password</param>
+        /// <returns></returns>
+        public Task<string> AddEmailWithPassword(string email, string password);
+        /// <summary>
+        /// Return the token
+        /// </summary>
+        /// <returns></returns>
+        public  string User();
+        /// <summary>
+        /// Login with email and password.
+        /// </summary>
+        /// <param name="email">Email</param>
+        /// <param name="password">Password</param>
+        /// <returns></returns>
+        public Task<string> LoginWithEmailPassword(string email, string password);
     }
 }

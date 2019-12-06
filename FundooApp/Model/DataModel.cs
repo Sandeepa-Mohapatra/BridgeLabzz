@@ -4,7 +4,10 @@ using System.Text;
 
 namespace FundooApp.Model
 {
-  public  class DataModel
+    /// <summary>
+    /// Model class for getting and setting Data
+    /// </summary>
+    public class DataModel
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

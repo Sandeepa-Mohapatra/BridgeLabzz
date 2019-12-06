@@ -10,24 +10,39 @@ using Firebase.Database.Query;
 
 namespace FundooApp.ViewModel
 {
+    /// <summary>
+    /// Utility class
+    /// </summary>
     class Utility
     {
+        /// <summary>
+        /// create the object of firebase
+        /// </summary>
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
-       
+        /// <summary>
+        /// Adds the details.
+        /// </summary>
+        /// <param name="firstname">The firstname.</param>
+        /// <param name="lastname">The lastname.</param>
+        /// <param name="email">The email.</param>
+        /// <param name="password">The password.</param>
+        /// <returns></returns>
         public async Task<string> AddDetails(string firstname,string lastname,string email,string password)
         {
             try
             {
+                ///it will identify the platform and execute the implementation
                 string token = await DependencyService.Get<Interfaces.IFirebaseAuthentictor>().AddEmailWithPassword(email, password);
                 if (token != null)
                 {
+                    ///it will add data to firebase
                     await firebaseobj.Child("detail").Child(token).Child("UserDetails").PostAsync<DataModel>(new DataModel() { FirstName = firstname, LastName = lastname, EmailId = email });
 
                 }
                 
                 return token;
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 return null;
             }
@@ -35,6 +50,7 @@ namespace FundooApp.ViewModel
 
         public async Task<string> LogIn(string email, string password)
         {
+            ///it will identify the platform and execute the implementation
             string token = await DependencyService.Get<Interfaces.IFirebaseAuthentictor>().LoginWithEmailPassword(email, password);
             return token;
         }

@@ -8,32 +8,62 @@
 
     <StackLayout class="StyleSheet1.body">
         <!-- Place new controls here -->
-
         <ScrollView>
             <StackLayout>
-                <StackLayout BackgroundColor="#1B1BC3" Margin="0,0,0,60">
+                <StackLayout 
+                    BackgroundColor="#1B1BC3" 
+                    Margin="0,0,0,60">
                     <Image
                     Source="img3.png"
                     WidthRequest="60"
                     HorizontalOptions="Center" 
                     Margin="0,20,0,0"/>
-                    <Label Text="FUNDOO APP" FontSize="Large"  FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White" Margin="10,20,20,60"/>                    
+                    <Label
+                        Text="FUNDOO APP" 
+                        FontSize="Large" 
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center" 
+                        TextColor="White" Margin="10,20,20,60"/>                    
                 </StackLayout>                
                 <StackLayout>                    
-                    <Entry Placeholder="Firstname" Margin="0,0,0,10" x:Name="Firstname"/>
-                    <Entry Placeholder="Lastname" Margin="0,0,0,10"  x:Name="Lastname"/>
-                    <Entry Placeholder="EmailId" Margin="0,0,0,10"  x:Name="EmailId"/>
-                    <Entry Placeholder="Password" IsPassword="true" Margin="0,0,0,10"  x:Name="Password"/>
+                    <Entry
+                        Placeholder="Firstname" 
+                        Margin="0,0,0,10"
+                        x:Name="Firstname"/>
+                    <Entry 
+                        Placeholder="Lastname" 
+                        Margin="0,0,0,10" 
+                        x:Name="Lastname"/>
+                    <Entry 
+                        Placeholder="EmailId" 
+                        Margin="0,0,0,10"
+                        x:Name="EmailId"/>
+                    <Entry 
+                        Placeholder="Password"
+                        IsPassword="true" 
+                        Margin="0,0,0,10" 
+                        x:Name="Password"/>
                 </StackLayout>
-
-                <StackLayout Orientation="Horizontal" Margin="0,50,0,0">
-                    <Button Text="LogIn" TextColor="White" Clicked="Login_btn" BackgroundColor="#1B1BC3" WidthRequest="100" FontAttributes="Bold" Margin="50,20,50,15"/>
-                    <Button Text="SignUp" TextColor="White" Clicked="Signup_btn" BackgroundColor="#1B1BC3" WidthRequest="100" FontAttributes="Bold" Margin="15,20,10,15"/>
-                </StackLayout>
-                
+                <StackLayout 
+                    Orientation="Horizontal"
+                    Margin="0,50,0,0">
+                    <Button
+                        Text="LogIn"
+                        TextColor="White"
+                        Clicked="Login_btn"
+                        BackgroundColor="#1B1BC3" 
+                        WidthRequest="100"
+                        FontAttributes="Bold"
+                        Margin="50,20,50,15"/>
+                    <Button 
+                        Text="SignUp" 
+                        TextColor="White"
+                        Clicked="Signup_btn"
+                        BackgroundColor="#1B1BC3"
+                        WidthRequest="100"
+                        FontAttributes="Bold" Margin="15,20,10,15"/>
+                </StackLayout>                
             </StackLayout>
-        </ScrollView>
-        
+        </ScrollView>        
     </StackLayout>
-
 </ContentPage>
