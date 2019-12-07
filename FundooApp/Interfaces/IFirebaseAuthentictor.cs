@@ -1,10 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=IFirebaseAuthentictor.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
 namespace FundooApp.Interfaces
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Threading.Tasks;
     /// <summary>
     /// Interface for authentication
     /// </summary>
@@ -29,5 +34,10 @@ namespace FundooApp.Interfaces
         /// <param name="password">Password</param>
         /// <returns></returns>
         public Task<string> LoginWithEmailPassword(string email, string password);
+        /// <summary>
+        /// Forgot password.
+        /// </summary>
+        /// <param name="email">The email.</param>
+        public void ForgotPassword(string email);
     }
 }

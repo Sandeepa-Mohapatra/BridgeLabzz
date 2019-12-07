@@ -13,3 +13,4 @@ C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\Fu
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\ref\FundooApp.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.pdb
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\Dashboard.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ForgotPassword.xaml.g.cs

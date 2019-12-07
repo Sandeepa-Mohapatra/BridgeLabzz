@@ -1,15 +1,17 @@
-﻿using FundooApp.View;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=MainPage.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace FundooApp
 {
+    using FundooApp.View;
+    using System;
+    using System.ComponentModel;
+    using System.Text.RegularExpressions;
+    using Xamarin.Forms;
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {

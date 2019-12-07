@@ -1,15 +1,21 @@
-﻿using FundooApp.Model;
-using System;
-using Firebase.Database;
-using System.Linq;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using Firebase.Database.Query;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=Utility.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace FundooApp.ViewModel
 {
+    using FundooApp.Model;
+    using System;
+    using Firebase.Database;
+    using System.Linq;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Xamarin.Forms;
+    using Firebase.Database.Query;
     /// <summary>
     /// Utility class
     /// </summary>
@@ -53,6 +59,10 @@ namespace FundooApp.ViewModel
             ///it will identify the platform and execute the implementation
             string token = await DependencyService.Get<Interfaces.IFirebaseAuthentictor>().LoginWithEmailPassword(email, password);
             return token;
+        }
+        public void Forgotpassword(string email)
+        {
+             DependencyService.Get<Interfaces.IFirebaseAuthentictor>().ForgotPassword(email);
         }
         
         

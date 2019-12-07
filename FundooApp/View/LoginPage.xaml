@@ -41,26 +41,14 @@
                     TextColor="White" 
                     FontAttributes="Bold"
                     WidthRequest="150"/>
-                <Label 
+                <Button
                     Text="Forgot Password?"
-                    FontSize="Body"
+                    Clicked="ForgotPassword_btn"
+                    BackgroundColor="White"
+                    TextColor="Blue"
                     FontAttributes="Bold"
-                    HorizontalTextAlignment="End" 
-                    Margin="0,20,0,40">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span 
-                                Text="Forgot Password?"
-                                TextColor="Blue" 
-                                TextDecorations="Underline">
-                                <Span.GestureRecognizers>
-                                    <TapGestureRecognizer 
-                                        CommandParameter="https://xamarin.com" />
-                                </Span.GestureRecognizers>
-                            </Span>
-                        </FormattedString>
-                    </Label.FormattedText>                    
-                </Label>
+                    HorizontalOptions="End"
+                    Margin="0,20,0,0"/>
             </StackLayout>
             <StackLayout>
                 <Label 

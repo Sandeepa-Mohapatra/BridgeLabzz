@@ -53,6 +53,12 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.4.0.991220-pre3, )"
+            },
+            "xunit.runner.console": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           }
         }

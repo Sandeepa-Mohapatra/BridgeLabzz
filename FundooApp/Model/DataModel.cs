@@ -1,7 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=DataModel.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
 namespace FundooApp.Model
 {
     /// <summary>

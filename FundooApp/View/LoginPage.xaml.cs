@@ -1,15 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=LoginPage.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
 namespace FundooApp.View
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Text.RegularExpressions;
+    using System.Threading.Tasks;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
     /// <summary>
     /// class for login page
     /// </summary>
@@ -17,6 +21,7 @@ namespace FundooApp.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        ViewModel.Utility u = new ViewModel.Utility();
         /// <summary>
         /// Initializes a new instance of the <see cref="LoginPage"/> class.
         /// </summary>
@@ -89,6 +94,13 @@ namespace FundooApp.View
                 EmailId.Text = string.Empty;
                 Password.Text = string.Empty;
             }
+        }
+        /// <summary>
+        /// Handles the btn event of the ForgotPassword
+        /// </summary>       
+        private void ForgotPassword_btn(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new ForgotPassword());
         }
     }
 }
