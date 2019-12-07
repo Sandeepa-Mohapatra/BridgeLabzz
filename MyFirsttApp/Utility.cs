@@ -1,14 +1,19 @@
-﻿using Firebase.Database;
-using Firebase.Database.Query;
-using MyFirsttApp.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=Utility.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
 namespace MyFirsttApp
 {
+    using Firebase.Database;
+    using Firebase.Database.Query;
+    using MyFirsttApp.Model;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
     /// <summary>
     /// Utility class
     /// </summary>
@@ -64,10 +69,11 @@ namespace MyFirsttApp
         /// <param name="id">id</param>
         public async void DeleteDetail(int id)
         {
-            var toDeletePerson = (await firebaseobj
+            var delete = (await firebaseobj
              .Child("Notes")
-             .OnceAsync<DataModel>()).Where(a => a.Object.PersonId.Equals(id)).FirstOrDefault();
-            await firebaseobj.Child("Notes").Child(toDeletePerson.Key).DeleteAsync();
+             .OnceAsync<DataModel>())
+             .Where(a => a.Object.PersonId.Equals(id)).FirstOrDefault();
+            await firebaseobj.Child("Notes").Child(delete.Key).DeleteAsync();
 
         }
         /// <summary>

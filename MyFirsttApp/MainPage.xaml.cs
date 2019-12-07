@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=MainPage.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
 namespace MyFirsttApp
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
+    using System;    
+    using System.ComponentModel;    
+    using Xamarin.Forms;
+    
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
@@ -64,7 +64,6 @@ namespace MyFirsttApp
             await DisplayAlert("Message", "Details updated successfully", "ok");
             var details = await u.GetAllPersons();
             lstPersons.ItemsSource = details;
-
         }
         /// <summary>
         /// Handles the Button event of the Delete control.

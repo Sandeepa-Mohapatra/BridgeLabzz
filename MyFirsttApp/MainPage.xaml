@@ -4,11 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MyFirsttApp.MainPage">    
-    <!--It will make the screen scrollable--!>
+             x:Class="MyFirsttApp.MainPage">       
         <ScrollView>             
         <StackLayout>
-            <!--Layout for header--!> 
+           
             <StackLayout BackgroundColor="Blue">
                 <Image
                     Source="img2.png"
@@ -24,7 +23,7 @@
                     </Label>
                 </StackLayout>
             </StackLayout>
-            <!--Layout for Textfield--!> 
+            
             <StackLayout Margin="20,80,20,60">
                 <Label 
                     Text="Enter ID" 
@@ -32,7 +31,8 @@
                     FontAttributes="Bold"/>
                 <StackLayout Margin="0,10,0,10">
                     <Entry 
-                        x:Name="txtid" 
+                        x:Name="txtid"
+                        CursorPosition="5"                        
                         Placeholder="Id"/>
                 </StackLayout>
                 <Label 
@@ -40,10 +40,12 @@
                     FontSize="Body" 
                     FontAttributes="Bold" />
                 <StackLayout Margin="0,10,0,20">
-                    <Entry x:Name="txtname"  Placeholder="notes"/>
+                    <Entry
+                        x:Name="txtname" 
+                        Placeholder="notes" />
                 </StackLayout>
             </StackLayout>
-            <!--Layout for Buttons--!> 
+           
             <StackLayout Margin="0,0,0,30">
                 <StackLayout Orientation="Horizontal">
                         <Button 
@@ -70,14 +72,16 @@
                             Clicked="Delete_Button"/>
                 </StackLayout>
             </StackLayout>
-            <!--Layout for List--!> 
-            <ListView x:Name="lstPersons" BackgroundColor="Gray">
+            
+            <ListView x:Name="lstPersons" BackgroundColor="WhiteSmoke">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell 
                             Text="{Binding Name}"
-                            TextColor="Black">                            
+                            TextColor="Black">
+                            
                         </TextCell>
+                        
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
