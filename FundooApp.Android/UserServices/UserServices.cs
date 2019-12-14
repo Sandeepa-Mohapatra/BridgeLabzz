@@ -71,6 +71,6 @@ namespace FundooApp.Droid.UserServices
               await FirebaseAuth.Instance.SendPasswordResetEmail(email);
             
         }
-
+       
     }
 }

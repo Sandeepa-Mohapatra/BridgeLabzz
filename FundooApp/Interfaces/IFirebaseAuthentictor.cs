@@ -39,5 +39,6 @@ namespace FundooApp.Interfaces
         /// </summary>
         /// <param name="email">The email.</param>
         public void ForgotPassword(string email);
+       
     }
 }

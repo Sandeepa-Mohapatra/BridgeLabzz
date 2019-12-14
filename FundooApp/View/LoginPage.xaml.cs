@@ -39,16 +39,17 @@ namespace FundooApp.View
         /// </summary>        
         private void Registration_btn(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new MainPage());
+            Navigation.PushModalAsync(new MainPage());           
         }
         /// <summary>
         /// Handles the btn event of the LogIn control.
         /// </summary>        
         private async void LogIn_btn(object sender, EventArgs e)
-        {
+        { 
             ///It will check whether the data is valid or not
             bool isEmailValid = Regex.IsMatch(EmailId.Text, emailPattern);
-            bool isPasswordValid= Regex.IsMatch(Password.Text, passwordPattern);
+            bool isPasswordValid = Regex.IsMatch(Password.Text, passwordPattern);
+
             ///It will check whether the textfield is empty or not
             if (string.IsNullOrEmpty(EmailId.Text) || string.IsNullOrEmpty(Password.Text))
             {
@@ -66,7 +67,11 @@ namespace FundooApp.View
                         ///Display message
                         await DisplayAlert("Message", "LogIn Successfull", "Ok");
                         ///Navigate to different page
-                        await Navigation.PushModalAsync(new Dashboard());
+                        await Navigation.PushModalAsync(new Dashboard.Dashboard());
+                        // this.Navigation.RemovePage(this);
+                        //.Navigation.RemovePage(this);
+                       // Navigation.InsertPageBefore(new Page(), Navigation.NavigationStack[Navigation.NavigationStack.Count]);
+
                     }
                     else
                     {
@@ -98,9 +103,9 @@ namespace FundooApp.View
         /// <summary>
         /// Handles the btn event of the ForgotPassword
         /// </summary>       
-        private void ForgotPassword_btn(object sender, EventArgs e)
+        private async void ForgotPassword_btn(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new ForgotPassword());
+            await Navigation.PushModalAsync(new ForgotPassword());            
         }
     }
 }
