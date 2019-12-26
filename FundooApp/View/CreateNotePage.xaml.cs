@@ -20,11 +20,14 @@ namespace FundooApp.View
             InitializeComponent();
         }
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
-        private async void Save(object sender, EventArgs e)
+       
+        protected async override void OnDisappearing()
         {
+           // base.OnDisappearing();
             string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
-            await firebaseobj.Child("detail").Child(token).Child("Notes").PostAsync<DataModel>(new DataModel() { Title=Title.Text,Notes=Notes.Text });
+            await firebaseobj.Child("detail").Child(token).Child("Notes").PostAsync<NoteModel>(new NoteModel() { Title = Title.Text, Notes = Notes.Text});
             await Navigation.PushModalAsync(new Dashboard.Dashboard());
+           
         }
     }
 }

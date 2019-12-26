@@ -6,10 +6,43 @@
              mc:Ignorable="d"
              x:Class="FundooApp.View.ArchivePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <RelativeLayout>
+            <ScrollView Orientation="Vertical" HeightRequest="600" VerticalOptions="StartAndExpand">
+                <StackLayout>
+                    <ListView x:Name="MainListViewArc"  
+             HasUnevenRows="True" ItemTapped="lvItemTapped" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="White" WidthRequest="120" CornerRadius="10" OutlineColor="Wheat" Margin="0,10,30,10" >
+                                        <StackLayout Orientation="Vertical" >
+                                            <Label Text="{Binding Title}" FontSize="Title" FontFamily="Bold" TextColor="Black"/>
+                                            <Label Text="{Binding Notes}" FontSize="Subtitle" TextColor="Black" />
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+
+            <StackLayout  Margin="0,0,0,20" VerticalOptions="End" BackgroundColor="White" 
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
+                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
+                <StackLayout HorizontalOptions="End">
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,0,0,40" BackgroundColor="White">
+                    <ImageButton Source="tik.png" Clicked="Button_Clicked_1"  BackgroundColor="White" HeightRequest="20" WidthRequest="20" />
+                    <ImageButton Source="edit.png" Clicked="Button_Clicked_1"  BackgroundColor="White" HeightRequest="20" WidthRequest="20" Margin="15,0,0,0"/>
+                    <ImageButton Source="voice.png" Clicked="Button_Clicked_1"  BackgroundColor="White" HeightRequest="15" WidthRequest="15" Margin="15,0,0,0"/>
+                    <ImageButton Source="gallery.png" Clicked="Button_Clicked_1"  BackgroundColor="White" HeightRequest="20" WidthRequest="20" Margin="15,0,0,0"/>
+                    <ImageButton Source="create1.png" HorizontalOptions="EndAndExpand"    BackgroundColor="White" HeightRequest="50" WidthRequest="50" Margin="50,0,0,20"/>
+                </StackLayout>
+
+            </StackLayout>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

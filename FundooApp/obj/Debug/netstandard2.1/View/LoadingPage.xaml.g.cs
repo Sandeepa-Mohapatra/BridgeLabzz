@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FundooApp.View.Dashboard.xaml", "View/Dashboard.xaml", typeof(global::FundooApp.View.Dashboard))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FundooApp.View.LoadingPage.xaml", "View/LoadingPage.xaml", typeof(global::FundooApp.View.LoadingPage))]
 
 namespace FundooApp.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\Dashboard.xaml")]
-    public partial class Dashboard : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\LoadingPage.xaml")]
+    public partial class LoadingPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Dashboard));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LoadingPage));
         }
     }
 }

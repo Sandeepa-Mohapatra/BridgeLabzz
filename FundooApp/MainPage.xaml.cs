@@ -27,8 +27,7 @@ namespace FundooApp
         /// </summary>        
         private void Login_btn(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new LoginPage());
-            this.Navigation.RemovePage(this.Navigation.NavigationStack[this.Navigation.NavigationStack.Count - 2]);
+            Navigation.PushModalAsync(new LoginPage());            
         }
         /// <summary>
         /// Handles the btn event of the Signup control.

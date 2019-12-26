@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page:PopupPage
+    xmlns:Page="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FundooApp.View.PopUp">
+    <ScrollView>
+        <StackLayout HeightRequest="400" WidthRequest="450"
+                 HorizontalOptions="StartAndExpand" VerticalOptions="End" BackgroundColor="White">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="del1.png" WidthRequest="30" HeightRequest="30"/>
+                    <Button Text="Delete" BackgroundColor="Transparent" FontSize="Subtitle" Clicked="Trash_btn"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="del1.png" WidthRequest="30" HeightRequest="30"/>
+                    <Button Text="Label" FontAttributes="Bold" BackgroundColor="Transparent" Clicked="Label_btn" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Margin="0,120,0,0" Orientation="Horizontal">
+                <Frame CornerRadius="80" WidthRequest="10" HeightRequest="10" HasShadow="True" BackgroundColor="Orange">
+                    <Button BackgroundColor="Orange" Clicked="Blue_btn" CornerRadius="100"/>
+                </Frame>
+                <Frame CornerRadius="80" WidthRequest="10" HeightRequest="10" HasShadow="True" BackgroundColor="Red">
+                    <Button BackgroundColor="Red" Clicked="Blue_btn" CornerRadius="80"/>
+                </Frame>
+                <Frame CornerRadius="80" WidthRequest="10" HeightRequest="10" HasShadow="True" BackgroundColor="BlueViolet">
+                    <Button BackgroundColor="BlueViolet" Clicked="Blue_btn" CornerRadius="80"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="ok" Clicked="Ok_btn"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Page:PopupPage>

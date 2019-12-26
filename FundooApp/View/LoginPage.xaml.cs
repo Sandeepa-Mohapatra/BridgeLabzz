@@ -45,7 +45,12 @@ namespace FundooApp.View
         /// Handles the btn event of the LogIn control.
         /// </summary>        
         private async void LogIn_btn(object sender, EventArgs e)
-        { 
+        {
+
+            activity.IsEnabled = true;
+            activity.IsRunning = true;
+            activity.IsVisible = true;
+
             ///It will check whether the data is valid or not
             bool isEmailValid = Regex.IsMatch(EmailId.Text, emailPattern);
             bool isPasswordValid = Regex.IsMatch(Password.Text, passwordPattern);
@@ -106,6 +111,13 @@ namespace FundooApp.View
         private async void ForgotPassword_btn(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new ForgotPassword());            
+        }
+        protected override void OnDisappearing()
+        {
+
+            activity.IsEnabled = false;
+            activity.IsRunning = false;
+            activity.IsVisible = false;
         }
     }
 }

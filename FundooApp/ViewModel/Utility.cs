@@ -25,7 +25,7 @@ namespace FundooApp.ViewModel
         /// create the object of firebase
         /// </summary>
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
-        /// <summary>
+        /// <summary>`  
         /// Adds the details.
         /// </summary>
         /// <param name="firstname">The firstname.</param>
@@ -64,7 +64,25 @@ namespace FundooApp.ViewModel
         {
              DependencyService.Get<Interfaces.IFirebaseAuthentictor>().ForgotPassword(email);
         }
-        
-        
+        public async Task<List<NoteModel>> RetriveNote()
+        {
+            var token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+            
+            List<NoteModel> notesData = (await this.firebaseobj.Child("detail").Child(token).Child("Notes").OnceAsync<NoteModel>()).Select(item => new NoteModel
+             {
+                Title = item.Object.Title,
+               Notes = item.Object.Notes,
+               IsArchieve=item.Object.IsArchieve,
+               IsTrash=item.Object.IsTrash,
+               Id=item.Key
+
+            }).ToList();
+            
+            return notesData;
+           
+           
+        }
+
+
     }
 }

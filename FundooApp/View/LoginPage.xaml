@@ -6,42 +6,58 @@
              mc:Ignorable="d"
              x:Class="FundooApp.View.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout 
-                BackgroundColor="#1B1BC3" 
-                Margin="0,0,0,60">
-                <Image
+        <ScrollView>
+            <StackLayout>
+                <StackLayout
+                    BackgroundColor="#1B1BC3" 
+                    Margin="0,0,0,60">
+                    <Image
                     Source="img3.png"
                     WidthRequest="60"
                     HorizontalOptions="Center" 
                     Margin="0,20,0,0"/>
-                <Label
+                    <Label
                     Text="FUNDOO APP"
                     FontSize="Large" 
                     FontAttributes="Bold"
                     HorizontalTextAlignment="Center" 
                     TextColor="White"
                     Margin="10,20,20,60"/>
-            </StackLayout>
-            <StackLayout>
-                <Entry
+                </StackLayout>
+                <StackLayout>
+                    <Entry
                     Placeholder="UserId*"
                     x:Name="EmailId" 
                     Margin="0,0,0,20"/>
-                <Entry
+                    <Entry
                     Placeholder="Password*"
                     x:Name="Password" 
                     IsPassword="True"
                     Margin="0,0,0,50"/>
-            </StackLayout>
-            <StackLayout>
-                <Button 
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <AbsoluteLayout>
+                        <ActivityIndicator x:Name="activity"  
+                       IsRunning="False"  
+                       IsEnabled="False"  
+                       IsVisible="False"  
+                       Color="Blue"  
+                       BackgroundColor="Transparent"/>
+                    </AbsoluteLayout>
+
+                </StackLayout>
+                
+                    <StackLayout>
+                        <Button 
                     Text="LogIn" Clicked="LogIn_btn" 
-                    BackgroundColor="#1B1BC3" 
+                    BackgroundColor="#1B1BC3"
                     TextColor="White" 
-                    FontAttributes="Bold"
-                    WidthRequest="150"/>
-                <Button
+                    FontAttributes="Bold"  FontSize="Subtitle" CornerRadius="30"/>
+                    
+                    </StackLayout>
+                
+                <StackLayout>
+                    <Button
                     Text="Forgot Password?"
                     Clicked="ForgotPassword_btn"
                     BackgroundColor="White"
@@ -49,16 +65,16 @@
                     FontAttributes="Bold"
                     HorizontalOptions="End"
                     Margin="0,20,0,0"/>
-            </StackLayout>
-            <StackLayout>
-                <Label 
+                </StackLayout>
+                <StackLayout>
+                    <Label 
                     Text="OR" 
                     TextColor="Gray"
                     Margin="0,20,0,20"
                     HorizontalOptions="Center"/>
-            </StackLayout>
-            <StackLayout>
-                <Button 
+                </StackLayout>
+                <StackLayout>
+                    <Button 
                     Text="Create an account" 
                     Clicked="Registration_btn" 
                     BackgroundColor="#1B1BC3"
@@ -66,7 +82,8 @@
                     TextColor="White"
                     FontAttributes="Bold"
                     Margin="0,20,0,0"/>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

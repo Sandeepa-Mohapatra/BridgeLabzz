@@ -9,8 +9,8 @@
         <ToolbarItem Text="fundoo"/>
         <ToolbarItem IconImageSource="img3.png"/>
         <ToolbarItem IconImageSource="rem1.png"/>
-        <ToolbarItem IconImageSource="arc.png"/>        
-        <ToolbarItem Text="Save" Clicked="Save"/>
+        <ToolbarItem IconImageSource="arc.png"/>
+        
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
