@@ -75,7 +75,7 @@ namespace FundooApp.View
                         await Navigation.PushModalAsync(new Dashboard.Dashboard());
                         // this.Navigation.RemovePage(this);
                         //.Navigation.RemovePage(this);
-                       // Navigation.InsertPageBefore(new Page(), Navigation.NavigationStack[Navigation.NavigationStack.Count]);
+                        // Navigation.InsertPageBefore(new Page(), Navigation.NavigationStack[Navigation.NavigationStack.Count]);
 
                     }
                     else

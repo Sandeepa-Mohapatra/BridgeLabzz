@@ -23,12 +23,14 @@ namespace FundooApp.View.Dashboard
         public DashboardDetail()
         {
             InitializeComponent();
+            
            
         }    
 
         private async void Signout_btn(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new LoginPage());
+            
         }
 
         private void Button_Clicked(object sender, EventArgs e)

@@ -27,7 +27,7 @@ namespace FundooApp.View.Dashboard
 
         class DashboardMasterViewModel : INotifyPropertyChanged
         {
-            public ObservableCollection<DashboardMasterMenuItem> MenuItems { get; set; }
+            public ObservableCollection<DashboardMasterMenuItem> MenuItems { get; set; }           
 
             public DashboardMasterViewModel()
             {
