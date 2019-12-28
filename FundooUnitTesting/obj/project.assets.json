@@ -6672,11 +6672,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj",
+      "projectUniqueName": "D:\\BridgeLabzz\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj",
       "projectName": "FundooUnitTesting",
-      "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj",
+      "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj",
       "packagesPath": "C:\\Users\\BridgeLabs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooUnitTesting\\obj\\",
+      "outputPath": "D:\\BridgeLabzz\\FundooApp\\FundooUnitTesting\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

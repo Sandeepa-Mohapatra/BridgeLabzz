@@ -13,6 +13,6 @@ namespace FundooApp.Model
         public bool IsArchieve { get; set; }
         public bool IsTrash { get; set; }
 
-       
+        public string Label { get; set; }
     }
 }

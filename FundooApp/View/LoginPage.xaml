@@ -6,84 +6,92 @@
              mc:Ignorable="d"
              x:Class="FundooApp.View.LoginPage">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                <StackLayout
-                    BackgroundColor="#1B1BC3" 
+        <StackLayout Margin="0,30,0,30" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+            <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" WidthRequest="300">
+                <StackLayout>
+                    <StackLayout
+                    BackgroundColor="Transparent" 
                     Margin="0,0,0,60">
-                    <Image
+                        <Image
                     Source="img3.png"
                     WidthRequest="60"
                     HorizontalOptions="Center" 
                     Margin="0,20,0,0"/>
-                    <Label
-                    Text="FUNDOO APP"
+                        <Label
+                    
+                    Text="LogIn"
                     FontSize="Large" 
                     FontAttributes="Bold"
                     HorizontalTextAlignment="Center" 
-                    TextColor="White"
-                    Margin="10,20,20,60"/>
-                </StackLayout>
-                <StackLayout>
-                    <Entry
+                    TextColor="MediumVioletRed"
+                    Margin="5,20,20,0"/>
+                        <Label
+                    
+                    Text="Welcome To FundooNotes"
+                    FontSize="Large" 
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center" 
+                    TextColor="SeaGreen"
+                    Margin="5,20,20,0"/>
+                    </StackLayout>
+
+
+                    <StackLayout>
+                        
+                            <Entry
                     Placeholder="UserId*"
                     x:Name="EmailId" 
-                    Margin="0,0,0,20"/>
-                    <Entry
+                    Margin="0,0,0,0"/>
+                       
+                            <Entry
                     Placeholder="Password*"
                     x:Name="Password" 
                     IsPassword="True"
-                    Margin="0,0,0,50"/>
-                </StackLayout>
-                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                    <AbsoluteLayout>
-                        <ActivityIndicator x:Name="activity"  
+                    Margin="0,0,0,0"/>
+                      
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                            <AbsoluteLayout>
+                                <ActivityIndicator x:Name="activity"  
                        IsRunning="False"  
                        IsEnabled="False"  
                        IsVisible="False"  
                        Color="Blue"  
                        BackgroundColor="Transparent"/>
-                    </AbsoluteLayout>
-
-                </StackLayout>
-                
-                    <StackLayout>
-                        <Button 
+                            </AbsoluteLayout>
+                        </StackLayout>
+                        <StackLayout>
+                            <Button 
                     Text="LogIn" Clicked="LogIn_btn" 
                     BackgroundColor="#1B1BC3"
                     TextColor="White" 
-                    FontAttributes="Bold"  FontSize="Subtitle" CornerRadius="30"/>
-                    
-                    </StackLayout>
-                
-                <StackLayout>
-                    <Button
-                    Text="Forgot Password?"
-                    Clicked="ForgotPassword_btn"
-                    BackgroundColor="White"
-                    TextColor="Blue"
-                    FontAttributes="Bold"
-                    HorizontalOptions="End"
-                    Margin="0,20,0,0"/>
-                </StackLayout>
-                <StackLayout>
-                    <Label 
-                    Text="OR" 
-                    TextColor="Gray"
-                    Margin="0,20,0,20"
-                    HorizontalOptions="Center"/>
-                </StackLayout>
-                <StackLayout>
-                    <Button 
-                    Text="Create an account" 
+                    FontAttributes="Bold"  FontSize="Subtitle" CornerRadius="30" WidthRequest="130"/>
+
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Button 
+                    Text="Regiser" 
                     Clicked="Registration_btn" 
-                    BackgroundColor="#1B1BC3"
-                    WidthRequest="100" 
-                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    WidthRequest="130" 
+                    TextColor="Gray"
                     FontAttributes="Bold"
+                    Margin="0,20,0,0" CornerRadius="30"/>
+
+                            <Button
+                    Text="Forgot"
+                    Clicked="ForgotPassword_btn"
+                    BackgroundColor="Transparent"
+                    TextColor="Gray"
+                    FontAttributes="Bold"
+                    HorizontalOptions="EndAndExpand"
                     Margin="0,20,0,0"/>
+                        </StackLayout>
+                    </StackLayout>
+
+
                 </StackLayout>
-            </StackLayout>
-        </ScrollView>
+            </Frame>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

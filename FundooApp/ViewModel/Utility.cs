@@ -74,7 +74,8 @@ namespace FundooApp.ViewModel
                Notes = item.Object.Notes,
                IsArchieve=item.Object.IsArchieve,
                IsTrash=item.Object.IsTrash,
-               Id=item.Key
+               Id=item.Key,
+               Label=item.Object.Label
 
             }).ToList();
             

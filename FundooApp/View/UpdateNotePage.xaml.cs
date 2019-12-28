@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -99,6 +99,23 @@ namespace FundooApp.View
         private void Button_Clicked_1(object sender, EventArgs e)
         {
 
+        }
+
+        
+
+        private void Share_btn(object sender, EventArgs e)
+        {
+            Share.RequestAsync(new ShareTextRequest
+            {
+                Text = Notes.Text
+            });
+                
+                
+        }
+
+        private void Rem_btn(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new ReminderPage());
         }
 
         private void BottomMenu_btn(object sender, EventArgs e)

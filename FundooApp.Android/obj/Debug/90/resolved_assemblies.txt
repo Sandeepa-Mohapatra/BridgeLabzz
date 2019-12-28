@@ -1,4 +1,6 @@
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\FundooApp.Android.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\CardView.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\CardViewNetStandard.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\Firebase.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\FundooApp.dll
@@ -7,6 +9,8 @@ C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\androi
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\mscorlib.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.Droid.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Core.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Numerics.dll
@@ -65,6 +69,8 @@ C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\androi
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\Xamarin.GooglePlayServices.Basement.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\Xamarin.GooglePlayServices.Flags.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\Xamarin.GooglePlayServices.Tasks.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Resources.ResourceManager.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Runtime.Extensions.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\netstandard.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Data.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Transactions.dll
@@ -76,5 +82,12 @@ C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\androi
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.ServiceModel.Internals.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Web.Services.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Threading.Tasks.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Collections.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Diagnostics.Debug.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Reflection.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Threading.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Linq.dll
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Reflection.Extensions.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\Mono.Security.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.WindowsRuntime.dll

@@ -29,5 +29,15 @@ namespace FundooApp.View
             await Navigation.PushModalAsync(new Dashboard.Dashboard());
            
         }
+
+        private void Back_btn(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Arc_btn(object sender, EventArgs e)
+        {
+
+        }
     }
 }

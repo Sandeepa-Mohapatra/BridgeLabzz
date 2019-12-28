@@ -45,7 +45,7 @@ namespace FundooApp.View.Dashboard
 
         private async void Create_btn(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new CreateNotePage()));
+            await Navigation.PushModalAsync(new CreateNotePage());
         }
 
         protected async override void OnAppearing()
@@ -80,7 +80,7 @@ namespace FundooApp.View.Dashboard
         private void lvItemTapped(object sender, ItemTappedEventArgs e)
         {         
                    
-            Navigation.PushModalAsync(new UpdateNotePage(e.Item ));
+            Navigation.PushModalAsync(new NavigationPage(new UpdateNotePage(e.Item )));
            
         }
 

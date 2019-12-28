@@ -15,6 +15,17 @@ namespace FundooApp.View
         public ReminderPage()
         {
             InitializeComponent();
+            MainDatePicker.MinimumDate = DateTime.Now;
+        }
+
+        private void MainDatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            MainLabel.Text = e.NewDate.ToLongDateString();
+        }
+
+        private void Save_btn(object sender, EventArgs e)
+        {
+
         }
     }
 }

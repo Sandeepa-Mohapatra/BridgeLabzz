@@ -46,7 +46,7 @@ namespace FundooApp.View
 
         private void Label_btn(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new LabelPage(Noteid,Notes,Title));
         }
         protected override void OnDisappearing()
         {

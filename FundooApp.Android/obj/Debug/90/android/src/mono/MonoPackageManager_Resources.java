@@ -3,11 +3,15 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "FundooApp.Android.dll" comes first in this list. */
 		"FundooApp.Android.dll",
+		"CardView.dll",
+		"CardViewNetStandard.dll",
 		"Firebase.dll",
 		"FormsViewGroup.dll",
 		"FundooApp.dll",
 		"LiteDB.dll",
 		"Newtonsoft.Json.dll",
+		"Rg.Plugins.Popup.dll",
+		"Rg.Plugins.Popup.Droid.dll",
 		"System.Reactive.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",

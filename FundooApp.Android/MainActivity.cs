@@ -22,6 +22,7 @@ namespace FundooApp.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             FirebaseApp.InitializeApp(Application.Context);
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }

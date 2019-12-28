@@ -5,13 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="FundooApp.View.UpdateNotePage">
-    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="arc1.png" Clicked="Arc_btn"/>
+        <ToolbarItem IconImageSource="share.png" Clicked="Share_btn"/>
+        <ToolbarItem IconImageSource="rem2.png" Clicked="Rem_btn"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        
+            <StackLayout>
             <RelativeLayout>
             <StackLayout>
                     
-                        <Grid>
+                 <!--<Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="*"/>
@@ -22,17 +27,19 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                        <StackLayout Margin="10,0,0,0">
+                        <StackLayout  Margin="10,0,0,0">
                             <ImageButton Source="back.png" Clicked="Back_btn" HorizontalOptions="Start" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"/>
                         </StackLayout>
-                        <StackLayout Grid.Row="0" Grid.Column="2"  Orientation="Horizontal" BackgroundColor="Transparent" Spacing="20" IsClippedToBounds="True">
+                        <StackLayout  Orientation="Horizontal" BackgroundColor="Transparent" Spacing="20">
                             
-                            <ImageButton Source="pin.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"/>
+                        <ImageButton Source="pin.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"/>
                         <ImageButton Source="rem2.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"/>
-                        <ImageButton Source="arc.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" Clicked="Arc_btn"/>
-                    </StackLayout>
+                            <ImageButton Source="arc.png" HorizontalOptions="End" HeightRequest="40" WidthRequest="40" BackgroundColor="Transparent" Clicked="Arc_btn"/>
 
-                </Grid>
+
+                        </StackLayout>
+
+                </Grid>-->
                       
                 </StackLayout>
 

@@ -53,9 +53,6 @@ namespace FundooApp.View.Dashboard
             #endregion
         }
 
-        private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-
-        }
+      
     }
 }

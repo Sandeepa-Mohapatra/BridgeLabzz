@@ -6,10 +6,24 @@
              mc:Ignorable="d"
              x:Class="FundooApp.View.ReminderPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" WidthRequest="400" HeightRequest="60" >
+           <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            
+            <StackLayout  Orientation="Horizontal">
+                    <Label Text="Date" TextColor="Black" FontAttributes="Bold" FontSize="Subtitle"/>
+                    <DatePicker x:Name="MainDatePicker" MinimumDate="{Binding Date}" MaximumDate="12/31/2020" DateSelected="MainDatePicker_DateSelected" />
+                <Label x:Name="MainLabel"  FontSize="20" TextColor="Blue" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                    <Label Text="Time" TextColor="Black" FontAttributes="Bold" FontSize="Subtitle"/>
+                    <TimePicker x:Name="TimePicker12">
+                    <TimePicker.Format>hh:mm tt</TimePicker.Format>
+                </TimePicker>
+            </StackLayout>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Button Text="Save" Clicked="Save_btn" BackgroundColor="Pink"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
     </ContentPage.Content>
 </ContentPage>
