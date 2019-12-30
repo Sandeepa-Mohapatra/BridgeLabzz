@@ -1,17 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=DashBoardMaster.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace FundooApp.View.Dashboard
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Collections.ObjectModel;
+    using System.ComponentModel;
+    using System.Linq;
+    using System.Runtime.CompilerServices;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DashboardMaster : ContentPage
     {
@@ -34,10 +40,11 @@ namespace FundooApp.View.Dashboard
                 MenuItems = new ObservableCollection<DashboardMasterMenuItem>(new[]
                 {
                     new DashboardMasterMenuItem { Id = 0, Title = "Notes",Icon = "note1.png" , TargetType=typeof(DashboardDetail) },
-                    new DashboardMasterMenuItem { Id = 1, Title = "Reminder" ,Icon = "rem1.png" , TargetType=typeof(ReminderPage)},
+                    new DashboardMasterMenuItem { Id = 1, Title = "Reminder" ,Icon = "rem1.png" , TargetType=typeof(ReminderNotePage)},
                     new DashboardMasterMenuItem { Id = 2, Title = "Create New Label",Icon = "Create.png" , TargetType=typeof(LabelPage) },
                     new DashboardMasterMenuItem { Id = 3, Title = "Archive" ,Icon = "arc.png" , TargetType=typeof(ArchivePage)},
                     new DashboardMasterMenuItem { Id = 4, Title = "Delete",Icon = "del1.png" , TargetType=typeof(DeletePage) },
+                    
                 });
             }
 

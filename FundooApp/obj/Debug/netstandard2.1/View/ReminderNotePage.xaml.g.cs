@@ -8,33 +8,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FundooApp.View.Dashboard.DashboardDetail.xaml", "View/Dashboard/DashboardDetail.xaml", typeof(global::FundooApp.View.Dashboard.DashboardDetail))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("FundooApp.View.ReminderNotePage.xaml", "View/ReminderNotePage.xaml", typeof(global::FundooApp.View.ReminderNotePage))]
 
-namespace FundooApp.View.Dashboard {
+namespace FundooApp.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\Dashboard\\DashboardDetail.xaml")]
-    public partial class DashboardDetail : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\ReminderNotePage.xaml")]
+    public partial class ReminderNotePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ToolbarItem Gridview;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.SearchBar Searchbar;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ListView MainListView;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.ListView MainListView1;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(DashboardDetail));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ReminderNotePage));
             Gridview = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ToolbarItem>(this, "Gridview");
-            Searchbar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.SearchBar>(this, "Searchbar");
             MainListView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "MainListView");
-            MainListView1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "MainListView1");
         }
     }
 }

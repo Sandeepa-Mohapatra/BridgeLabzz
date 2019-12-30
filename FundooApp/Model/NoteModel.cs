@@ -14,5 +14,8 @@ namespace FundooApp.Model
         public bool IsTrash { get; set; }
 
         public string Label { get; set; }
+        public string Date { get; set; }
+        public string Time { get; set; }
+        public bool IsPin { get; set; }
     }
 }

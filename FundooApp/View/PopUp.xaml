@@ -27,7 +27,7 @@
                     <Button BackgroundColor="Red" Clicked="Blue_btn" CornerRadius="80"/>
                 </Frame>
                 <Frame CornerRadius="80" WidthRequest="10" HeightRequest="10" HasShadow="True" BackgroundColor="BlueViolet">
-                    <Button BackgroundColor="BlueViolet" Clicked="Blue_btn" CornerRadius="80"/>
+                    <Button BackgroundColor="BlueViolet" Clicked="Blue_btn" CornerRadius="80" x:Name="BlueViolet"/>
                 </Frame>
             </StackLayout>
             <StackLayout>

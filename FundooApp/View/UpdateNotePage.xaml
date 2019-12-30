@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="FundooApp.View.UpdateNotePage">
     <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="pin.png" Clicked="Pin_btn"/>
         <ToolbarItem IconImageSource="arc1.png" Clicked="Arc_btn"/>
         <ToolbarItem IconImageSource="share.png" Clicked="Share_btn"/>
         <ToolbarItem IconImageSource="rem2.png" Clicked="Rem_btn"/>

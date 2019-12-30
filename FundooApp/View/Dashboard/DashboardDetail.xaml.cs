@@ -1,19 +1,25 @@
-﻿using Firebase.Database;
-using FundooApp.Model;
-using FundooApp.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using Xamarin.Forms.Internals;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=DashBoardDeails.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace FundooApp.View.Dashboard
 {
+    using Firebase.Database;
+    using FundooApp.Model;
+    using FundooApp.ViewModel;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Collections.Generic;
+    using Xamarin.Forms.Internals;
+
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DashboardDetail : ContentPage
     {
@@ -22,8 +28,7 @@ namespace FundooApp.View.Dashboard
         private Grid myGrid = new Grid();
         public DashboardDetail()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
            
         }    
 
@@ -47,20 +52,56 @@ namespace FundooApp.View.Dashboard
         {
             await Navigation.PushModalAsync(new CreateNotePage());
         }
-
+        List<NoteModel> pinnotes = new List<NoteModel>();
+        List<NoteModel> unpinnotes = new List<NoteModel>();
+        List<NoteModel> notes = new List<NoteModel>();
+        List<NoteModel> Notes = new List<NoteModel>();
         protected async override void OnAppearing()
         {
-            List<NoteModel> notes=new List<NoteModel>();
+            List<NoteModel> pinnotes=new List<NoteModel>();
+            List<NoteModel> unpinnotes = new List<NoteModel>();
+            List<string> notes = new List<string>();
             var Title =await u.RetriveNote();
            foreach(var note in Title)
            {
-                if (note.IsArchieve == false && note.IsTrash == false)
+                if (note.IsArchieve == false && note.IsTrash == false )
                 {
-                    notes.Add(note);
-                }
+                    notes.Add(note.Title);
+                    Notes.Add(note);
+                    if (note.IsPin == true)
+                    {
+                        pinnotes.Add(note);
+                    }  
+                    else
+                    {
+                        unpinnotes.Add(note);
+                    }
+
+                    
+                }               
+              
            }
-            MainListView.ItemsSource = notes;            
-           
+            MainListView.ItemsSource = pinnotes;
+            MainListView1.ItemsSource = unpinnotes;
+            //foreach (var note in Title)
+            //{
+            //    if (note.IsArchieve == false && note.IsTrash == false && note.IsPin == true)
+            //    {
+
+            //        pinnotes.Add(note);
+
+
+            //    }
+            //    if (note.IsArchieve == false && note.IsTrash == false && note.IsPin == false)
+            //    {
+            //        unpinnotes.Add(note);
+            //    }
+
+            //}
+
+            //MainListView1.ItemsSource = unpinnotes;
+            //MainListView1.ItemsSource = unpinnotes;
+
         }
         private void CreateGrid()
         {
@@ -80,7 +121,7 @@ namespace FundooApp.View.Dashboard
         private void lvItemTapped(object sender, ItemTappedEventArgs e)
         {         
                    
-            Navigation.PushModalAsync(new NavigationPage(new UpdateNotePage(e.Item )));
+            Navigation.PushModalAsync(new NavigationPage(new UpdateNotePage(e.Item)));
            
         }
 
@@ -101,5 +142,18 @@ namespace FundooApp.View.Dashboard
             
 
         }
+
+        private void Search_btn(object sender, EventArgs e)
+        {
+            var searchnote = Searchbar.Text.ToLower();
+            
+            MainListView.ItemsSource = Notes.Where(x => x.Equals(searchnote));
+        }
+
+        //private void Search_btn(object sender, TextChangedEventArgs e)
+        //{
+        //    var searchnote = Searchbar.Text;
+        //    MainListView.ItemsSource = Notes.Where(x => x.Title.Equals(searchnote));            
+        //}
     }
 }

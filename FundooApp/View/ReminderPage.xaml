@@ -6,24 +6,59 @@
              mc:Ignorable="d"
              x:Class="FundooApp.View.ReminderPage">
     <ContentPage.Content>
-        <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" WidthRequest="400" HeightRequest="60" >
-           <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            
-            <StackLayout  Orientation="Horizontal">
-                    <Label Text="Date" TextColor="Black" FontAttributes="Bold" FontSize="Subtitle"/>
-                    <DatePicker x:Name="MainDatePicker" MinimumDate="{Binding Date}" MaximumDate="12/31/2020" DateSelected="MainDatePicker_DateSelected" />
-                <Label x:Name="MainLabel"  FontSize="20" TextColor="Blue" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                    <Label Text="Time" TextColor="Black" FontAttributes="Bold" FontSize="Subtitle"/>
-                    <TimePicker x:Name="TimePicker12">
-                    <TimePicker.Format>hh:mm tt</TimePicker.Format>
-                </TimePicker>
-            </StackLayout>
-                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                    <Button Text="Save" Clicked="Save_btn" BackgroundColor="Pink"/>
+        <StackLayout Margin="0,30,0,30" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+            <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" WidthRequest="300">
+                <StackLayout>
+                    <StackLayout
+                    BackgroundColor="Transparent" 
+                    Margin="0,0,0,60">
+                        <Image
+                    Source="img3.png"
+                    WidthRequest="60"
+                    HorizontalOptions="Center" 
+                    Margin="0,20,0,0"/>
+                        <Label
+                    
+                    Text="Reminder"
+                    FontSize="Large" 
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center" 
+                    TextColor="MediumVioletRed"
+                    Margin="5,20,20,0"/>
+                        <Label
+                    
+                    Text="Welcome To FundooNotes"
+                    FontSize="Large" 
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center" 
+                    TextColor="SeaGreen"
+                    Margin="5,20,20,0"/>
+                    </StackLayout>
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+                        <StackLayout  Orientation="Horizontal">
+                            <Label Text="Date" TextColor="Black" FontAttributes="Bold" FontSize="Subtitle"/>
+                            <DatePicker x:Name="MainDatePicker" MinimumDate="{Binding Date}" MaximumDate="12/31/2020" DateSelected="MainDatePicker_DateSelected" />
+                            <Label x:Name="MainLabel"  FontSize="20" TextColor="Blue" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Time" TextColor="Black" FontAttributes="Bold" FontSize="Subtitle" x:Name="TimePicker"/>
+                            <TimePicker x:Name="_timePicker"
+                    Time="11:00:00"
+                    Format="T"
+                    PropertyChanged="OnTimePickerPropertyChanged" />
+
+                        </StackLayout>
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Button Text="Save" Clicked="Save_btn" BackgroundColor="Pink"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Button Text="Geocoding" Clicked="Geocoding_btn"/>
+                            <Label Text="Location" x:Name="Location"/>
+                        </StackLayout>
+                    </StackLayout>
                 </StackLayout>
-            </StackLayout>
-        </Frame>
+            </Frame>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

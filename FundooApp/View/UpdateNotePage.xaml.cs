@@ -1,4 +1,11 @@
-﻿using Firebase.Database;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file=UpdateNotePage.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Sandeepa Mohapatra"/>
+// --------------------------------------------------------------------------------------------------------------------
+
+using Firebase.Database;
 using Firebase.Database.Query;
 using FundooApp.Model;
 using Rg.Plugins.Popup.Services;
@@ -10,14 +17,14 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 namespace FundooApp.View
 {
     
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UpdateNotePage : ContentPage
     {
-        private string noteid,note,title;
+        private string noteid,note,title,Date,label,Time;
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
         public UpdateNotePage(object b)
         {
@@ -30,11 +37,14 @@ namespace FundooApp.View
             noteid = s.Id;
             note = s.Notes;
             title = s.Title;
+            Date = s.Date;
+            label = s.Label;
+            Time = s.Time;
         }
 
         private void Save(object sender, EventArgs e)
         {
-
+            
         }
         protected override bool OnBackButtonPressed()
         {
@@ -115,12 +125,12 @@ namespace FundooApp.View
 
         private void Rem_btn(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new ReminderPage());
+            Navigation.PushModalAsync(new ReminderPage(noteid,note, title,label));
         }
 
         private void BottomMenu_btn(object sender, EventArgs e)
         {
-            PopupNavigation.Instance.PushAsync(new View.PopUp(note,title,noteid));
+            PopupNavigation.Instance.PushAsync(new View.PopUp(note,title,noteid,Date,Time));
         }
 
         private void Back_btn(object sender, EventArgs e)
@@ -129,6 +139,12 @@ namespace FundooApp.View
             firebaseobj.Child("detail").Child(token).Child("Notes").Child(noteid).PutAsync<NoteModel>(new NoteModel() { Title = Title.Text, Notes = Notes.Text });
             Navigation.PopAsync(true);
             Navigation.PushModalAsync(new Dashboard.Dashboard());            
+        }
+        private void Pin_btn(object sender, EventArgs e)
+        {
+            string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+            firebaseobj.Child("detail").Child(token).Child("Notes").Child(noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title.Text, Notes = Notes.Text, IsPin = true,Date=Date,Label=label,Time=Time });
+            Navigation.PushModalAsync(new Dashboard.Dashboard());
         }
     }
 }

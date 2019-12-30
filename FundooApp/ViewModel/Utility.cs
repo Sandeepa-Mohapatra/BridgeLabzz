@@ -75,15 +75,14 @@ namespace FundooApp.ViewModel
                IsArchieve=item.Object.IsArchieve,
                IsTrash=item.Object.IsTrash,
                Id=item.Key,
-               Label=item.Object.Label
-
+               Label=item.Object.Label,
+               Date=item.Object.Date,
+               Time=item.Object.Time,
+               IsPin = item.Object.IsPin
             }).ToList();
             
-            return notesData;
-           
+            return notesData;           
            
         }
-
-
     }
 }
