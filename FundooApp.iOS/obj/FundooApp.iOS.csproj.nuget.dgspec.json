@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BridgeLabzz\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj": {}
+    "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj": {}
   },
   "projects": {
-    "D:\\BridgeLabzz\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj": {
+    "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BridgeLabzz\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj",
         "projectName": "FundooApp.iOS",
-        "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj",
+        "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj",
         "packagesPath": "C:\\Users\\BridgeLabs\\.nuget\\packages\\",
-        "outputPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp.iOS\\obj\\",
+        "outputPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj": {
-                "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj"
+              "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj": {
+                "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj"
               }
             }
           }
@@ -46,9 +46,17 @@
               "target": "Package",
               "version": "[4.0.4, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.13.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.3.1, )"
+            },
+            "Xamarin.Firebase.Messaging": {
+              "target": "Package",
+              "version": "[71.1740.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
@@ -75,14 +83,14 @@
         }
       }
     },
-    "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj": {
+    "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj",
+        "projectUniqueName": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj",
         "projectName": "FundooApp",
-        "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj",
+        "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj",
         "packagesPath": "C:\\Users\\BridgeLabs\\.nuget\\packages\\",
-        "outputPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\obj\\",
+        "outputPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -118,6 +126,14 @@
               "target": "Package",
               "version": "[4.0.4, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.13.1, )"
+            },
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[1.2.0.223, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.3.1, )"
@@ -125,6 +141,14 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.4.0.991220-pre3, )"
+            },
+            "XamarinForms.CardView": {
+              "target": "Package",
+              "version": "[1.1.1.5, )"
+            },
+            "XamarinForms.CardView.NetStandard": {
+              "target": "Package",
+              "version": "[1.1.1.5, )"
             }
           },
           "imports": [
