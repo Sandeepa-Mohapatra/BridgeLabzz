@@ -23,8 +23,9 @@ namespace FundooApp.View
     {
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
         string Noteid, Notes, Titles,Date,Time;
+        bool IsPin, IsTrash, IsArchive;
         ViewModel.Utility u = new ViewModel.Utility();
-        public LabelPage(string noteid,string notes,string title,string date,string time)
+        public LabelPage(string noteid,string notes,string title,string date,string time, bool ispin, bool istrash, bool isarchive)
         {
             InitializeComponent();
             Noteid = noteid;
@@ -32,12 +33,16 @@ namespace FundooApp.View
             Titles = title;
             Date = date;
             Time = time;
+            IsPin = ispin;
+            IsTrash = istrash;
+            IsArchive = isarchive;
+
         }
 
         private async void AddLabel_btn(object sender, EventArgs e)
         {
             string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
-            await firebaseobj.Child("detail").Child(token).Child("Notes").Child(Noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Titles, Notes = Notes,Date=Date, Label=label.Text});
+            await firebaseobj.Child("detail").Child(token).Child("Notes").Child(Noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Titles, Notes = Notes, Date = Date, Label = label.Text, IsPin = IsPin, IsTrash = IsTrash ,IsArchieve=IsArchive}) ;
             
             var notes = await u.RetriveNote();
             foreach (var note in notes)

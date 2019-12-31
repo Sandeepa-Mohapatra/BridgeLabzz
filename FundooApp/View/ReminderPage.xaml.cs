@@ -25,8 +25,21 @@ namespace FundooApp.View
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
         string Noteid, Notes, Titles, NLabel;
         string _triggerTime;
+        bool IsPin, IsTrash, IsArchive;
         ViewModel.Utility u = new ViewModel.Utility();
-
+        public ReminderPage(string noteid, string notes, string title, string label, bool ispin, bool istrash, bool isarchive)
+        {
+            InitializeComponent();
+            MainDatePicker.MinimumDate = DateTime.Now;
+            Noteid = noteid;
+            Notes = notes;
+            Titles = title;
+            NLabel = label;
+            IsPin = ispin;
+            IsTrash = istrash;
+            IsArchive = isarchive;
+            //var Time = TimePicker12.Time;
+        }
         private async void Geocoding_btn(object sender, EventArgs e)
         {
             try
@@ -73,16 +86,7 @@ namespace FundooApp.View
             
         }
 
-        public ReminderPage(string noteid, string notes, string title, string label)
-        {
-            InitializeComponent();
-            MainDatePicker.MinimumDate = DateTime.Now;
-            Noteid = noteid;
-            Notes = notes;
-            Titles = title;
-            NLabel = label;
-            //var Time = TimePicker12.Time;
-        }
+        
 
         private void MainDatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
@@ -93,10 +97,9 @@ namespace FundooApp.View
         {
             var f = MainLabel.Text +" "+ _triggerTime;
             string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
-            await firebaseobj.Child("detail").Child(token).Child("Notes").Child(Noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Titles, Notes = Notes, Label = NLabel, Date = f });
+            await firebaseobj.Child("detail").Child(token).Child("Notes").Child(Noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Titles, Notes = Notes, Label = NLabel, Date = f, IsPin = IsPin ,IsTrash=IsTrash,IsArchieve=IsArchive}) ;
             await Navigation.PushModalAsync(new Dashboard.Dashboard());
         }
-
 
     }
 }

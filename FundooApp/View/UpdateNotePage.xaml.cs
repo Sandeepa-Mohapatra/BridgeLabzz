@@ -25,6 +25,7 @@ namespace FundooApp.View
     public partial class UpdateNotePage : ContentPage
     {
         private string noteid,note,title,Date,label,Time;
+        bool IsPin, IsArchive, IsTrash;
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
         public UpdateNotePage(object b)
         {
@@ -40,6 +41,9 @@ namespace FundooApp.View
             Date = s.Date;
             label = s.Label;
             Time = s.Time;
+            IsPin = s.IsPin;
+            IsArchive = s.IsArchieve;
+            IsTrash = s.IsTrash;
         }
 
         private void Save(object sender, EventArgs e)
@@ -74,14 +78,14 @@ namespace FundooApp.View
         private void Arc_btn(object sender, EventArgs e)
         {
             string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
-            firebaseobj.Child("detail").Child(token).Child("Notes").Child(noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title.Text, Notes = Notes.Text,IsArchieve=true });
+            firebaseobj.Child("detail").Child(token).Child("Notes").Child(noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title.Text, Notes = Notes.Text,IsArchieve=true,IsPin=IsPin });
             Navigation.PushModalAsync(new Dashboard.Dashboard());
         }
 
         public void Trash_btn(object sender, EventArgs e)
         {
             string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
-            firebaseobj.Child("detail").Child(token).Child("Notes").Child(noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title.Text, Notes = Notes.Text ,IsTrash=true});
+            firebaseobj.Child("detail").Child(token).Child("Notes").Child(noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title.Text, Notes = Notes.Text ,IsTrash=true, IsPin = IsPin });
             Navigation.PushModalAsync(new Dashboard.Dashboard());
         }
 
@@ -99,6 +103,11 @@ namespace FundooApp.View
            
             Navigation.PushModalAsync(new Dashboard.Dashboard());
              base.OnDisappearing();
+        }
+
+        private void Collaborator_btn(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new Collaborator());
         }
 
         private void Blue_btn(object sender, EventArgs e)
@@ -125,12 +134,12 @@ namespace FundooApp.View
 
         private void Rem_btn(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new ReminderPage(noteid,note, title,label));
+            Navigation.PushModalAsync(new ReminderPage(noteid,note, title,label,IsPin,IsTrash,IsArchive));
         }
 
         private void BottomMenu_btn(object sender, EventArgs e)
         {
-            PopupNavigation.Instance.PushAsync(new View.PopUp(note,title,noteid,Date,Time));
+            PopupNavigation.Instance.PushAsync(new View.PopUp(note,title,noteid,Date,Time, IsPin, IsTrash, IsArchive));
         }
 
         private void Back_btn(object sender, EventArgs e)

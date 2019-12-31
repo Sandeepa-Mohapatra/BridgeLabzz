@@ -31,7 +31,14 @@ namespace FundooApp.Droid.UserServices
         public string User()
         {
             string userid = FirebaseAuth.Instance.CurrentUser.Uid;
+            string userid1 = FirebaseAuth.Instance.CurrentUser.Email;
+            
             return userid;
+        }
+        public string UserId()
+        {            
+            string Currentuserid = FirebaseAuth.Instance.CurrentUser.Email;
+            return Currentuserid;
         }
         /// <summary>
         /// Adds the email with password.

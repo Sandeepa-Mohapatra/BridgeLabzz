@@ -24,8 +24,9 @@ namespace FundooApp.View
     public partial class PopUp : PopupPage
     {
         private string Noteid,Notes,Title,Date,Time;
+        bool IsPin, IsTrash, IsArchive;
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
-        public PopUp(string note,string title,string noteid,string date,string time)
+        public PopUp(string note,string title,string noteid,string date,string time ,bool ispin, bool istrash, bool isarchive)
         {           
             InitializeComponent();
             Noteid = noteid;
@@ -33,6 +34,9 @@ namespace FundooApp.View
             Title = title;
             Date = date;
             Time = time;
+            IsPin = ispin;
+            IsTrash = istrash;
+            IsArchive = isarchive;
         }
 
         private void Blue_btn(object sender, EventArgs e)
@@ -55,7 +59,7 @@ namespace FundooApp.View
 
         private void Label_btn(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new LabelPage(Noteid,Notes,Title,Date,Time));
+            Navigation.PushModalAsync(new LabelPage(Noteid,Notes,Title,Date,Time,IsPin,IsTrash,IsArchive));
         }
         protected override void OnDisappearing()
         {
