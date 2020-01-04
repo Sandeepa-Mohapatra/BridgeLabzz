@@ -15,39 +15,42 @@
           <x:Array Type="{x:Type x:String}">
               <x:String>Notes</x:String>
               <x:String>Reminder</x:String>
-              <x:String>Create New Label </x:String>
+              <x:String>Create New Label</x:String>
               <x:String>Archive</x:String>
               <x:String>Delete</x:String>
           </x:Array>
       </d:ListView.ItemsSource>
       <ListView.Header>
-        <Grid BackgroundColor="Blue">
+        <Grid BackgroundColor="#2C5CF8">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="10"/>
           </Grid.ColumnDefinitions>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="10"/>
-          </Grid.RowDefinitions>
-          <Label
-              Grid.Column="1"
-              Grid.Row="2"
-              Text="FundooApp"
-              TextColor="White"              
-              FontSize="Title"
-              Style="{DynamicResource SubtitleStyle}"/>
-        </Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Orientation="Horizontal"                                
+                                 Grid.Column="1"
+                                 Grid.Row="2">
+                        <Image Source="{Binding icon}" x:Name="Icon" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30"/>
+                        <Label             
+                         x:Name="Email"              
+                         TextColor="White"              
+                         FontSize="Small"
+                         Style="{DynamicResource SubtitleStyle}"/>
+                    </StackLayout>
+                </Grid>
       </ListView.Header>
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
-          <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,10,0,10" Spacing="20">
-               <Image Source="{Binding Icon}" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" />
-               <Label Text="{Binding Title}" FontSize="Medium" VerticalOptions="Center" TextColor="Black" />
+          <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,10,0,10" Spacing="20" Margin="0,0,0,20">
+               <Image Source="{Binding Icon}" WidthRequest="25" BackgroundColor="Transparent" HeightRequest="25" VerticalOptions="Center" />
+               <Label Text="{Binding Title}" FontSize="Small" FontFamily="Times New Roman" VerticalOptions="Center" TextColor="Black" />
           </StackLayout>
         
           </ViewCell>

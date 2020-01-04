@@ -107,7 +107,7 @@ namespace FundooApp.View
 
         private void Collaborator_btn(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new Collaborator());
+            Navigation.PushModalAsync(new Collaborator(note,title,label,Date,IsArchive,IsTrash,IsPin));
         }
 
         private void Blue_btn(object sender, EventArgs e)

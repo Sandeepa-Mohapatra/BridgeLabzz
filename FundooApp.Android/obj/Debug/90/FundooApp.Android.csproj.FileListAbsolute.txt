@@ -1319,3 +1319,4 @@ C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\stamp\
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\res\drawable\icon.png

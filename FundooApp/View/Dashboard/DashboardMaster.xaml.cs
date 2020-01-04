@@ -26,7 +26,8 @@ namespace FundooApp.View.Dashboard
         public DashboardMaster()
         {
             InitializeComponent();
-
+            Icon.Source = "icon.png";
+            Email.Text = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().UserId();
             BindingContext = new DashboardMasterViewModel();
             ListView = MenuItemsListView;
         }
@@ -37,11 +38,13 @@ namespace FundooApp.View.Dashboard
 
             public DashboardMasterViewModel()
             {
+                
                 MenuItems = new ObservableCollection<DashboardMasterMenuItem>(new[]
                 {
                     new DashboardMasterMenuItem { Id = 0, Title = "Notes",Icon = "note1.png" , TargetType=typeof(DashboardDetail) },
-                    new DashboardMasterMenuItem { Id = 1, Title = "Reminder" ,Icon = "rem1.png" , TargetType=typeof(ReminderNotePage)},
-                    new DashboardMasterMenuItem { Id = 2, Title = "Create New Label",Icon = "Create.png" , TargetType=typeof(LabelPage) },
+                    new DashboardMasterMenuItem { Id = 1, Title = "Reminder" ,Icon = "rem2.png" , TargetType=typeof(ReminderNotePage)},
+
+                    new DashboardMasterMenuItem { Id = 2, Title = "Create New Label",Icon = "Create2.png" , TargetType=typeof(LabelPage) },
                     new DashboardMasterMenuItem { Id = 3, Title = "Archive" ,Icon = "arc.png" , TargetType=typeof(ArchivePage)},
                     new DashboardMasterMenuItem { Id = 4, Title = "Delete",Icon = "del1.png" , TargetType=typeof(DeletePage) },
                     

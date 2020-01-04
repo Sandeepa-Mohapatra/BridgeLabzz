@@ -25,20 +25,26 @@ namespace FundooApp.Interfaces
         /// <summary>
         /// Return the token
         /// </summary>
-        /// <returns></returns>
-        public  string User();
+        /// <returns></returns>        
+        public string User();
         /// <summary>
         /// Login with email and password.
         /// </summary>
         /// <param name="email">Email</param>
         /// <param name="password">Password</param>
-        /// <returns></returns>
+        /// <returns></returns>        
         public Task<string> LoginWithEmailPassword(string email, string password);
         /// <summary>
         /// Forgot password.
         /// </summary>
         /// <param name="email">The email.</param>
         public void ForgotPassword(string email);
-       
+        /// <summary>
+        /// Users the identifier.
+        /// </summary>
+        /// <returns></returns>
+        public string UserId();
+
+
     }
 }

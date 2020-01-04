@@ -69,7 +69,7 @@ namespace FundooApp
                             await DisplayAlert("Message", "Registered Successfully", "Ok");
                             ///Navigate to another page
                             await Navigation.PushModalAsync(new LoginPage());
-                            this.Navigation.RemovePage(this.Navigation.NavigationStack[this.Navigation.NavigationStack.Count - 2]);
+                          
                         }
                         else
                         {

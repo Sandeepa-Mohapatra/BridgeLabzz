@@ -15,6 +15,7 @@ namespace FundooApp.Model
         public string LastName { get; set; }
         public string EmailId { get; set; }
         public string Password { get; set; }
+        public string Key { get; set; }
         
     }
 }
