@@ -6,9 +6,9 @@ namespace FundooApp.Model
 {
     class CollaboratorModel
     {
-        string SenderId { get; set; }
-        string ReciverId { get; set; }
-        string Id { get; set; }
-        string CollId { get; set; }
+       public string SenderId { get; set; }
+        public string ReciverId { get; set; }
+        public string NoteId { get; set; }
+        public string CollId { get; set; }
     }
 }

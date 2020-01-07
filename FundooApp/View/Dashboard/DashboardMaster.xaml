@@ -33,10 +33,15 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="10"/>
                     </Grid.RowDefinitions>
-                    <StackLayout Orientation="Horizontal"                                
+                    <StackLayout Orientation="Vertical"                                
                                  Grid.Column="1"
-                                 Grid.Row="2">
-                        <Image Source="{Binding icon}" x:Name="Icon" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="30" HeightRequest="30"/>
+                                 Grid.Row="2" HorizontalOptions="Center">
+                        <!--<ImageButton x:Name="imgChoosed" Clicked="ImageUpload_btn" HeightRequest="40"></ImageButton>-->
+                        
+                        <Label x:Name="name"
+                        TextColor="White"              
+                        FontSize="Small"/>
+                       
                         <Label             
                          x:Name="Email"              
                          TextColor="White"              

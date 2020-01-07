@@ -20,22 +20,30 @@ namespace FundooApp.View.Dashboard
 
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
+    using Firebase.Storage;
+    using Plugin.Media;
+    using System.Diagnostics;
+    using System.IO;
+    using Plugin.Media.Abstractions;
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DashboardDetail : ContentPage
     {
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
         ViewModel.Utility u = new ViewModel.Utility();
         private Grid myGrid = new Grid();
+        int count;
         public DashboardDetail()
         {
-            InitializeComponent();            
-           
-        }    
+            InitializeComponent();
+            
+
+        }
 
         private async void Signout_btn(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new LoginPage());
-            
+
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -58,31 +66,34 @@ namespace FundooApp.View.Dashboard
         List<NoteModel> Notes = new List<NoteModel>();
         protected async override void OnAppearing()
         {
-            List<NoteModel> pinnotes=new List<NoteModel>();
+            List<NoteModel> pinnotes = new List<NoteModel>();
             List<NoteModel> unpinnotes = new List<NoteModel>();
             List<string> notes = new List<string>();
-            var Title =await u.RetriveNote();
-           foreach(var note in Title)
-           {
-                if (note.IsArchieve == false && note.IsTrash == false )
+            var Title = await u.RetriveNote();
+            foreach (var note in Title)
+            {
+                if (note.IsArchieve == false && note.IsTrash == false)
                 {
                     notes.Add(note.Title);
                     Notes.Add(note);
                     if (note.IsPin == true)
                     {
+                        count++;
                         pinnotes.Add(note);
-                    }  
+                    }
                     else
                     {
+                        count++;
                         unpinnotes.Add(note);
                     }
 
-                    
-                }               
-              
-           }
+
+                }
+
+            }
             MainListView.ItemsSource = pinnotes;
             MainListView1.ItemsSource = unpinnotes;
+            Count.Text = "No of notes is: "+count;
             //foreach (var note in Title)
             //{
             //    if (note.IsArchieve == false && note.IsTrash == false && note.IsPin == true)
@@ -108,10 +119,10 @@ namespace FundooApp.View.Dashboard
             myGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(0.5, GridUnitType.Star) });
             myGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(0.5, GridUnitType.Star) });
             int rowIndex = 0;
-            while(rowIndex>=0)
+            while (rowIndex >= 0)
             {
                 myGrid.RowDefinitions.Add(new RowDefinition() { Height = 100 });
-                for(int columnIndex=0;columnIndex<2;columnIndex++)
+                for (int columnIndex = 0; columnIndex < 2; columnIndex++)
                 {
 
                 }
@@ -119,10 +130,10 @@ namespace FundooApp.View.Dashboard
         }
 
         private void lvItemTapped(object sender, ItemTappedEventArgs e)
-        {         
-                   
+        {
+
             Navigation.PushModalAsync(new NavigationPage(new UpdateNotePage(e.Item)));
-           
+
         }
 
         private void Grid_btn(object sender, EventArgs e)
@@ -138,22 +149,57 @@ namespace FundooApp.View.Dashboard
             //    Gridview.IconImageSource = "edit.png";
             //    MainGridView.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(20) });
             //}
-            
-            
+
+
 
         }
 
         private void Search_btn(object sender, EventArgs e)
         {
             var searchnote = Searchbar.Text.ToLower();
-            
+
             MainListView.ItemsSource = Notes.Where(x => x.Equals(searchnote));
         }
+        MediaFile file;
+        private async void ImageUpload_btn(object sender, EventArgs e)
+        {
+            await CrossMedia.Current.Initialize();
+            try
+            {
+                file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+                {
+                    PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium
+                });
+                if (file == null)
+                    return;
+                imgChoosed.Source = ImageSource.FromStream(() =>
+                {
+                    var imageStram = file.GetStream();
+                    return imageStram;
+                });
+                await StoreImages(file.GetStream());
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        public async Task<string> StoreImages(Stream imageStream)
+        {
+            var stroageImage = await new FirebaseStorage("xamarinfirebase-d3352.appspot.com")
+                .Child("XamarinMonkeys")
+                .Child("image.jpg")
+                .PutAsync(imageStream);
+            string imgurl = stroageImage;
+            return imgurl;
+        }
+
 
         //private void Search_btn(object sender, TextChangedEventArgs e)
         //{
         //    var searchnote = Searchbar.Text;
         //    MainListView.ItemsSource = Notes.Where(x => x.Title.Equals(searchnote));            
         //}
-    }
+    } 
 }

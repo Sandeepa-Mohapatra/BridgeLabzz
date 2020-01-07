@@ -46,13 +46,25 @@
               "target": "Package",
               "version": "[4.0.4, )"
             },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.13.1, )"
             },
+            "Plugin.CurrentActivity": {
+              "target": "Package",
+              "version": "[2.1.0.4, )"
+            },
             "Rg.Plugins.Popup": {
               "target": "Package",
               "version": "[1.2.0.223, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.4.10-beta, )"
             },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
@@ -131,6 +143,10 @@
               "target": "Package",
               "version": "[4.0.4, )"
             },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.13.1, )"
@@ -138,6 +154,10 @@
             "Rg.Plugins.Popup": {
               "target": "Package",
               "version": "[1.2.0.223, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[4.0.1.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

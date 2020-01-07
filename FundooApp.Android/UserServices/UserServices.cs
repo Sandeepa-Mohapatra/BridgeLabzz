@@ -4,12 +4,15 @@
 // </copyright>
 // <creator name="Sandeepa Mohapatra"/>
 // --------------------------------------------------------------------------------------------------------------------
+using System.IO;
 using System.Threading.Tasks;
 using Android.Gms.Extensions;
 using Firebase.Auth;
 using Firebase.Database;
+using Firebase.Database.Query;
 using FundooApp.Droid.UserServices;
 using FundooApp.Interfaces;
+using FundooApp.Model;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(UserServices))]
@@ -31,15 +34,18 @@ namespace FundooApp.Droid.UserServices
         public string User()
         {
             string userid = FirebaseAuth.Instance.CurrentUser.Uid;
-            string userid1 = FirebaseAuth.Instance.CurrentUser.Email;
-            
+           
+
             return userid;
         }
         public string UserId()
         {            
             string Currentuserid = FirebaseAuth.Instance.CurrentUser.Email;
+           
             return Currentuserid;
         }
+        string Name;
+       
         /// <summary>
         /// Adds the email with password.
         /// </summary>
@@ -78,6 +84,7 @@ namespace FundooApp.Droid.UserServices
               await FirebaseAuth.Instance.SendPasswordResetEmail(email);
             
         }
-       
+        
+
     }
 }

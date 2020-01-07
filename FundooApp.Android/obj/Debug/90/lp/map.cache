@@ -1,4 +1,7 @@
 FormsViewGroup
+Plugin.CurrentActivity
+Plugin.Media
+Plugin.Permissions
 Rg.Plugins.Popup.Droid
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime

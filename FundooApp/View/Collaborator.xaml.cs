@@ -19,7 +19,7 @@ namespace FundooApp.View
         List<string> CollList = new List<string>();
         string Noteid, Note, Title, Date, Label, Time;
         bool IsPin, IsArchive, IsTrash;
-        public Collaborator(string note,string title,string label,string date,bool isArchive,bool isTrash,bool isPin)
+        public Collaborator(string note,string noteid,string title,string label,string date,bool isArchive,bool isTrash,bool isPin)
         {
             InitializeComponent();
             Note = note;
@@ -29,6 +29,7 @@ namespace FundooApp.View
             IsPin = isPin;
             IsTrash = isTrash;
             IsArchive = isArchive;
+            Noteid = noteid;
 
             //string Email = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().UserId();
             //Owner.Text = Email;
@@ -46,11 +47,11 @@ namespace FundooApp.View
       
         private async void Add_btn(object sender, EventArgs e)
         {
-            string Email = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().UserId();
+            string Email = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
             CollList.Add(Email);
             var users = await firebaseobj.Child("detail").OnceAsync<DataModel>();
             
-            string uid = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+            //string uid = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
             //string id = n.Id;
             foreach (var item in users)
             {
@@ -59,11 +60,12 @@ namespace FundooApp.View
                 foreach (var items in s)
                 {
                     var d = items.Object.EmailId;
-                    if (d== Collid.Text)
+                    
+                    if (d == Collid.Text)
                     {
-                        await firebaseobj.Child("detail").Child(item.Key).Child("Notes").PostAsync<NoteModel>(new NoteModel() { Title = Title, Notes = Note, Label = Label }) ;
+                        await firebaseobj.Child("detail").Child(item.Key).Child("Collaborator").PostAsync<CollaboratorModel>(new CollaboratorModel() { SenderId = Email, NoteId = Noteid});
                         CollList.Add(d);
-                        break;
+                        
                     }
                     //else
                     //{

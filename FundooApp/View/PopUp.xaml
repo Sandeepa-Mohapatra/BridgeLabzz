@@ -21,14 +21,17 @@
             </StackLayout>
             <StackLayout Margin="0,120,0,0" Orientation="Horizontal">
                 <Frame CornerRadius="80" WidthRequest="10" HeightRequest="10" HasShadow="True" BackgroundColor="Orange">
-                    <Button BackgroundColor="Orange" Clicked="Blue_btn" CornerRadius="100"/>
+                    <Button BackgroundColor="Orange" Clicked="Orange_btn" x:Name="Org" Text="Orange" TextColor="White" CornerRadius="100"/>
                 </Frame>
                 <Frame CornerRadius="80" WidthRequest="10" HeightRequest="10" HasShadow="True" BackgroundColor="Red">
-                    <Button BackgroundColor="Red" Clicked="Blue_btn" CornerRadius="80"/>
+                    <Button BackgroundColor="Red" Clicked="Red_btn" x:Name="Red" Text="Red" TextColor="red" CornerRadius="100" />
                 </Frame>
                 <Frame CornerRadius="80" WidthRequest="10" HeightRequest="10" HasShadow="True" BackgroundColor="BlueViolet">
-                    <Button BackgroundColor="BlueViolet" Clicked="Blue_btn" CornerRadius="80" x:Name="BlueViolet"/>
+                    <Button BackgroundColor="BlueViolet" Clicked="Blue_btn"  TextColor="BlueViolet" x:Name="Blue"  CornerRadius="100" Text="BlueViolet"/>
                 </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="hello" x:Name="Lb"/>
             </StackLayout>
             <StackLayout>
                 <Button Text="ok" Clicked="Ok_btn"/>

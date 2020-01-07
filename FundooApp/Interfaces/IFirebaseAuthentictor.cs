@@ -8,6 +8,7 @@ namespace FundooApp.Interfaces
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Text;
     using System.Threading.Tasks;
     /// <summary>
@@ -45,6 +46,7 @@ namespace FundooApp.Interfaces
         /// <returns></returns>
         public string UserId();
 
+       
 
     }
 }

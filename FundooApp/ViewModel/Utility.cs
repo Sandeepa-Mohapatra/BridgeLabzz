@@ -78,11 +78,28 @@ namespace FundooApp.ViewModel
                Label=item.Object.Label,
                Date=item.Object.Date,
                Time=item.Object.Time,
-               IsPin = item.Object.IsPin
+               IsPin = item.Object.IsPin,
+               Color=item.Object.Color
             }).ToList();
             
             return notesData;           
            
+        }
+        string Name;
+        public async Task<string> NameMethod()
+        {
+            var token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+            var s = await firebaseobj.Child("detail").Child(token).Child("UserDetails").OnceAsync<DataModel>();
+
+            foreach (var items in s)
+            {
+                string f = items.Object.FirstName;
+                string l = items.Object.LastName;
+                string  Name = f + " " + l;
+
+            }
+            return Name;
+
         }
     }
 }

@@ -23,10 +23,13 @@ namespace FundooApp.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PopUp : PopupPage
     {
-        private string Noteid,Notes,Title,Date,Time;
+        private string Noteid,Notes,Title,Date,Time,Labels;
         bool IsPin, IsTrash, IsArchive;
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
-        public PopUp(string note,string title,string noteid,string date,string time ,bool ispin, bool istrash, bool isarchive)
+
+       
+
+        public PopUp(string note,string title,string noteid,string date,string time ,bool ispin, bool istrash, bool isarchive,string label)
         {           
             InitializeComponent();
             Noteid = noteid;
@@ -37,12 +40,36 @@ namespace FundooApp.View
             IsPin = ispin;
             IsTrash = istrash;
             IsArchive = isarchive;
+            Labels = label;
         }
 
+        private void Red_btn(object sender, EventArgs e)
+        {
+            var s = Red.Text;
+
+            string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+            firebaseobj.Child("detail").Child(token).Child("Notes").Child(Noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title, Notes = Notes, IsTrash = IsTrash, IsArchieve = IsArchive, IsPin = IsPin, Label = Labels, Color = s });
+            Navigation.PushModalAsync(new Dashboard.Dashboard());
+        }
+
+        private void Orange_btn(object sender, EventArgs e)
+        {
+            //var s = Org.BackgroundColor.ToHex();  
+            var s = Org.Text;
+
+            string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+            firebaseobj.Child("detail").Child(token).Child("Notes").Child(Noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title, Notes = Notes, IsTrash = IsTrash, IsArchieve = IsArchive, IsPin = IsPin, Label = Labels, Color = s });
+            Navigation.PushModalAsync(new Dashboard.Dashboard());
+
+        }
+        
         private void Blue_btn(object sender, EventArgs e)
         {
-            var g = e.ToString();
-            var h = sender.ToString();
+            var s = Blue.Text;
+
+            string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+            firebaseobj.Child("detail").Child(token).Child("Notes").Child(Noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title, Notes = Notes, IsTrash = IsTrash, IsArchieve = IsArchive, IsPin = IsPin, Label = Labels, Color = s });
+            Navigation.PushModalAsync(new Dashboard.Dashboard());
         }
 
         private void Ok_btn(object sender, EventArgs e)

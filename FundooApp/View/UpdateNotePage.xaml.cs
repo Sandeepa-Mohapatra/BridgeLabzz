@@ -24,7 +24,7 @@ namespace FundooApp.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UpdateNotePage : ContentPage
     {
-        private string noteid,note,title,Date,label,Time;
+        private string noteid,note,title,Date,label,Time,Color;
         bool IsPin, IsArchive, IsTrash;
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
         public UpdateNotePage(object b)
@@ -44,6 +44,7 @@ namespace FundooApp.View
             IsPin = s.IsPin;
             IsArchive = s.IsArchieve;
             IsTrash = s.IsTrash;
+            Color = s.Color;
         }
 
         private void Save(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace FundooApp.View
         {
             ///update details
             string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
-            firebaseobj.Child("detail").Child(token).Child("Notes").Child(noteid).PutAsync<NoteModel>(new NoteModel() { Title = Title.Text, Notes = Notes.Text  });
+            firebaseobj.Child("detail").Child(token).Child("Notes").Child(noteid).PutAsync<NoteModel>(new NoteModel() { Title = Title.Text, Notes = Notes.Text ,Color=Color,Label=label,IsArchieve=IsArchive,IsPin=IsPin,IsTrash=IsTrash });
             //Navigation.PushModalAsync(new Dashboard.Dashboard());
             return base.OnBackButtonPressed();
             
@@ -107,7 +108,7 @@ namespace FundooApp.View
 
         private void Collaborator_btn(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new Collaborator(note,title,label,Date,IsArchive,IsTrash,IsPin));
+            Navigation.PushModalAsync(new Collaborator(note,noteid,title,label,Date,IsArchive,IsTrash,IsPin));
         }
 
         private void Blue_btn(object sender, EventArgs e)
@@ -139,7 +140,7 @@ namespace FundooApp.View
 
         private void BottomMenu_btn(object sender, EventArgs e)
         {
-            PopupNavigation.Instance.PushAsync(new View.PopUp(note,title,noteid,Date,Time, IsPin, IsTrash, IsArchive));
+            PopupNavigation.Instance.PushAsync(new View.PopUp(note,title,noteid,Date,Time, IsPin, IsTrash, IsArchive,label));
         }
 
         private void Back_btn(object sender, EventArgs e)

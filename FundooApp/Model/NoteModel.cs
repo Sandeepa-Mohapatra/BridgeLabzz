@@ -17,5 +17,6 @@ namespace FundooApp.Model
         public string Date { get; set; }
         public string Time { get; set; }
         public bool IsPin { get; set; }
+        public string Color { get; set; }
     }
 }
