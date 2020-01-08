@@ -13,6 +13,7 @@ namespace FundooUnitTesting
         {
             //Arrange
             var service = new Mock<IFirebaseAuthentictor>();
+           // var controller = new AccountController(service.Object);
             string FirstName = "Sandeepa";
             string Lastname = "Mohaptra";
             string EmailId = "saisandeepa96@gmail.com";

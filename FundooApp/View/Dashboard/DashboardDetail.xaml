@@ -71,7 +71,7 @@
 
                 <StackLayout  Margin="0,0,0,20" VerticalOptions="End" BackgroundColor="Transparent" 
                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-                          RelativeLayout.YConstraint="{ConstraintExpression T`ype=RelativeToParent, Property=Height, Factor=0.90}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
                           RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
                     <StackLayout HorizontalOptions="End">
                     </StackLayout>
@@ -83,9 +83,7 @@
                         <ImageButton Source="camera.png" Clicked="ImageUpload_btn" x:Name="imgChoosed" BackgroundColor="Transparent" HeightRequest="20" WidthRequest="20" Margin="15,0,0,0"/>
                         <ImageButton Source="Create2.png" HorizontalOptions="EndAndExpand"  Clicked="Create_btn"  BackgroundColor="Transparent" HeightRequest="60" WidthRequest="60" Margin="50,0,0,20"/>
                     </StackLayout>
-
                 </StackLayout>
-            </RelativeLayout>
-        
+            </RelativeLayout>        
     </ContentPage.Content>
 </ContentPage>

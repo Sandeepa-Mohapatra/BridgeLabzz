@@ -63,7 +63,7 @@ namespace FundooApp.View
                     
                     if (d == Collid.Text)
                     {
-                        await firebaseobj.Child("detail").Child(item.Key).Child("Collaborator").PostAsync<CollaboratorModel>(new CollaboratorModel() { SenderId = Email, NoteId = Noteid});
+                        await firebaseobj.Child("detail").Child(item.Key).Child("Notes").Child(Noteid).PostAsync<NoteModel>(new NoteModel() {Notes=Note,Title=Title});
                         CollList.Add(d);
                         
                     }
