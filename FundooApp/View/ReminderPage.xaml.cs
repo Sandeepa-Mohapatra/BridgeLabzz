@@ -40,37 +40,7 @@ namespace FundooApp.View
             IsArchive = isarchive;
             //var Time = TimePicker12.Time;
         }
-        private async void Geocoding_btn(object sender, EventArgs e)
-        {
-            try
-            {
-                var request = new GeolocationRequest(GeolocationAccuracy.Medium);
-                var location = await Geolocation.GetLocationAsync(request);
-
-                if (location != null)
-                {
-                    Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
-                    Location.Text = "Lat:" + location.Latitude +" "+ "Longitude:" + location.Longitude;
-                }
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Handle not supported on device exception
-            }
-            catch (FeatureNotEnabledException fneEx)
-            {
-                // Handle not enabled on device exception
-            }
-            catch (PermissionException pEx)
-            {
-                // Handle permission exception
-            }
-            catch (Exception ex)
-            {
-                // Unable to get location
-            }
-        }
-
+        
         private void OnTimePickerPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             if (e.PropertyName == "Time")

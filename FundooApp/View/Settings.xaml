@@ -7,8 +7,21 @@
              x:Class="FundooApp.View.Settings">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Geocoding" Clicked="Geocoding_btn"/>
-            <Label Text="Location" x:Name="Location"/>
+            <StackLayout>
+                <Button Text="Geocoding" Clicked="Geocoding_btn"/>
+                <Label Text="Location" x:Name="Location"/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="GeoLocation" Clicked="Geolocation_btn"/>
+                <Label Text="Location" x:Name="Loc"/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="App Information" Clicked="AppInfo_btn"/>
+                <Label Text="Information" x:Name="info"/>
+                <Label Text="Information" x:Name="info1"/>
+                <Label Text="Information" x:Name="info2"/>
+                <Label Text="Information" x:Name="info3"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

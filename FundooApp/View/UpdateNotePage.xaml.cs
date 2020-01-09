@@ -106,6 +106,13 @@ namespace FundooApp.View
              base.OnDisappearing();
         }
 
+        private void Close_btn(object sender, EventArgs e)
+        {
+            string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+            firebaseobj.Child("detail").Child(token).Child("Notes").Child(noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title.Text, Notes = Notes.Text, IsClose=true, IsPin = IsPin });
+            Navigation.PushModalAsync(new Dashboard.Dashboard());
+        }
+
         private void Collaborator_btn(object sender, EventArgs e)
         {
             Navigation.PushModalAsync(new Collaborator(note,noteid,title,label,Date,IsArchive,IsTrash,IsPin));

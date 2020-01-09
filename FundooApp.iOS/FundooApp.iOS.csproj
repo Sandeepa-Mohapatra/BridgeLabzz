@@ -126,8 +126,14 @@
     <PackageReference Include="FirebaseStorage.net">
       <Version>1.0.3</Version>
     </PackageReference>
+    <PackageReference Include="Microcharts.Forms">
+      <Version>0.8.5-pre</Version>
+    </PackageReference>
     <PackageReference Include="Moq">
       <Version>4.13.1</Version>
+    </PackageReference>
+    <PackageReference Include="OxyPlot.Xamarin.iOS">
+      <Version>1.1.0-unstable0011</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Media">
       <Version>4.4.10-beta</Version>

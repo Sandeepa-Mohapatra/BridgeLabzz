@@ -51,6 +51,10 @@
               "target": "Package",
               "version": "[1.0.3, )"
             },
+            "Microcharts.Forms": {
+              "target": "Package",
+              "version": "[0.8.5-pre, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.13.1, )"
@@ -58,6 +62,10 @@
             "Rg.Plugins.Popup": {
               "target": "Package",
               "version": "[1.2.0.223, )"
+            },
+            "Xam.FormsPlugin.CrossPieChart": {
+              "target": "Package",
+              "version": "[2.1.15, )"
             },
             "Xam.Plugin.Media": {
               "target": "Package",

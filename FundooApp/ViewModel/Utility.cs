@@ -79,7 +79,8 @@ namespace FundooApp.ViewModel
                Date=item.Object.Date,
                Time=item.Object.Time,
                IsPin = item.Object.IsPin,
-               Color=item.Object.Color
+               Color=item.Object.Color,
+               IsClose=item.Object.IsClose
             }).ToList();
             
             return notesData;           

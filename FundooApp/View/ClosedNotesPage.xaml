@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FundooApp.View.ClosedNotesPage">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <ScrollView Orientation="Vertical" HeightRequest="600" VerticalOptions="StartAndExpand">
+                <StackLayout>
+                    <ListView x:Name="MainListViewArc"  
+             HasUnevenRows="True" ItemTapped="lvItemTapped" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="White" WidthRequest="120" CornerRadius="10" OutlineColor="Wheat" Margin="0,10,30,10" >
+                                        <StackLayout Orientation="Vertical" >
+                                            <Label Text="{Binding Title}" FontSize="Title" FontFamily="Bold" TextColor="Black"/>
+                                            <Label Text="{Binding Notes}" FontSize="Subtitle" TextColor="Black" />
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+
+            <StackLayout  Margin="0,0,0,20" VerticalOptions="End" BackgroundColor="White" 
+                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
+                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
+                <StackLayout HorizontalOptions="End">
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,0,0,40" BackgroundColor="White">
+                    
+                </StackLayout>
+
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

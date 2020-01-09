@@ -46,5 +46,20 @@ namespace FundooApp.View
         {
 
         }
+
+        private void Pin_btn(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Share_btn(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Rem_btn(object sender, EventArgs e)
+        {
+
+        }
     }
 }

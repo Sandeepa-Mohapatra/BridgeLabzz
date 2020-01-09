@@ -84,8 +84,11 @@ C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\Vi
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\UpdateNotePage.xaml.g.cs
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.AssemblyInfoInputs.cache
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.AssemblyInfo.cs
-C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\XamlC.stamp
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\ref\FundooApp.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.pdb
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\UploadImage.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\Settings.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ChartPage.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\XamlC.stamp
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ClosedNotesPage.xaml.g.cs

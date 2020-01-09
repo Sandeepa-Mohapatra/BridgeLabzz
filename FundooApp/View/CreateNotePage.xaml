@@ -5,7 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="FundooApp.View.CreateNotePage">
-    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="pin.png" Clicked="Pin_btn"/>
+        <ToolbarItem IconImageSource="arc1.png" Clicked="Arc_btn"/>
+        <ToolbarItem IconImageSource="share.png" Clicked="Share_btn"/>
+        <ToolbarItem IconImageSource="rem2.png" Clicked="Rem_btn"/>
+       
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
@@ -21,15 +27,7 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <StackLayout Margin="10,0,0,0">
-                        <ImageButton Source="back.png" Clicked="Back_btn" HorizontalOptions="Start" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"/>
-                    </StackLayout>
-                    <StackLayout Grid.Row="0" Grid.Column="2"  Orientation="Horizontal" BackgroundColor="Transparent" Spacing="20" IsClippedToBounds="True">
-
-                        <ImageButton Source="pin.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"/>
-                        <ImageButton Source="rem2.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"/>
-                        <ImageButton Source="arc.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" Clicked="Arc_btn"/>
-                    </StackLayout>
+                    
 
                 </Grid>
                 <ImageButton Source="arc.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" Clicked="Arc_btn"/>

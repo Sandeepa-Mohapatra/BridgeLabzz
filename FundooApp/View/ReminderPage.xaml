@@ -52,10 +52,7 @@
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Button Text="Save" Clicked="Save_btn" BackgroundColor="Pink"/>
                         </StackLayout>
-                        <StackLayout>
-                            <Button Text="Geocoding" Clicked="Geocoding_btn"/>
-                            <Label Text="Location" x:Name="Location"/>
-                        </StackLayout>
+                       
                     </StackLayout>
                 </StackLayout>
             </Frame>

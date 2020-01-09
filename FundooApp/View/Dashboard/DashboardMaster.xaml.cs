@@ -58,7 +58,8 @@ namespace FundooApp.View.Dashboard
                     new DashboardMasterMenuItem { Id = 2, Title = "Create New Label",Icon = "Create2.png" , TargetType=typeof(LabelPage) },
                     new DashboardMasterMenuItem { Id = 3, Title = "Archive" ,Icon = "arc.png" , TargetType=typeof(ArchivePage)},
                     new DashboardMasterMenuItem { Id = 4, Title = "Delete",Icon = "del1.png" , TargetType=typeof(DeletePage) },
-                    new DashboardMasterMenuItem { Id = 5, Title = "Settings",Icon = "Setting.png" , TargetType=typeof(DeletePage) },
+                    new DashboardMasterMenuItem { Id = 5, Title = "Closed Notes",Icon = "close.png" , TargetType=typeof(ClosedNotesPage) },
+                    new DashboardMasterMenuItem { Id = 5, Title = "Settings",Icon = "Setting.png" , TargetType=typeof(Settings) },
 
                 });
             }

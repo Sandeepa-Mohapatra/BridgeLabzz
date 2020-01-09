@@ -32,7 +32,7 @@ namespace FundooApp.View.Dashboard
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
         ViewModel.Utility u = new ViewModel.Utility();
         private Grid myGrid = new Grid();
-        int count;
+        int count=0;
         public DashboardDetail()
         {
             InitializeComponent();
@@ -58,12 +58,13 @@ namespace FundooApp.View.Dashboard
 
         private async void Create_btn(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new CreateNotePage());
+            await Navigation.PushModalAsync(new NavigationPage(new CreateNotePage()));
         }
         List<NoteModel> pinnotes = new List<NoteModel>();
         List<NoteModel> unpinnotes = new List<NoteModel>();
         List<NoteModel> notes = new List<NoteModel>();
         List<NoteModel> Notes = new List<NoteModel>();
+        int count1, count2, count3, count4;
         protected async override void OnAppearing()
         {
             List<NoteModel> pinnotes = new List<NoteModel>();
@@ -72,28 +73,43 @@ namespace FundooApp.View.Dashboard
             var Title = await u.RetriveNote();
             foreach (var note in Title)
             {
-                if (note.IsArchieve == false && note.IsTrash == false)
+                if (note.IsArchieve == false )
                 {
-                    notes.Add(note.Title);
-                    Notes.Add(note);
-                    if (note.IsPin == true)
+                    if (note.IsTrash == false)
                     {
-                        count++;
-                        pinnotes.Add(note);
+                        if (note.IsClose == false)
+                        {
+                            notes.Add(note.Title);
+                            Notes.Add(note);
+                            if (note.IsPin == true)
+                            {
+                                count4++;
+                                count++;
+                                pinnotes.Add(note);
+                            }
+                            else
+                            {
+                                count3++;
+                                count++;
+                                unpinnotes.Add(note);
+                            }
+                        }
+
                     }
                     else
                     {
-                        count++;
-                        unpinnotes.Add(note);
+                        count2++;
                     }
-
-
+                }
+                else
+                {
+                    count1++;
                 }
 
             }
             MainListView.ItemsSource = pinnotes;
             MainListView1.ItemsSource = unpinnotes;
-            Count.Text = "No of notes is: "+count;
+            Count.Text = "No of notes is: "+ count;
             //foreach (var note in Title)
             //{
             //    if (note.IsArchieve == false && note.IsTrash == false && note.IsPin == true)
@@ -163,7 +179,7 @@ namespace FundooApp.View.Dashboard
         MediaFile file;
         private async void ImageUpload_btn(object sender, EventArgs e)
         {
-            await CrossMedia.Current.Initialize();
+           // await CrossMedia.Current.Initialize();
             try
             {
                 file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
@@ -193,6 +209,13 @@ namespace FundooApp.View.Dashboard
                 .PutAsync(imageStream);
             string imgurl = stroageImage;
             return imgurl;
+        }
+
+        private void ShowChart_btn(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new NavigationPage(new ChartPage(count1,count2,count3,count4)));
+            
+
         }
 
 

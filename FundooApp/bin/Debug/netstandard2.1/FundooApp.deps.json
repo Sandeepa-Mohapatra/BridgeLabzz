@@ -11,6 +11,7 @@
         "dependencies": {
           "FirebaseDatabase.net": "4.0.4",
           "FirebaseStorage.net": "1.0.3",
+          "Microcharts.Forms": "0.8.5-pre",
           "Moq": "4.13.1",
           "Rg.Plugins.Popup": "1.2.0.223",
           "Xam.Plugin.Media": "4.0.1.5",
@@ -77,6 +78,32 @@
           "lib/netstandard2.0/LiteDB.dll": {
             "assemblyVersion": "4.1.4.0",
             "fileVersion": "4.1.4.0"
+          }
+        }
+      },
+      "Microcharts/0.8.5-pre": {
+        "dependencies": {
+          "SkiaSharp": "1.68.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microcharts.dll": {
+            "assemblyVersion": "0.8.4.2",
+            "fileVersion": "0.8.4.2"
+          }
+        }
+      },
+      "Microcharts.Forms/0.8.5-pre": {
+        "dependencies": {
+          "Microcharts": "0.8.5-pre",
+          "NETStandard.Library": "1.6.1",
+          "SkiaSharp.Views.Forms": "1.68.0",
+          "Xamarin.Forms": "4.4.0.991220-pre3"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microcharts.Forms.dll": {
+            "assemblyVersion": "0.8.5.0",
+            "fileVersion": "0.8.5.0"
           }
         }
       },
@@ -224,6 +251,26 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "SkiaSharp/1.68.0": {
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.dll": {
+            "assemblyVersion": "1.68.0.0",
+            "fileVersion": "1.68.0.0"
+          }
+        }
+      },
+      "SkiaSharp.Views.Forms/1.68.0": {
+        "dependencies": {
+          "SkiaSharp": "1.68.0",
+          "Xamarin.Forms": "4.4.0.991220-pre3"
+        },
+        "runtime": {
+          "lib/netstandard1.3/SkiaSharp.Views.Forms.dll": {
+            "assemblyVersion": "1.68.0.0",
+            "fileVersion": "1.68.0.0"
+          }
+        }
+      },
       "System.AppContext/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1030,6 +1077,7 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.ValueTuple/4.5.0": {},
       "System.Xml.ReaderWriter/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -1192,6 +1240,20 @@
       "sha512": "sha512-g4g9JlHzRBZl+Gd2UbiRdszZ7t8wozU2wX7+5xY5uE79tmcgcDhha+ubAP84G1VLbwQmhBGCzRfIx+epLmJciQ==",
       "path": "litedb/4.1.4",
       "hashPath": "litedb.4.1.4.nupkg.sha512"
+    },
+    "Microcharts/0.8.5-pre": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zPRK+ZtublASZneu97T8ZeyVEWZQnOo0RZMvWyu7w/ZmN6fDl2NDdQP0IdW4Y4PVfOrLIBQp+2/EkQs8YkFDtQ==",
+      "path": "microcharts/0.8.5-pre",
+      "hashPath": "microcharts.0.8.5-pre.nupkg.sha512"
+    },
+    "Microcharts.Forms/0.8.5-pre": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-39l0XTMVT0SUJuVA3vqAjizr+73GmX/uekrbOA32y2InhGahuZY+XkMWu88kpPvtSDqLqKvSTdVwRIJgbjwewA==",
+      "path": "microcharts.forms/0.8.5-pre",
+      "hashPath": "microcharts.forms.0.8.5-pre.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -1360,6 +1422,20 @@
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "SkiaSharp/1.68.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ptuxAKk9FiClNnAgWM8hVMCYw/B0hUJWZ8W6efnIAtJmJn/Xl4jvxxDF5WOqfQYCLVzxXw5gvBPVxvTLblFp0g==",
+      "path": "skiasharp/1.68.0",
+      "hashPath": "skiasharp.1.68.0.nupkg.sha512"
+    },
+    "SkiaSharp.Views.Forms/1.68.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VqxL96ywOA9HUj1MAEO6yvSzg4Tk03ZHvvxQFhbUKgCodDxk9lIUxmBcssTZ/wYjOUn9R2Lf/VIpDMQZlhVh/A==",
+      "path": "skiasharp.views.forms/1.68.0",
+      "hashPath": "skiasharp.views.forms.1.68.0.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
@@ -1794,6 +1870,13 @@
       "sha512": "sha512-Z6YfyYTCg7lOZjJzBjONJTFKGN9/NIYKSxhU5GRd+DTwHSZyvWp1xuI5aR+dLg+ayyC5Xv57KiY4oJ0tMO89fQ==",
       "path": "system.threading.timer/4.3.0",
       "hashPath": "system.threading.timer.4.3.0.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
     "System.Xml.ReaderWriter/4.3.0": {
       "type": "package",

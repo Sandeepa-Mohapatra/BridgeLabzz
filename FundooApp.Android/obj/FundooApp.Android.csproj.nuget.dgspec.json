@@ -50,9 +50,17 @@
               "target": "Package",
               "version": "[1.0.3, )"
             },
+            "Microcharts.Forms": {
+              "target": "Package",
+              "version": "[0.8.5-pre, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.13.1, )"
+            },
+            "OxyPlot.Xamarin.Android": {
+              "target": "Package",
+              "version": "[1.1.0-unstable0011, )"
             },
             "Plugin.CurrentActivity": {
               "target": "Package",
@@ -61,6 +69,10 @@
             "Rg.Plugins.Popup": {
               "target": "Package",
               "version": "[1.2.0.223, )"
+            },
+            "Xam.FormsPlugin.CrossPieChart": {
+              "target": "Package",
+              "version": "[2.1.15, )"
             },
             "Xam.Plugin.Media": {
               "target": "Package",
@@ -146,6 +158,10 @@
             "FirebaseStorage.net": {
               "target": "Package",
               "version": "[1.0.3, )"
+            },
+            "Microcharts.Forms": {
+              "target": "Package",
+              "version": "[0.8.5-pre, )"
             },
             "Moq": {
               "target": "Package",
