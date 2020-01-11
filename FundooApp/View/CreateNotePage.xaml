@@ -30,21 +30,21 @@
                     
 
                 </Grid>
-                <ImageButton Source="arc.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" Clicked="Arc_btn"/>
+                
             </StackLayout>
             <StackLayout>
                 <StackLayout>
                     <Entry Placeholder="Title" x:Name="Title" FontSize="Title" TextColor="Gray"/>
                     <Entry Placeholder="Notes" x:Name="Notes" FontSize="Subtitle" TextColor="Gray"/>
                 </StackLayout>
-                <RelativeLayout>
+               <!-- <RelativeLayout>
                     <StackLayout  Margin="0,0,0,20" VerticalOptions="StartAndExpand" BackgroundColor="White" 
                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
                           RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
                         <Button Text="create"/>
                     </StackLayout>
-                </RelativeLayout>
+                </RelativeLayout>-->
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

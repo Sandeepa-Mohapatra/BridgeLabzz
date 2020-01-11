@@ -744,3 +744,8 @@ C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\androi
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\src\md5e4c2749da5edf4a9690b7fedcbdb53f0\SKGLViewRendererBase_2.java
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\android\src\md58bd1a5e5e9762fb4364e956b467b4e35\PlotView.java
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\res\drawable\close.png
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\res\drawable\undo.png
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\res\drawable\undo1.png
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\res\drawable\menu2.png
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\res\drawable\close1.png
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.Android\obj\Debug\90\res\drawable\label.png

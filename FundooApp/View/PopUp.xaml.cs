@@ -23,13 +23,13 @@ namespace FundooApp.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PopUp : PopupPage
     {
-        private string Noteid,Notes,Title,Date,Time,Labels;
+        private string Noteid,Notes,Title,Date,Time,Labels,Color;
         bool IsPin, IsTrash, IsArchive;
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
 
        
 
-        public PopUp(string note,string title,string noteid,string date,string time ,bool ispin, bool istrash, bool isarchive,string label)
+        public PopUp(string note,string title,string noteid,string date,string time ,bool ispin, bool istrash, bool isarchive,string label,string color)
         {           
             InitializeComponent();
             Noteid = noteid;
@@ -41,6 +41,7 @@ namespace FundooApp.View
             IsTrash = istrash;
             IsArchive = isarchive;
             Labels = label;
+            Color = color;
         }
 
         private void Red_btn(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace FundooApp.View
         private void Trash_btn(object sender, EventArgs e)
         {
             string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
-            firebaseobj.Child("detail").Child(token).Child("Notes").Child(Noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title, Notes = Notes, IsTrash = true });
+            firebaseobj.Child("detail").Child(token).Child("Notes").Child(Noteid).PatchAsync<NoteModel>(new NoteModel() { Title = Title, Notes = Notes, IsTrash = true, Date = Date, Label = Labels, Color = Color });
             Navigation.PushModalAsync(new Dashboard.Dashboard());
         }
 

@@ -17,7 +17,7 @@ namespace FundooApp.View.Dashboard
     using System.Threading.Tasks;
     using System.Collections.Generic;
     using Xamarin.Forms.Internals;
-
+    
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
     using Firebase.Storage;
@@ -35,13 +35,14 @@ namespace FundooApp.View.Dashboard
         int count=0;
         public DashboardDetail()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
 
         }
 
         private async void Signout_btn(object sender, EventArgs e)
         {
+            
+            DependencyService.Get<Interfaces.IFirebaseAuthentictor>().Signout();
             await Navigation.PushModalAsync(new LoginPage());
 
         }
@@ -109,25 +110,7 @@ namespace FundooApp.View.Dashboard
             }
             MainListView.ItemsSource = pinnotes;
             MainListView1.ItemsSource = unpinnotes;
-            Count.Text = "No of notes is: "+ count;
-            //foreach (var note in Title)
-            //{
-            //    if (note.IsArchieve == false && note.IsTrash == false && note.IsPin == true)
-            //    {
-
-            //        pinnotes.Add(note);
-
-
-            //    }
-            //    if (note.IsArchieve == false && note.IsTrash == false && note.IsPin == false)
-            //    {
-            //        unpinnotes.Add(note);
-            //    }
-
-            //}
-
-            //MainListView1.ItemsSource = unpinnotes;
-            //MainListView1.ItemsSource = unpinnotes;
+            Count.Text = "No of notes is: "+ count;           
 
         }
         private void CreateGrid()

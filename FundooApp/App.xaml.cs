@@ -1,4 +1,5 @@
 ﻿using FundooApp.View;
+using FundooApp.View.Dashboard;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,8 +11,17 @@ namespace FundooApp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new LoginPage();
+           string token= DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+            //MainPage = new LoginPage();
+            if (token != null)
+            {
+                MainPage = new Dashboard();
+            }
+            else
+            {
+               
+               MainPage = new LoginPage();
+            }
         }
 
         protected override void OnStart()

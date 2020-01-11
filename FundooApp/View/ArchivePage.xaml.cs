@@ -47,6 +47,11 @@ namespace FundooApp.View
 
         private void lvItemTapped(object sender, ItemTappedEventArgs e)
         {
+            Navigation.PushModalAsync(new NavigationPage(new ArchiveNoteItemPressed(e.Item)));
+        }
+
+        private void UnArchieve_btn(object sender, EventArgs e)
+        {
 
         }
     }

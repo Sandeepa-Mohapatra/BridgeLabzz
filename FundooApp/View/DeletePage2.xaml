@@ -5,63 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="FundooApp.View.DeletePage2">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="del1.png" Clicked="Delete_btn"/>
+        <ToolbarItem IconImageSource="undo1.png" Clicked="Restore_btn"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <RelativeLayout>
-                <StackLayout>
-
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="20"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <StackLayout Margin="10,0,0,0">
-                            <ImageButton Source="back.png" Clicked="Back_btn" HorizontalOptions="Start" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"/>
-                        </StackLayout>
-                        <StackLayout Grid.Row="0" Grid.Column="2"  Orientation="Horizontal" BackgroundColor="Transparent" Spacing="20" IsClippedToBounds="True">
-
-                            <ImageButton Source="pin.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"/>
-                            <ImageButton Source="rem2.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"/>
-                            <ImageButton Source="arc.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent" Clicked="Arc_btn"/>
-                        </StackLayout>
-
-                    </Grid>
-
-                </StackLayout>
-
-                <StackLayout>
-                    <RelativeLayout>
-                        <ScrollView HeightRequest="500" WidthRequest="600">
-                            <StackLayout Margin="0,60,0,20">
-                                <Editor Placeholder="Title" x:Name="Title" FontSize="Title" TextColor="Gray"/>
-                                <Editor Placeholder="Notes" x:Name="Notes" FontSize="Subtitle" TextColor="Gray"/>
-                            </StackLayout>
-
-                        </ScrollView>
-                      
-                    </RelativeLayout>
-                </StackLayout>
-
-                <StackLayout  VerticalOptions="End" BackgroundColor="White" 
-                          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
-                          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}"
-                          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}">
-                    <StackLayout HorizontalOptions="End">
-
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="0,0,0,40" BackgroundColor="White">
-                        <Button Text="Restore" Clicked="Restore_btn"/>
-                        <Button Text="Delete Forever" Clicked="Delete_btn"/>
-                    </StackLayout>
-
-                </StackLayout>
-            </RelativeLayout>
+        <StackLayout Margin="0,60,0,20">
+            <Editor Placeholder="Title" x:Name="Title" FontSize="Title" TextColor="Gray"/>
+            <Editor Placeholder="Notes" x:Name="Notes" FontSize="Subtitle" TextColor="Gray"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

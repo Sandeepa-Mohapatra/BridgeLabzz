@@ -12,10 +12,10 @@
             <StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Image Source="del1.png" WidthRequest="30" HeightRequest="30"/>
-                    <Button Text="Delete" BackgroundColor="Transparent" FontSize="Subtitle" Clicked="Trash_btn"/>
+                    <Button Text="Delete" FontAttributes="Bold" BackgroundColor="Transparent" Clicked="Trash_btn"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Image Source="del1.png" WidthRequest="30" HeightRequest="30"/>
+                    <Image Source="label.png" WidthRequest="30" HeightRequest="30"/>
                     <Button Text="Label" FontAttributes="Bold" BackgroundColor="Transparent" Clicked="Label_btn" />
                 </StackLayout>
             </StackLayout>
@@ -29,6 +29,7 @@
                 <Frame CornerRadius="80" WidthRequest="10" HeightRequest="10" HasShadow="True" BackgroundColor="BlueViolet">
                     <Button BackgroundColor="BlueViolet" Clicked="Blue_btn"  TextColor="BlueViolet" x:Name="Blue"  CornerRadius="100" Text="BlueViolet"/>
                 </Frame>
+                
             </StackLayout>
             <StackLayout>
                 <Label Text="hello" x:Name="Lb"/>

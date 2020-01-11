@@ -47,7 +47,7 @@ namespace FundooApp.View
 
         private void lvItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Navigation.PushModalAsync(new DeletePage2());
+            Navigation.PushModalAsync(new NavigationPage(new DeletePage2(e.Item)));
         }
     }
 }

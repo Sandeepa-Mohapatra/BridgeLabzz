@@ -92,3 +92,5 @@ C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\Vi
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ChartPage.xaml.g.cs
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\XamlC.stamp
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ClosedNotesPage.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ArchiveNoteItemPressed.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ClosedNotePage1.xaml.g.cs

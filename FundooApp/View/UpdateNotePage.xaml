@@ -11,7 +11,7 @@
         <ToolbarItem IconImageSource="share.png" Clicked="Share_btn"/>
         <ToolbarItem IconImageSource="rem2.png" Clicked="Rem_btn"/>
         <ToolbarItem IconImageSource="coll1.png" Clicked="Collaborator_btn"/>
-        <ToolbarItem IconImageSource="close.png" Clicked="Close_btn"/>
+        <ToolbarItem IconImageSource="close1.png" Clicked="Close_btn"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         
@@ -66,8 +66,8 @@
                     <StackLayout HorizontalOptions="End">
 
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="0,0,0,40" BackgroundColor="White">
-                        <ImageButton Source="menu.png" HorizontalOptions="EndAndExpand"  Clicked="BottomMenu_btn"  BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" Margin="50,0,0,20"/>
+                    <StackLayout Orientation="Horizontal" Margin="20,0,0,60" BackgroundColor="Transparent">
+                        <ImageButton Source="menu2.png" HorizontalOptions="EndAndExpand"  Clicked="BottomMenu_btn"  BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" Margin="50,0,0,20"/>
                     </StackLayout>
 
                 </StackLayout>

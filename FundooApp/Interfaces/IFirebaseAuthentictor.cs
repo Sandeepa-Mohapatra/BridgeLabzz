@@ -46,7 +46,7 @@ namespace FundooApp.Interfaces
         /// <returns></returns>
         public string UserId();
 
-       
+         string Signout();
 
     }
 }

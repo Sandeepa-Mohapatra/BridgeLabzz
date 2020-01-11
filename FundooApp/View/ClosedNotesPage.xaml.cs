@@ -34,7 +34,7 @@ namespace FundooApp.View
         }
         private void lvItemTapped(object sender, ItemTappedEventArgs e)
         {
-
+            Navigation.PushModalAsync(new NavigationPage(new ClosedNotePage1(e.Item)));
         }
     }
 }

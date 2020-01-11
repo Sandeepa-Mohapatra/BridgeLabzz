@@ -4,6 +4,7 @@
 // </copyright>
 // <creator name="Sandeepa Mohapatra"/>
 // --------------------------------------------------------------------------------------------------------------------
+using System;
 using System.IO;
 using System.Threading.Tasks;
 using Android.Gms.Extensions;
@@ -33,18 +34,15 @@ namespace FundooApp.Droid.UserServices
         /// <returns></returns>
         public string User()
         {
-            string userid = FirebaseAuth.Instance.CurrentUser.Uid;
-           
-
-            return userid;
+            if (FirebaseAuth.Instance.CurrentUser != null) return FirebaseAuth.Instance.CurrentUser.Uid;     
+            return null;
         }
         public string UserId()
         {            
-            string Currentuserid = FirebaseAuth.Instance.CurrentUser.Email;
-           
+            string Currentuserid = FirebaseAuth.Instance.CurrentUser.Email;           
             return Currentuserid;
         }
-        string Name;
+       
        
         /// <summary>
         /// Adds the email with password.
@@ -57,6 +55,7 @@ namespace FundooApp.Droid.UserServices
             
             var response = await FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(email, password);
             return response.User.Uid;
+
         }
         /// <summary>
         /// Login with email and password.
@@ -84,7 +83,21 @@ namespace FundooApp.Droid.UserServices
               await FirebaseAuth.Instance.SendPasswordResetEmail(email);
             
         }
-        
+        public string Signout()
+        {
+            string user = null;
+            try
+            {
+                FirebaseAuth.Instance.SignOut();
+                user = FirebaseAuth.Instance.CurrentUser.Uid;
+                return user;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
 
     }
 }
