@@ -92,6 +92,9 @@
 
                 </StackLayout>
             </Frame>
+            <StackLayout VerticalOptions="End">
+                <Label Text="Disconnected" x:Name="LabelConnection" HorizontalTextAlignment="Center"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -22,6 +22,19 @@
                 <Label Text="Information" x:Name="info2"/>
                 <Label Text="Information" x:Name="info3"/>
             </StackLayout>
+            <StackLayout>
+                <Entry Placeholder="Receiver@gmail.com" x:Name="EntryEmail"/>
+                <Entry Placeholder="Subject" x:Name="EntrySub"/>
+                <Button Text="Email" Clicked="Email_btn"/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Open Browser" Clicked="Browser_btn"/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Track Version" Clicked="VersionTracking_btn"/>
+                <Label  x:Name="currentversion"/>
+                <Label x:Name="Prevversion"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

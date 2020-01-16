@@ -87,5 +87,21 @@ namespace FundooApp.View
             info2.Text = AppInfo.Version.ToString();
             info3.Text = AppInfo.BuildString;
         }
+
+        private void Email_btn(object sender, EventArgs e)
+        {
+            Email.ComposeAsync(EntrySub.Text, "", EntryEmail.Text);
+        }
+
+        private void Browser_btn(object sender, EventArgs e)
+        {
+            Browser.OpenAsync("https://www.google.com/",BrowserLaunchMode.SystemPreferred);
+        }
+
+        private void VersionTracking_btn(object sender, EventArgs e)
+        {
+            currentversion.Text = $"{ VersionTracking.CurrentBuild}({VersionTracking.CurrentVersion})";
+            Prevversion.Text = $"{VersionTracking.PreviousBuild}({VersionTracking.PreviousVersion})";
+        }
     }
 }

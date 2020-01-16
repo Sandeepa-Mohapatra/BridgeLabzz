@@ -14,6 +14,7 @@ namespace FundooApp.View
     using System.Threading.Tasks;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
+    using Xamarin.Essentials;
     /// <summary>
     /// class for login page
     /// </summary>
@@ -46,7 +47,10 @@ namespace FundooApp.View
         /// </summary>        
         private async void LogIn_btn(object sender, EventArgs e)
         {
-
+            if(Connectivity.NetworkAccess!=NetworkAccess.Internet)
+            {
+               await DisplayAlert("No internet", "", "Ok");
+            }
             activity.IsEnabled = true;
             activity.IsRunning = true;
             activity.IsVisible = true;
@@ -112,6 +116,24 @@ namespace FundooApp.View
         {
             await Navigation.PushModalAsync(new ForgotPassword());            
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
+        }
+
+        private void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
+        {
+            if(e.NetworkAccess==NetworkAccess.Internet)
+            {
+                LabelConnection.FadeTo(0).ContinueWith((result) => { });
+            }
+            else
+            {
+                LabelConnection.FadeTo(1).ContinueWith((result) => { });
+            }
+        }
+
         protected override void OnDisappearing()
         {
 

@@ -23,27 +23,27 @@ namespace FundooApp.View
             {
                 Color= SKColor.Parse("#FF1943"),
                 Label ="Archive",
-                ValueLabel = "100"
+                ValueLabel = p.ToString()
             },
             new Entry(p1)
             {
                 Color = SKColor.Parse("00BFFF"),
                 Label = "Trash",
-                ValueLabel = "200"
+                ValueLabel = p1.ToString()
             },
             new Entry(p2)
             {
                 Color =  SKColor.Parse("#00CED1"),
                 Label = "Pinned",
-                ValueLabel = "300"
+                ValueLabel = p2.ToString()
             },
              new Entry(p3)
             {
                 Color =  SKColor.Parse("#00CED1"),
                 Label = "Unpinned",
-                ValueLabel = "400"
+                ValueLabel =p3.ToString()
             },
-            };
+        };
         
      
        
@@ -57,7 +57,7 @@ namespace FundooApp.View
             p2 = (c * 100) / s;
             p3 = (d * 100) / s;           
             chart.Chart = new LineChart { Entries = entries };
-        }         
+        }            
                
     }
 }
