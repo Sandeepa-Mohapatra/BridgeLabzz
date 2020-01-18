@@ -6,35 +6,41 @@
              mc:Ignorable="d"
              x:Class="FundooApp.View.Settings">
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
             <StackLayout>
-                <Button Text="Geocoding" Clicked="Geocoding_btn"/>
-                <Label Text="Location" x:Name="Location"/>
+                <StackLayout>
+                    <Button Text="Geocoding" Clicked="Geocoding_btn"/>
+                    <Label Text="Location" x:Name="Location"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="GeoLocation" Clicked="Geolocation_btn"/>
+                    <Label Text="Location" x:Name="Loc"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="App Information" Clicked="AppInfo_btn"/>
+                    <Label Text="Information" x:Name="info"/>
+                    <Label Text="Information" x:Name="info1"/>
+                    <Label Text="Information" x:Name="info2"/>
+                    <Label Text="Information" x:Name="info3"/>
+                </StackLayout>
+                <StackLayout>
+                    <Entry Placeholder="Receiver@gmail.com" x:Name="EntryEmail"/>
+                    <Entry Placeholder="Subject" x:Name="EntrySub"/>
+                    <Button Text="Email" Clicked="Email_btn"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Open Browser" Clicked="Browser_btn"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Track Version" Clicked="VersionTracking_btn"/>
+                    <Label  x:Name="currentversion"/>
+                    <Label x:Name="Prevversion"/>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Load file content" Clicked="FileSystem_btn"/>
+                    <Label x:Name="text"/>
+                </StackLayout>
             </StackLayout>
-            <StackLayout>
-                <Button Text="GeoLocation" Clicked="Geolocation_btn"/>
-                <Label Text="Location" x:Name="Loc"/>
-            </StackLayout>
-            <StackLayout>
-                <Button Text="App Information" Clicked="AppInfo_btn"/>
-                <Label Text="Information" x:Name="info"/>
-                <Label Text="Information" x:Name="info1"/>
-                <Label Text="Information" x:Name="info2"/>
-                <Label Text="Information" x:Name="info3"/>
-            </StackLayout>
-            <StackLayout>
-                <Entry Placeholder="Receiver@gmail.com" x:Name="EntryEmail"/>
-                <Entry Placeholder="Subject" x:Name="EntrySub"/>
-                <Button Text="Email" Clicked="Email_btn"/>
-            </StackLayout>
-            <StackLayout>
-                <Button Text="Open Browser" Clicked="Browser_btn"/>
-            </StackLayout>
-            <StackLayout>
-                <Button Text="Track Version" Clicked="VersionTracking_btn"/>
-                <Label  x:Name="currentversion"/>
-                <Label x:Name="Prevversion"/>
-            </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

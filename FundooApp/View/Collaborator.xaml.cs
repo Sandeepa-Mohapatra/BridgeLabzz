@@ -40,15 +40,11 @@ namespace FundooApp.View
         }
         List<string> Email = new List<string>();
         NoteModel n = new NoteModel();
-        private async void data()
-        {
-           
-        }
-      
+       
         private async void Add_btn(object sender, EventArgs e)
         {
             string Email = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
-            CollList.Add(Email);
+            
             var users = await firebaseobj.Child("detail").OnceAsync<DataModel>();
             
             //string uid = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
@@ -64,13 +60,9 @@ namespace FundooApp.View
                     if (d == Collid.Text)
                     {
                         await firebaseobj.Child("detail").Child(item.Key).Child("Notes").Child(Noteid).PostAsync<NoteModel>(new NoteModel() {Notes=Note,Title=Title});
-                        CollList.Add(d);
-                        
+                     
                     }
-                    //else
-                    //{
-                    // await   DisplayAlert("Message", "User is not registered yet", "ok");
-                    //}
+                   
                 }
 
                 //Email.Add(s);

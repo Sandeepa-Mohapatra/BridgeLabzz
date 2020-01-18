@@ -63,13 +63,9 @@
               "target": "Package",
               "version": "[1.2.0.223, )"
             },
-            "Xam.FormsPlugin.CrossPieChart": {
-              "target": "Package",
-              "version": "[2.1.15, )"
-            },
             "Xam.Plugin.Media": {
               "target": "Package",
-              "version": "[4.0.1.5, )"
+              "version": "[4.4.10-beta, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

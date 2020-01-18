@@ -11,7 +11,7 @@ namespace FundooApp
         public App()
         {
             InitializeComponent();
-            Xamarin.Essentials.VersionTracking.Track();
+            Xamarin.Essentials.VersionTracking.Track(); 
            string token= DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
             //MainPage = new LoginPage();
             if (token != null)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -102,6 +103,18 @@ namespace FundooApp.View
         {
             currentversion.Text = $"{ VersionTracking.CurrentBuild}({VersionTracking.CurrentVersion})";
             Prevversion.Text = $"{VersionTracking.PreviousBuild}({VersionTracking.PreviousVersion})";
+        }
+        const string file = "FileTemplate.txt";
+        private async void FileSystem_btn(object sender, EventArgs e)
+        {
+            using (var stream = await FileSystem.OpenAppPackageFileAsync(file))
+            {
+                using (var reader = new StreamReader(stream))
+                {
+                    text.Text = await reader.ReadToEndAsync();
+                }
+            }
+
         }
     }
 }

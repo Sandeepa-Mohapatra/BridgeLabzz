@@ -18,18 +18,18 @@
                 <ScrollView Orientation="Vertical" HeightRequest="600" VerticalOptions="StartAndExpand">
                     <StackLayout>
                         <StackLayout Margin="0,0,0,10" Orientation="Vertical">
-                            <SearchBar HorizontalOptions="StartAndExpand" Placeholder="Search Notes...... " x:Name="Searchbar" SearchButtonPressed="Search_btn"/>
+                            <SearchBar HorizontalOptions="FillAndExpand" Placeholder="Search Notes...... " x:Name="Searchbar" SearchButtonPressed="Search_btn"/>
                             <Label x:Name="Count" TextColor="Red" FontSize="Small" FontFamily="Bold"/>
                     </StackLayout>
                         <StackLayout>
                             <Label Text="Pinned notes"/>
                             <ListView x:Name="MainListView"  
-                                      VerticalOptions="Start"
+                                      VerticalOptions="StartAndExpand"
              HasUnevenRows="True" ItemTapped="lvItemTapped" >
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell>
-                                        <Frame  BackgroundColor="{Binding Color}"  WidthRequest="120" CornerRadius="10" OutlineColor="Wheat" Margin="0,10,30,10" Padding="20,20,20,20" >
+                                        <Frame x:Name="listframe" BackgroundColor="{Binding Color}"   CornerRadius="10" OutlineColor="Wheat" Margin="0,10,30,10"  >
                                             <StackLayout Orientation="Vertical" >
                                                     <Label Text="{Binding Title}" FontSize="Title" FontFamily="Bold" TextColor="Black"/>
                                                     <Label Text="{Binding Notes}" FontSize="Subtitle" TextColor="Black" />
@@ -46,11 +46,11 @@
                             </ListView>
                             <Label Text="Others"/>
                             <ListView x:Name="MainListView1"  
-             HasUnevenRows="True" ItemTapped="lvItemTapped">
+             HasUnevenRows="True" ItemTapped="lvItemTapped" WidthRequest="120">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell>
-                                        <Frame  BackgroundColor="{Binding Color}"  WidthRequest="120" CornerRadius="10" OutlineColor="Wheat" Margin="0,10,30,10" Padding="20,20,20,20" >
+                                        <Frame  BackgroundColor="{Binding Color}"  CornerRadius="10" OutlineColor="Wheat" Margin="20,10,30,10" Padding="20,20,20,20" >
                                             <StackLayout Orientation="Vertical" >
                                                 <Label Text="{Binding Title}" FontSize="Title" FontFamily="Bold" TextColor="Black"/>
                                                 <Label Text="{Binding Notes}" FontSize="Subtitle" TextColor="Black" />
@@ -82,7 +82,8 @@
                         <ImageButton Source="chart.png" Clicked="ShowChart_btn"  BackgroundColor="Transparent" HeightRequest="20" WidthRequest="20" Margin="15,0,0,0"/>
                         <ImageButton Source="camera.png" Clicked="ImageUpload_btn" x:Name="imgChoosed" BackgroundColor="Transparent" HeightRequest="20" WidthRequest="20" Margin="15,0,0,0"/>
                         <ImageButton Source="Create2.png" HorizontalOptions="EndAndExpand"  Clicked="Create_btn"  BackgroundColor="Transparent" HeightRequest="60" WidthRequest="60" Margin="50,0,0,20"/>
-                    </StackLayout>
+                    <Button Text="Camera" Clicked="ImageUpload_btn"/>
+                </StackLayout>
                 </StackLayout>
             </RelativeLayout>        
     </ContentPage.Content>

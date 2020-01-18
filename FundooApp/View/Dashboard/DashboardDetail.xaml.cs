@@ -17,7 +17,7 @@ namespace FundooApp.View.Dashboard
     using System.Threading.Tasks;
     using System.Collections.Generic;
     using Xamarin.Forms.Internals;
-    
+
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
     using Firebase.Storage;
@@ -25,6 +25,7 @@ namespace FundooApp.View.Dashboard
     using System.Diagnostics;
     using System.IO;
     using Plugin.Media.Abstractions;
+    using System.Collections.ObjectModel;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DashboardDetail : ContentPage
@@ -32,16 +33,16 @@ namespace FundooApp.View.Dashboard
         FirebaseClient firebaseobj = new FirebaseClient("https://fundooapp-f87fb.firebaseio.com/");
         ViewModel.Utility u = new ViewModel.Utility();
         private Grid myGrid = new Grid();
-        int count=0;
+        int count = 0;
         public DashboardDetail()
         {
-            InitializeComponent();            
+            InitializeComponent();
 
         }
 
         private async void Signout_btn(object sender, EventArgs e)
         {
-            
+
             DependencyService.Get<Interfaces.IFirebaseAuthentictor>().Signout();
             await Navigation.PushModalAsync(new LoginPage());
 
@@ -68,13 +69,13 @@ namespace FundooApp.View.Dashboard
         int count1, count2, count3, count4;
         protected async override void OnAppearing()
         {
-            List<NoteModel> pinnotes = new List<NoteModel>();
-            List<NoteModel> unpinnotes = new List<NoteModel>();
+            ObservableCollection<NoteModel> pinnotes = new ObservableCollection<NoteModel>();
+            ObservableCollection<NoteModel> unpinnotes = new ObservableCollection<NoteModel>();
             List<string> notes = new List<string>();
             var Title = await u.RetriveNote();
             foreach (var note in Title)
             {
-                if (note.IsArchieve == false )
+                if (note.IsArchieve == false)
                 {
                     if (note.IsTrash == false)
                     {
@@ -110,7 +111,8 @@ namespace FundooApp.View.Dashboard
             }
             MainListView.ItemsSource = pinnotes;
             MainListView1.ItemsSource = unpinnotes;
-            Count.Text = "No of notes is: "+ count;           
+            Count.Text = "No of notes is: " + count;
+
 
         }
         private void CreateGrid()
@@ -153,36 +155,68 @@ namespace FundooApp.View.Dashboard
 
         }
 
+
         private void Search_btn(object sender, EventArgs e)
         {
             var searchnote = Searchbar.Text.ToLower();
 
-            MainListView.ItemsSource = Notes.Where(x => x.Equals(searchnote));
+            ////MainListView.ItemsSource = Notes.Where(x => x.Equals(searchnote));
+            Console.WriteLine(Notes.Where(x => x.Title == searchnote));
+            MainListView.ItemsSource = Notes.Where(x => x.Title == searchnote);
         }
         MediaFile file;
         private async void ImageUpload_btn(object sender, EventArgs e)
         {
-           // await CrossMedia.Current.Initialize();
+            //await CrossMedia.Current.Initialize();
+            //try
+            //{
+            //    file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+            //    {
+            //        PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium
+            //    });
+            //    if (file == null)
+            //        return;
+            //    imgChoosed.Source = ImageSource.FromStream(() =>
+            //    {
+            //        var imageStram = file.GetStream();
+            //        return imageStram;
+            //    });
+            //    await StoreImages(file.GetStream());
+            //}
+            //catch (Exception ex)
+            //{
+            //    Debug.WriteLine(ex.Message);
+            //}
+
             try
             {
-                file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+                ////Check if camera is availbale or taking video feature is supported 
+                if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakeVideoSupported)
                 {
-                    PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium
+                    await DisplayAlert("No Camera", ":( No camera avaialble.", "OK");
+                    return;
+                }
+
+                ////take a video using device camera and store into the specified location
+                var file = await CrossMedia.Current.TakeVideoAsync(new StoreVideoOptions
+                {
+                    Name = "video.mp4",
+                    Directory = "DefaultVideos",
                 });
+
+                ////Check if video is available in file 
                 if (file == null)
                     return;
-                imgChoosed.Source = ImageSource.FromStream(() =>
-                {
-                    var imageStram = file.GetStream();
-                    return imageStram;
-                });
-                await StoreImages(file.GetStream());
+
+                await DisplayAlert("Video Recorded", "Location: " + file.Path, "OK");
+                file.Dispose();
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
+
 
         public async Task<string> StoreImages(Stream imageStream)
         {
@@ -196,16 +230,16 @@ namespace FundooApp.View.Dashboard
 
         private void ShowChart_btn(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new NavigationPage(new ChartPage(count1,count2,count3,count4)));
-            
+            Navigation.PushModalAsync(new NavigationPage(new ChartPage(count1, count2, count3, count4)));
+
 
         }
 
 
-        //private void Search_btn(object sender, TextChangedEventArgs e)
-        //{
-        //    var searchnote = Searchbar.Text;
-        //    MainListView.ItemsSource = Notes.Where(x => x.Title.Equals(searchnote));            
-        //}
-    } 
+        private void Search_btn(object sender, TextChangedEventArgs e)
+        {
+            var searchnote = Searchbar.Text;
+            MainListView.ItemsSource = Notes.Where(x => x.Title.Equals(searchnote));
+        }
+    }
 }
