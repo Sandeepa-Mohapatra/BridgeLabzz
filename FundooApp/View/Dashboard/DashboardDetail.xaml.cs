@@ -26,6 +26,7 @@ namespace FundooApp.View.Dashboard
     using System.IO;
     using Plugin.Media.Abstractions;
     using System.Collections.ObjectModel;
+    using Firebase.Database.Query;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DashboardDetail : ContentPage
@@ -62,17 +63,24 @@ namespace FundooApp.View.Dashboard
         {
             await Navigation.PushModalAsync(new NavigationPage(new CreateNotePage()));
         }
-        List<NoteModel> pinnotes = new List<NoteModel>();
-        List<NoteModel> unpinnotes = new List<NoteModel>();
-        List<NoteModel> notes = new List<NoteModel>();
+        
         List<NoteModel> Notes = new List<NoteModel>();
         int count1, count2, count3, count4;
+        string img;
+        
         protected async override void OnAppearing()
         {
             ObservableCollection<NoteModel> pinnotes = new ObservableCollection<NoteModel>();
             ObservableCollection<NoteModel> unpinnotes = new ObservableCollection<NoteModel>();
+            ObservableCollection<DataModel> Details = new ObservableCollection<DataModel>();
             List<string> notes = new List<string>();
+            
             var Title = await u.RetriveNote();
+            var UserDetails = await u.RetriveUserDetails();
+            foreach(var details in UserDetails)
+            {
+               img  = details.Image;
+            }
             foreach (var note in Title)
             {
                 if (note.IsArchieve == false)
@@ -109,6 +117,7 @@ namespace FundooApp.View.Dashboard
                 }
 
             }
+            pic.IconImageSource = img;
             MainListView.ItemsSource = pinnotes;
             MainListView1.ItemsSource = unpinnotes;
             Count.Text = "No of notes is: " + count;
@@ -167,63 +176,63 @@ namespace FundooApp.View.Dashboard
         MediaFile file;
         private async void ImageUpload_btn(object sender, EventArgs e)
         {
-            //await CrossMedia.Current.Initialize();
-            //try
-            //{
-            //    file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
-            //    {
-            //        PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium
-            //    });
-            //    if (file == null)
-            //        return;
-            //    imgChoosed.Source = ImageSource.FromStream(() =>
-            //    {
-            //        var imageStram = file.GetStream();
-            //        return imageStram;
-            //    });
-            //    await StoreImages(file.GetStream());
-            //}
-            //catch (Exception ex)
-            //{
-            //    Debug.WriteLine(ex.Message);
-            //}
-
+           await Navigation.PushModalAsync(new NavigationPage(new PhotoPage()));
+        }
+        string image,firstname,lastname,email,password,key;
+        private async void Gallery_btn(object sender, EventArgs e)
+        {
             try
             {
-                ////Check if camera is availbale or taking video feature is supported 
-                if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakeVideoSupported)
+                ////check the support for picking photo from device
+                if (!CrossMedia.Current.IsPickPhotoSupported)
                 {
-                    await DisplayAlert("No Camera", ":( No camera avaialble.", "OK");
+                    await DisplayAlert("Photos Not Supported", "Permission not granted to photos.", "OK");
                     return;
                 }
 
-                ////take a video using device camera and store into the specified location
-                var file = await CrossMedia.Current.TakeVideoAsync(new StoreVideoOptions
+                ////Pick photo from device 
+                var file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions()
                 {
-                    Name = "video.mp4",
-                    Directory = "DefaultVideos",
+                    PhotoSize = PhotoSize.Small
                 });
 
-                ////Check if video is available in file 
+                ////If photo not selected, return 
                 if (file == null)
                     return;
 
-                await DisplayAlert("Video Recorded", "Location: " + file.Path, "OK");
+                ////Add that photo to the image source
+                pic.IconImageSource = ImageSource.FromStream(() => file.GetStream());
+                
+                string token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+                var UserDetails = await u.RetriveUserDetails();
+                foreach (var details in UserDetails)
+                {
+                    image = details.Image;
+                    firstname = details.FirstName;
+                    lastname = details.LastName;
+                    email = details.EmailId;
+                    password = details.Password;
+                    key = details.Key;
+                }
+               
+                await DisplayAlert("Photo Selected", "Location: " + file.Path, "OK");
+                string img=await StoreImages(file.GetStream());
+                await firebaseobj.Child("detail").Child(token).Child("UserDetails").Child(key).PatchAsync<DataModel>(new DataModel() { FirstName = firstname, LastName = lastname, EmailId = email, Password = password, Key = key, Image = img });
                 file.Dispose();
+
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine();
             }
         }
-
 
         public async Task<string> StoreImages(Stream imageStream)
         {
             var stroageImage = await new FirebaseStorage("xamarinfirebase-d3352.appspot.com")
-                .Child("XamarinMonkeys")
-                .Child("image.jpg")
-                .PutAsync(imageStream);
+                  .Child("XamarinMonkeys")
+                  .Child("image.jpg")
+                  .PutAsync(imageStream);
             string imgurl = stroageImage;
             return imgurl;
         }

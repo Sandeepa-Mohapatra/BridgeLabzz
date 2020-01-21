@@ -47,3 +47,12 @@ Xamarin.GooglePlayServices.Base
 Xamarin.GooglePlayServices.Basement
 Xamarin.GooglePlayServices.Flags
 Xamarin.GooglePlayServices.Tasks
+Microcharts.Droid
+OxyPlot.Xamarin.Android
+Plugin.CurrentActivity
+Plugin.Media
+Plugin.Permissions
+Rg.Plugins.Popup.Droid
+SkiaSharp
+SkiaSharp.Views.Android
+SkiaSharp.Views.Forms

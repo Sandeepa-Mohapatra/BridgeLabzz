@@ -1,3 +1,41 @@
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\bin\Debug\netstandard2.1\FundooApp.deps.json
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\bin\Debug\netstandard2.1\FundooApp.dll
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\bin\Debug\netstandard2.1\ref\FundooApp.dll
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\bin\Debug\netstandard2.1\FundooApp.pdb
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.csprojAssemblyReference.cache
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\App.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\MainPage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ArchiveNoteItemPressed.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ArchivePage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ChartPage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ClosedNotePage1.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ClosedNotesPage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\Collaborator.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\CreateNotePage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\Dashboard\Dashboard.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\Dashboard\DashboardDetail.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\Dashboard\DashboardMaster.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\DeletePage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\DeletePage2.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\Essentials\ShareText.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ForgotPassword.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\homepage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\LabelPage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\LoginPage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\NotePage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\PhotoPage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\PopUp.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ReminderNotePage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ReminderPage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\Settings.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\UpdateNotePage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\View\UploadImage.xaml.g.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.AssemblyInfoInputs.cache
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.AssemblyInfo.cs
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\XamlC.stamp
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.dll
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\ref\FundooApp.dll
+C:\FundooApp\BridgeLabzz-FundooApp (3)\BridgeLabzz-FundooApp\FundooApp\obj\Debug\netstandard2.1\FundooApp.pdb
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\bin\Debug\netstandard2.1\FundooApp.deps.json
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\bin\Debug\netstandard2.1\FundooApp.dll
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\bin\Debug\netstandard2.1\ref\FundooApp.dll
@@ -23,6 +61,7 @@ C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\Vi
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\LabelPage.xaml.g.cs
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\LoginPage.xaml.g.cs
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\NotePage.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\PhotoPage.xaml.g.cs
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\PopUp.xaml.g.cs
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ReminderNotePage.xaml.g.cs
 C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp\obj\Debug\netstandard2.1\View\ReminderPage.xaml.g.cs

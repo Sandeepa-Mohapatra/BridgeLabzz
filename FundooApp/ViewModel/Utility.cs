@@ -86,6 +86,24 @@ namespace FundooApp.ViewModel
             return notesData;           
            
         }
+        public async Task<List<DataModel>> RetriveUserDetails()
+        {
+            var token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
+
+            List<DataModel> userData = (await this.firebaseobj.Child("detail").Child(token).Child("UserDetails").OnceAsync<DataModel>()).Select(item => new DataModel
+            {
+                FirstName=item.Object.FirstName,
+                LastName=item.Object.LastName,
+                EmailId=item.Object.EmailId,
+                Image=item.Object.Image,
+                Password=item.Object.Password,
+                Key=item.Key
+            }).ToList();
+
+            return userData;
+
+        }
+
         string Name;
         public async Task<string> NameMethod()
         {

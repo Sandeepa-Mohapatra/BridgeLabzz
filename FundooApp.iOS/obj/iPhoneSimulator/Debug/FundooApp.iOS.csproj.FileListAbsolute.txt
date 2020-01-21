@@ -1,0 +1,7 @@
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.iOS\obj\iPhoneSimulator\Debug\coremlc\_PartialAppManifest.items
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.iOS\obj\iPhoneSimulator\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\BridgeLabs\source\repos\FundooApp\FundooApp.iOS\obj\iPhoneSimulator\Debug\FundooApp.iOS.csprojAssemblyReference.cache

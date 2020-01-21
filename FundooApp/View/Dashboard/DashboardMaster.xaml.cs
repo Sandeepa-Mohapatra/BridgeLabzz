@@ -36,12 +36,25 @@ namespace FundooApp.View.Dashboard
         {
             InitializeComponent();
             //imgChoosed.Source = "icon.png";
-            
+           
             Email.Text = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().UserId();
-            Task<string> nm=NameMethod();
+            
             name.Text = "Sandeepa Mohapatra";
             BindingContext = new DashboardMasterViewModel();
             ListView = MenuItemsListView;
+        }
+        string FullName;
+        protected async override void OnAppearing()
+        {
+            ViewModel.Utility u = new ViewModel.Utility();
+            var userdetails =await u.RetriveUserDetails();
+            foreach (var details in userdetails)
+            {
+                FullName = details.FirstName + " " + details.LastName;
+                Email.Text = details.EmailId;
+                name.Text = FullName;
+                imgChoosed.Source = details.Image;
+            }
         }
 
         class DashboardMasterViewModel : INotifyPropertyChanged
@@ -79,23 +92,47 @@ namespace FundooApp.View.Dashboard
         private async void ImageUpload_btn(object sender, EventArgs e)
         
         {
-          await  Navigation.PushModalAsync(new UploadImage());
-            
-
-        }
-        public async Task<string> NameMethod()
-        {
-            var token = DependencyService.Get<Interfaces.IFirebaseAuthentictor>().User();
-            var s = await firebaseobj.Child("detail").Child(token).Child("UserDetails").OnceAsync<DataModel>();
-
-            foreach (var items in s)
+            try
             {
-                string f = items.Object.FirstName;
-                string l = items.Object.LastName;
-                Name = f + " " + l;
+                ////check the support for picking photo from device
+                if (!CrossMedia.Current.IsPickPhotoSupported)
+                {
+                    await DisplayAlert("Photos Not Supported", "Permission not granted to photos.", "OK");
+                    return;
+                }
+
+                ////Pick photo from device 
+                var file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions()
+                {
+                    PhotoSize = PhotoSize.Small
+                });
+
+                ////If photo not selected, return 
+                if (file == null)
+                    return;
+
+                ////Add that photo to the image source
+                imgChoosed.Source = ImageSource.FromStream(() => file.GetStream());
+                await DisplayAlert("Photo Selected", "Location: " + file.Path, "OK");
+                string img = await StoreImages(file.GetStream());
+                file.Dispose();
 
             }
-            return Name;
+            catch (Exception)
+            {
+                Console.WriteLine();
+            }
+
+
+        }
+        public async Task<string> StoreImages(Stream imageStream)
+        {
+            var stroageImage = await new FirebaseStorage("xamarinfirebase-d3352.appspot.com")
+                  .Child("XamarinMonkeys")
+                  .Child("image.jpg")
+                  .PutAsync(imageStream);
+            string imgurl = stroageImage;
+            return imgurl;
         }
     }
 }
