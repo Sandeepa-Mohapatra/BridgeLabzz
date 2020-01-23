@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-
+using SQLite;
 namespace XamarinWithSQLite
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
@@ -21,7 +21,7 @@ namespace XamarinWithSQLite
 
         private async void Add_Button(object sender, EventArgs e)
         {
-            if(txtid.Text==null && txtname==null)
+            if(string.IsNullOrEmpty(txtid.Text) && string.IsNullOrEmpty(txtname.Text))
             {
                 await DisplayAlert("Message", "Enter value", "ok");
             }
@@ -35,19 +35,73 @@ namespace XamarinWithSQLite
             }
         }
 
-        private void Retrive_Button(object sender, EventArgs e)
+        private async void Retrive_Button(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(txtid.Text))
+            {
+                //Get Person  
+                var person = await App.SQLiteDb.GetItemAsync(Convert.ToInt32(txtid.Text));
+                if (person != null)
+                {
+                    txtname.Text = person.Name;
+                    await DisplayAlert("Success", "Person Name: " + person.Name, "OK");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Required", "Please Enter PersonID", "OK");
+            }
         }
 
-        private void Update_Button(object sender, EventArgs e)
+        private async void Update_Button(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(txtid.Text))
+            {
+                DataModel person = new DataModel()
+                {
+                    PersonId = Convert.ToInt32(txtid.Text),
+                    Name = txtname.Text
+                };
 
+                //Update Person  
+                await App.SQLiteDb.SaveItemAsync(person);
+
+                txtid.Text = string.Empty;
+                txtname.Text = string.Empty;
+                await DisplayAlert("Success", "Person Updated Successfully", "OK");
+                //Get All Persons  
+                var personList = await App.SQLiteDb.GetItemsAsync();
+                if (personList != null)
+                {
+                    lstPersons.ItemsSource = personList;
+                }
+            }
         }
-
-        private void Delete_Button(object sender, EventArgs e)
+        private async void Delete_Button(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(txtid.Text))
+            {
+                //Get Person  
+                var person = await App.SQLiteDb.GetItemAsync(Convert.ToInt32(txtid.Text));
+                if (person != null)
+                {
+                    //Delete Person  
+                    await App.SQLiteDb.DeleteItemAsync(person);
+                    txtid.Text = string.Empty;
+                    await DisplayAlert("Success", "Person Deleted", "OK");
 
+                    //Get All Persons  
+                    var personList = await App.SQLiteDb.GetItemsAsync();
+                    if (personList != null)
+                    {
+                        lstPersons.ItemsSource = personList;
+                    }
+                }
+            }
+            else
+            {
+                await DisplayAlert("Required", "Please Enter PersonID", "OK");
+            }
         }
     }
 }

@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 namespace XamarinWithSQLite
 {
-   public class SQLiteHelper
+    public class SQLiteHelper
     {
-        SQLiteAsyncConnection db;
+        SQLiteAsyncConnection db { get; }
         public  SQLiteHelper(string dbpath)
         {
             db = new SQLiteAsyncConnection(dbpath);
-            db.CreateTableAsync<DataModel>();
+            db.CreateTableAsync<DataModel>().Wait();
             
         }
         /// <summary>
@@ -29,7 +29,8 @@ namespace XamarinWithSQLite
         /// <returns></returns>
         public Task<DataModel> GetItemAsync(int personId)
         {
-            return db.Table<DataModel>().Where(i => i.PersonId == personId).FirstOrDefaultAsync();
+            var s= db.Table<DataModel>().Where(i => i.PersonId==personId).FirstOrDefaultAsync();
+            return s;
         }
         /// <summary>
         /// Insert and update items

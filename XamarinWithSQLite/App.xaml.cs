@@ -2,6 +2,7 @@
 using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SQLite;
 
 namespace XamarinWithSQLite
 {
@@ -28,6 +29,7 @@ namespace XamarinWithSQLite
         {
             // Handle when your app resumes
         }
+
         static SQLiteHelper db;
 
         public static SQLiteHelper SQLiteDb
@@ -36,10 +38,11 @@ namespace XamarinWithSQLite
             {
                 if (db == null)
                 {
-                    db = new SQLiteHelper(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "XamarinSQLite.db3"));
+                    db = new SQLiteHelper(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "AppDb.db3"));
                 }
                 return db;
             }
+
         }
     }
 }
