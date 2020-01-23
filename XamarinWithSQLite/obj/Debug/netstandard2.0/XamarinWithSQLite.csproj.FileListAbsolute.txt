@@ -1,0 +1,13 @@
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\bin\Debug\netstandard2.0\XamarinWithSQLite.deps.json
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\bin\Debug\netstandard2.0\XamarinWithSQLite.dll
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\obj\Debug\netstandard2.0\XamarinWithSQLite.csprojAssemblyReference.cache
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\obj\Debug\netstandard2.0\XamarinWithSQLite.AssemblyInfoInputs.cache
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\obj\Debug\netstandard2.0\XamarinWithSQLite.AssemblyInfo.cs
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\bin\Debug\netstandard2.0\ref\XamarinWithSQLite.dll
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\bin\Debug\netstandard2.0\XamarinWithSQLite.pdb
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\obj\Debug\netstandard2.0\XamarinWithSQLite.dll
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\obj\Debug\netstandard2.0\ref\XamarinWithSQLite.dll
+C:\Users\BridgeLabs\source\repos\XamarinWithSQLite\XamarinWithSQLite\obj\Debug\netstandard2.0\XamarinWithSQLite.pdb

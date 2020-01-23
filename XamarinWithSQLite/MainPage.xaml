@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinWithSQLite.MainPage">
+
+    <Frame CornerRadius="10" BorderColor="Black" HasShadow="True" WidthRequest="300">
+        <StackLayout>
+       
+            <StackLayout>
+                <Image
+                    Source="SQLite.png"
+                    WidthRequest="60"
+                    HorizontalOptions="Center" 
+                    Margin="0,20,0,0"/>
+                <StackLayout HorizontalOptions="Center">
+                    <Label 
+                        Text="Xamarin+SQLite"
+                        FontSize="Title" 
+                        FontAttributes="Bold" 
+                        TextColor="PaleGreen">
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        
+        <StackLayout>
+                <Label 
+                    Text="Enter ID" 
+                    FontSize="Body" 
+                    FontAttributes="Bold"/>
+                <StackLayout Margin="0,10,0,10">
+                    <Entry 
+                        x:Name="txtid"
+                        CursorPosition="5"                        
+                        Placeholder="Id"/>
+                </StackLayout>
+                <Label 
+                    Text="Enter name"
+                    FontSize="Body" 
+                    FontAttributes="Bold" />
+                <StackLayout Margin="0,10,0,20">
+                    <Entry
+                        x:Name="txtname" 
+                        Placeholder="notes" />
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Margin="0,0,0,30">
+                <StackLayout Orientation="Horizontal" Margin="0,50,0,0">
+                    <Button 
+                            Text="Add" 
+                            WidthRequest="175" 
+                            FontAttributes="Bold" 
+                            Clicked="Add_Button"/>
+                    <Button 
+                            Text="Retrive" 
+                            WidthRequest="175"
+                            FontAttributes="Bold" 
+                            Clicked="Retrive_Button"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button 
+                            Text="Update" 
+                            WidthRequest="175"
+                            FontAttributes="Bold" 
+                            Clicked="Update_Button"/>
+                    <Button 
+                            Text="Delete" 
+                            WidthRequest="175" 
+                            FontAttributes="Bold" 
+                            Clicked="Delete_Button"  Margin="10,0,30,30"/>
+                </StackLayout>
+            </StackLayout>
+            <ListView x:Name="lstPersons">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell 
+                            Text="{Binding Name}"
+                            TextColor="Black">
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </Frame>
+</ContentPage>
