@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,6 +20,10 @@ namespace FundooApp.View
         bool IsPin,IsArchive,IsTrash,IsClose;
         public ArchiveNoteItemPressed(object b)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                DependencyService.Get<Interfaces.IFirebaseAuthentictor>().ShowConnectivity("No Internet");
+            }
             InitializeComponent();
             var s = b as NoteModel;
             Notes.Text = s.Notes;

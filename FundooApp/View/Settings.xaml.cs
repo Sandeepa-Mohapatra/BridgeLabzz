@@ -116,5 +116,18 @@ namespace FundooApp.View
             }
 
         }
+
+        private  void PhoneDialer(object sender, EventArgs e)
+        {
+            //  DependencyService.Get<Interfaces.EssentialsInterface>().PlacePhoneCall(Number.Text);
+            try
+            {
+                Xamarin.Essentials.PhoneDialer.Open(Number.Text);
+            }
+            catch(Exception ex)
+            {
+                DisplayAlert("Unable to connect","Enter valid number","ok");
+            }
+        }
     }
 }

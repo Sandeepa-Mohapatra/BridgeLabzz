@@ -7,13 +7,16 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using Android.App;
 using Android.Gms.Extensions;
+using Android.Support.Design.Widget;
 using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
 using FundooApp.Droid.UserServices;
 using FundooApp.Interfaces;
 using FundooApp.Model;
+using Plugin.CurrentActivity;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(UserServices))]
@@ -97,7 +100,15 @@ namespace FundooApp.Droid.UserServices
                 return null;
             }
         }
-
-
+        public void ShowConnectivity(string message)
+        {
+            Android.Widget.Toast.MakeText(Android.App.Application.Context, message, Android.Widget.ToastLength.Long).Show();
+        }
+        public void ShowSnakeBar(string message)
+        {
+            Activity activity = CrossCurrentActivity.Current.Activity;
+            Android.Views.View view = activity.FindViewById(Android.Resource.Id.Content);
+            Snackbar.Make(view, message, Snackbar.LengthLong).Show();
+        }
     }
 }

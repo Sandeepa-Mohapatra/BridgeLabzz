@@ -29,6 +29,7 @@ namespace FundooApp.View
         public LoginPage()
         {
             InitializeComponent();
+           
         }
         /// <summary>
         ///Patterns

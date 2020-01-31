@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj": {}
+    "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj": {
+    "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj",
+        "projectUniqueName": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj",
         "projectName": "FundooApp",
-        "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj",
+        "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj",
         "packagesPath": "C:\\Users\\BridgeLabs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\obj\\",
+        "outputPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

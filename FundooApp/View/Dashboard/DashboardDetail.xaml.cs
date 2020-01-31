@@ -27,6 +27,7 @@ namespace FundooApp.View.Dashboard
     using Plugin.Media.Abstractions;
     using System.Collections.ObjectModel;
     using Firebase.Database.Query;
+    using Xamarin.Essentials;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DashboardDetail : ContentPage
@@ -38,7 +39,10 @@ namespace FundooApp.View.Dashboard
         public DashboardDetail()
         {
             InitializeComponent();
-
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                DependencyService.Get<Interfaces.IFirebaseAuthentictor>().ShowConnectivity("No Internet");
+            }
         }
 
         private async void Signout_btn(object sender, EventArgs e)

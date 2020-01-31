@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj": {}
+    "D:\\BridgeLabzz\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj": {
+    "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj",
+        "projectUniqueName": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj",
         "projectName": "FundooApp",
-        "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj",
+        "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj",
         "packagesPath": "C:\\Users\\BridgeLabs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\obj\\",
+        "outputPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -51,6 +51,10 @@
               "target": "Package",
               "version": "[1.0.3, )"
             },
+            "Microcharts.Forms": {
+              "target": "Package",
+              "version": "[0.8.5-pre, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.13.1, )"
@@ -61,7 +65,7 @@
             },
             "Xam.Plugin.Media": {
               "target": "Package",
-              "version": "[4.0.1.5, )"
+              "version": "[4.4.10-beta, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -99,14 +103,14 @@
         }
       }
     },
-    "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj": {
+    "D:\\BridgeLabzz\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj",
+        "projectUniqueName": "D:\\BridgeLabzz\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj",
         "projectName": "FundooUnitTesting",
-        "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj",
+        "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooUnitTesting\\FundooUnitTesting.csproj",
         "packagesPath": "C:\\Users\\BridgeLabs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooUnitTesting\\obj\\",
+        "outputPath": "D:\\BridgeLabzz\\FundooApp\\FundooUnitTesting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -127,8 +131,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj": {
-                "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj"
+              "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj": {
+                "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj"
               }
             }
           }

@@ -47,6 +47,8 @@ namespace FundooApp.Interfaces
         public string UserId();
 
          string Signout();
+        public void ShowConnectivity(string Message);
+        public void ShowSnakeBar(string message);
 
     }
 }

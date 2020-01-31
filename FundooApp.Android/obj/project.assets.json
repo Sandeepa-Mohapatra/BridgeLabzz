@@ -6874,11 +6874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.Android\\FundooApp.Android.csproj",
+      "projectUniqueName": "D:\\BridgeLabzz\\FundooApp\\FundooApp.Android\\FundooApp.Android.csproj",
       "projectName": "FundooApp.Android",
-      "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.Android\\FundooApp.Android.csproj",
+      "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp.Android\\FundooApp.Android.csproj",
       "packagesPath": "C:\\Users\\BridgeLabs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.Android\\obj\\",
+      "outputPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -6899,8 +6899,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj": {
-              "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj"
+            "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj": {
+              "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj"
             }
           }
         }

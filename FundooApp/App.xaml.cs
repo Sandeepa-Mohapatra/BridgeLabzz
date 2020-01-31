@@ -1,6 +1,7 @@
 ﻿using FundooApp.View;
 using FundooApp.View.Dashboard;
 using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,16 +29,28 @@ namespace FundooApp
         protected override void OnStart()
         {
             // Handle when your app starts
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                DependencyService.Get<Interfaces.IFirebaseAuthentictor>().ShowConnectivity("No Internet");
+            }
         }
 
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                DependencyService.Get<Interfaces.IFirebaseAuthentictor>().ShowConnectivity("No Internet");
+            }
         }
 
         protected override void OnResume()
         {
             // Handle when your app resumes
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                DependencyService.Get<Interfaces.IFirebaseAuthentictor>().ShowConnectivity("No Internet");
+            }
         }
     }
 }

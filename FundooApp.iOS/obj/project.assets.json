@@ -1044,7 +1044,7 @@
           "Microcharts.Forms": "0.8.5-pre",
           "Moq": "4.13.1",
           "Rg.Plugins.Popup": "1.2.0.223",
-          "Xam.Plugin.Media": "4.0.1.5",
+          "Xam.Plugin.Media": "4.4.10-beta",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.4.0.991220-pre3",
           "XamarinForms.CardView": "1.1.1.5",
@@ -2005,7 +2005,7 @@
           "Microcharts.Forms": "0.8.5-pre",
           "Moq": "4.13.1",
           "Rg.Plugins.Popup": "1.2.0.223",
-          "Xam.Plugin.Media": "4.0.1.5",
+          "Xam.Plugin.Media": "4.4.10-beta",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.4.0.991220-pre3",
           "XamarinForms.CardView": "1.1.1.5",
@@ -2969,7 +2969,7 @@
           "Microcharts.Forms": "0.8.5-pre",
           "Moq": "4.13.1",
           "Rg.Plugins.Popup": "1.2.0.223",
-          "Xam.Plugin.Media": "4.0.1.5",
+          "Xam.Plugin.Media": "4.4.10-beta",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.4.0.991220-pre3",
           "XamarinForms.CardView": "1.1.1.5",
@@ -3933,7 +3933,7 @@
           "Microcharts.Forms": "0.8.5-pre",
           "Moq": "4.13.1",
           "Rg.Plugins.Popup": "1.2.0.223",
-          "Xam.Plugin.Media": "4.0.1.5",
+          "Xam.Plugin.Media": "4.4.10-beta",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.4.0.991220-pre3",
           "XamarinForms.CardView": "1.1.1.5",
@@ -8026,11 +8026,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj",
+      "projectUniqueName": "D:\\BridgeLabzz\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj",
       "projectName": "FundooApp.iOS",
-      "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj",
+      "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp.iOS\\FundooApp.iOS.csproj",
       "packagesPath": "C:\\Users\\BridgeLabs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp.iOS\\obj\\",
+      "outputPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8051,8 +8051,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj": {
-              "projectPath": "C:\\Users\\BridgeLabs\\source\\repos\\FundooApp\\FundooApp\\FundooApp.csproj"
+            "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj": {
+              "projectPath": "D:\\BridgeLabzz\\FundooApp\\FundooApp\\FundooApp.csproj"
             }
           }
         }

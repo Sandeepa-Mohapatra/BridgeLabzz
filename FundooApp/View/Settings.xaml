@@ -40,6 +40,10 @@
                     <Button Text="Load file content" Clicked="FileSystem_btn"/>
                     <Label x:Name="text"/>
                 </StackLayout>
+                <StackLayout>
+                    <Entry Placeholder="+91**********" x:Name="Number"/>
+                    <Button Clicked="PhoneDialer" Text="Phone Dialer"/>
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

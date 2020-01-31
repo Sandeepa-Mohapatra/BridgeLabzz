@@ -9,6 +9,7 @@ using Android.OS;
 using Firebase;
 using Plugin.Media;
 using Plugin.CurrentActivity;
+using Java.Security;
 
 namespace FundooApp.Droid
 {
@@ -28,6 +29,26 @@ namespace FundooApp.Droid
             FirebaseApp.InitializeApp(Application.Context);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            try
+            {
+                PackageInfo info = Android.App.Application.Context.PackageManager.GetPackageInfo(Android.App.Application.Context.PackageName, PackageInfoFlags.Signatures);
+                foreach (var signature in info.Signatures)
+                {
+                    MessageDigest md = MessageDigest.GetInstance("SHA");
+                    md.Update(signature.ToByteArray());
+
+                    System.Diagnostics.Debug.WriteLine(Convert.ToBase64String(md.Digest()));
+                    
+                }
+            }
+            catch (NoSuchAlgorithmException e)
+            {
+                System.Diagnostics.Debug.WriteLine(e);
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e);
+            }
             LoadApplication(new App());
             
         }

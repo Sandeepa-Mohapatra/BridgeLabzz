@@ -14,7 +14,7 @@ namespace FundooApp.View
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-
+    using Xamarin.Essentials;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -23,6 +23,10 @@ namespace FundooApp.View
         ViewModel.Utility u = new ViewModel.Utility();
         public ArchivePage()
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                DependencyService.Get<Interfaces.IFirebaseAuthentictor>().ShowConnectivity("No Internet");
+            }
             InitializeComponent();
         }
         protected async override void OnAppearing()
