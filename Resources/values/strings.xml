@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">XamarinNative</string>
+    <string name="action_settings">Settings</string>
+  <string name="facebook_app_name">MyFacebookAppName</string>
+  <string name="facebook_app_id">181144353092302</string>
+  <string name="fb_login_protocol_scheme">fb181144353092302</string>
+</resources>
