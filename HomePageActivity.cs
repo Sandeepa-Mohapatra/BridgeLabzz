@@ -96,18 +96,15 @@ namespace XamarinNative
                 LoginResult loginResult = result as LoginResult;
                 var credentials = FacebookAuthProvider.GetCredential(loginResult.AccessToken.Token);
                 firebaseauth.SignInWithCredential(credentials).AddOnSuccessListener(this).AddOnFailureListener(this);
-                user_name.Text = "Name:" + firebaseauth.CurrentUser.DisplayName;
-                mail_id.Text = "Email" + firebaseauth.CurrentUser.Email;
-                pic.Text = "Photo" + firebaseauth.CurrentUser.PhotoUrl.Path;
+                user_name.Text = firebaseauth.CurrentUser.DisplayName;
+                mail_id.Text = firebaseauth.CurrentUser.Email;
+                pic.Text =firebaseauth.CurrentUser.PhotoUrl.Path;
             }
             else
             {
                 Toast.MakeText(this, "Login Succesful", ToastLength.Short).Show();
                 usingfirebase = false;
-                user_name.Text ="Name:"+ firebaseauth.CurrentUser.DisplayName;
-                mail_id.Text = "Email"+firebaseauth.CurrentUser.Email;
-                pic.Text ="Photo"+ firebaseauth.CurrentUser.PhotoUrl.Path;
-
+                
             }
         }
 
