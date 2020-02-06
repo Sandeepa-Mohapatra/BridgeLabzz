@@ -1,0 +1,11 @@
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\bin\Debug\netstandard2.0\DragAndDrop.deps.json
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\bin\Debug\netstandard2.0\DragAndDrop.dll
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\bin\Debug\netstandard2.0\DragAndDrop.pdb
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\obj\Debug\netstandard2.0\DragAndDrop.csprojAssemblyReference.cache
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\obj\Debug\netstandard2.0\DragAndDrop.AssemblyInfoInputs.cache
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\obj\Debug\netstandard2.0\DragAndDrop.AssemblyInfo.cs
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\obj\Debug\netstandard2.0\DragAndDrop.dll
+C:\Users\BridgeLabs\Downloads\Sample\DragAndDrop\DragAndDrop\obj\Debug\netstandard2.0\DragAndDrop.pdb
