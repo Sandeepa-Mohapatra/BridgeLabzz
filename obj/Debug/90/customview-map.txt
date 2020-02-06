@@ -17,6 +17,7 @@ Button;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\44\jl\res\
 Button;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\47\jl\res\layout\messenger_button_send_blue_round.xml
 Button;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\47\jl\res\layout\messenger_button_send_white_round.xml
 Button;obj\Debug\90\res\layout\activity_main.xml
+Button;obj\Debug\90\res\layout\homepage.xml
 cache-path;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\44\jl\res\values\values.xml
 color;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\49\jl\res\values\values.xml
@@ -50,6 +51,7 @@ FrameLayout;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\47\jl
 FrameLayout;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\47\jl\res\layout\messenger_button_send_white_large.xml
 FrameLayout;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\47\jl\res\layout\messenger_button_send_white_small.xml
 ImageView;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\46\jl\res\layout\com_facebook_tooltip_bubble.xml
+ImageView;obj\Debug\90\res\layout\homepage.xml
 item;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\44\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
 item;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\44\jl\res\drawable\com_facebook_button_background.xml
 item;C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\lp\44\jl\res\drawable\com_facebook_button_like_background.xml

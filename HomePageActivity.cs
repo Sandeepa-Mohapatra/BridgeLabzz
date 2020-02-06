@@ -1,34 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.Gms.Tasks;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Firebase;
-using Firebase.Auth;
-using Java.Lang;
-using Xamarin.Facebook;
-using Xamarin.Facebook.Login;
-using Xamarin.Facebook.Login.Widget;
+﻿
 
 namespace XamarinNative
+
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Net;
+    using System.Text;
+
+    using Android.App;
+    using Android.Content;
+    using Android.Gms.Auth.Api;
+    using Android.Gms.Auth.Api.SignIn;
+    using Android.Gms.Common.Apis;
+    using Android.Gms.Tasks;
+    using Android.Graphics;
+    using Android.OS;
+    using Android.Runtime;
+    using Android.Views;
+    using Android.Widget;
+    using Firebase;
+    using Firebase.Auth;
+    using Java.Lang;
+    using Xamarin.Facebook;
+    using Xamarin.Facebook.Login;
+    using Xamarin.Facebook.Login.Widget;
+
     [Activity(Label = "HomePageActivity" , MainLauncher =true)]
     public class HomePageActivity : Activity,IFacebookCallback, IOnSuccessListener, IOnFailureListener
     {
-        TextView user_name, mail_id, pic;
+        ImageView img;
+        TextView user_name, mail_id;
         LoginButton BtnClk;
         ICallbackManager callbackManager;
-
+        Button SigninBtn;
         FirebaseAuth firebaseauth;
         private bool usingfirebase;
-
+        GoogleSignInOptions gso;
+        GoogleApiClient gac;
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,17 +48,28 @@ namespace XamarinNative
             SetContentView(Resource.Layout.HomePage);
 
             user_name = (TextView)FindViewById(Resource.Id.user_name);
-            mail_id= (TextView)FindViewById(Resource.Id.mail_id);
-            pic= (TextView)FindViewById(Resource.Id.pic);
-
-            BtnClk =(LoginButton)FindViewById<Button>(Resource.Id.LoginWithFB);                      
+            mail_id= (TextView)FindViewById(Resource.Id.mail_id);            
+            img = (ImageView)FindViewById(Resource.Id.image);
+            BtnClk =(LoginButton)FindViewById<Button>(Resource.Id.LoginWithFB);
+            SigninBtn = (Button)FindViewById<Button>(Resource.Id.LoginWithGgl);
+            SigninBtn.Click += SigninBtn_Click;
             BtnClk.SetPermissions("public_profile", "email");
             callbackManager = CallbackManagerFactory.Create();
             BtnClk.RegisterCallback(callbackManager,this);
-            firebaseauth=GetFirebaseAuth();
+           
+            gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
+                .RequestIdToken("118276311441 - 92cg09cjm8j11kqrnfqa61abeeujskrt.apps.googleusercontent.com")
+                .RequestEmail()
+                .Build();
+            gac = new GoogleApiClient.Builder(this)
+                .AddApi(Auth.GOOGLE_SIGN_IN_API, gso).Build();
+            gac.Connect();
+            firebaseauth = GetFirebaseAuth();
             //BtnClk.Click += OnLoginClick;
-            
+
         }
+
+        
 
         FirebaseAuth GetFirebaseAuth()
         {
@@ -72,12 +93,33 @@ namespace XamarinNative
             }
             return mauth;
         }
+        private void SigninBtn_Click(object sender, EventArgs e)
+        {
+            var intent = Auth.GoogleSignInApi.GetSignInIntent(gac);
+            StartActivityForResult(intent, 1);
+        }
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
+            if(requestCode==1)
+            {
+                GoogleSignInResult result = Auth.GoogleSignInApi.GetSignInResultFromIntent(data);
+                if(result.IsSuccess)
+                {
+                    GoogleSignInAccount account = result.SignInAccount;
+                    LogInWithFirebase(account);
+                }
+            }
             callbackManager.OnActivityResult(requestCode, (int)resultCode, data);
 
         }
+
+        private void LogInWithFirebase(GoogleSignInAccount account)
+        {
+            var credentials = GoogleAuthProvider.GetCredential(account.IdToken, null);
+            firebaseauth.SignInWithCredential(credentials).AddOnSuccessListener(this).AddOnFailureListener(this);
+        }
+
         public void OnCancel()
         {
 
@@ -87,27 +129,43 @@ namespace XamarinNative
         {
 
         }
+        private Bitmap GetImageBitmapFromUrl(string url)
+        {
+           Bitmap imageBitmap = null;
+
+           using (var webClient = new WebClient())
+           {
+             var imageBytes = webClient.DownloadData(url);
+             if (imageBytes != null && imageBytes.Length > 0)
+             {
+               imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+             }
+           }
+
+           return imageBitmap;
+        }
+
+
 
         public void OnSuccess(Java.Lang.Object result)
-        {
+         {
             if (!usingfirebase)
             {
                 usingfirebase = true;
                 LoginResult loginResult = result as LoginResult;
                 var credentials = FacebookAuthProvider.GetCredential(loginResult.AccessToken.Token);
-                firebaseauth.SignInWithCredential(credentials).AddOnSuccessListener(this).AddOnFailureListener(this);
-                user_name.Text = "Name:" + firebaseauth.CurrentUser.DisplayName;
-                mail_id.Text = "Email" + firebaseauth.CurrentUser.Email;
-                pic.Text = "Photo" + firebaseauth.CurrentUser.PhotoUrl.Path;
+                firebaseauth.SignInWithCredential(credentials).AddOnSuccessListener(this).AddOnFailureListener(this);               
+                user_name.Text = firebaseauth.CurrentUser.DisplayName;
+                mail_id.Text = firebaseauth.CurrentUser.Email;               
+                var imageBitmap = GetImageBitmapFromUrl("http://graph.facebook.com" + firebaseauth.CurrentUser.PhotoUrl.Path);
+                img.SetImageBitmap(imageBitmap);
+
             }
             else
             {
                 Toast.MakeText(this, "Login Succesful", ToastLength.Short).Show();
                 usingfirebase = false;
-                user_name.Text ="Name:"+ firebaseauth.CurrentUser.DisplayName;
-                mail_id.Text = "Email"+firebaseauth.CurrentUser.Email;
-                pic.Text ="Photo"+ firebaseauth.CurrentUser.PhotoUrl.Path;
-
+                
             }
         }
 

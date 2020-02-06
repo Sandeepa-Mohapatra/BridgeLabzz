@@ -1022,6 +1022,71 @@
           "lib/monoandroid90/Google.ZXing.Core.dll": {}
         }
       },
+      "Xamarin.GooglePlayServices.Auth/71.1600.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.GooglePlayServices.Auth.Api.Phone": "71.1600.0",
+          "Xamarin.GooglePlayServices.Auth.Base": "71.1600.0",
+          "Xamarin.GooglePlayServices.Base": "71.1610.0",
+          "Xamarin.GooglePlayServices.Basement": "71.1620.0",
+          "Xamarin.GooglePlayServices.Tasks": "71.1601.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Auth.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid90/Xamarin.GooglePlayServices.Auth.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Auth.Api.Phone/71.1600.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.GooglePlayServices.Base": "71.1610.0",
+          "Xamarin.GooglePlayServices.Basement": "71.1620.0",
+          "Xamarin.GooglePlayServices.Tasks": "71.1601.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Auth.Api.Phone.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Auth.Api.Phone.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid90/Xamarin.GooglePlayServices.Auth.Api.Phone.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Auth.Base/71.1600.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.GooglePlayServices.Base": "71.1610.0",
+          "Xamarin.GooglePlayServices.Basement": "71.1620.0",
+          "Xamarin.GooglePlayServices.Tasks": "71.1601.0"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Auth.Base.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.GooglePlayServices.Auth.Base.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid90/Xamarin.GooglePlayServices.Auth.Base.targets": {}
+        }
+      },
       "Xamarin.GooglePlayServices.Base/71.1610.0": {
         "type": "package",
         "dependencies": {
@@ -2136,6 +2201,45 @@
         "xamarin.google.zxing.core.nuspec"
       ]
     },
+    "Xamarin.GooglePlayServices.Auth/71.1600.0": {
+      "sha512": "Il9/TBa99dCZj7JFvg4/PIqt3A5TWH5H0IbgxtxbTJJPIkpR5hDA5DSWCbgVBBwTHoGAYoyiI1Bh3HTEeutMzQ==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.auth/71.1600.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid90/Xamarin.GooglePlayServices.Auth.targets",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Auth.dll",
+        "xamarin.googleplayservices.auth.71.1600.0.nupkg.sha512",
+        "xamarin.googleplayservices.auth.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Auth.Api.Phone/71.1600.0": {
+      "sha512": "jmrKkoM5bbt1Y2j+TS9R/+Uzs6toDnnZcBg9KiDKJkC3s2ePfoxcjFS7U8sRNgvMF+EHlB2T+p/r1S5j3wW+7Q==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.auth.api.phone/71.1600.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid90/Xamarin.GooglePlayServices.Auth.Api.Phone.targets",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Auth.Api.Phone.dll",
+        "xamarin.googleplayservices.auth.api.phone.71.1600.0.nupkg.sha512",
+        "xamarin.googleplayservices.auth.api.phone.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Auth.Base/71.1600.0": {
+      "sha512": "THMWaN9GfMixKgsawxZgXFRu755tw2X8xYAog4z7n79jR1krJT/Eiq4/I/wo0jLz/6RDPfapgOiquKLsRM9HOA==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.auth.base/71.1600.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MonoAndroid90/Xamarin.GooglePlayServices.Auth.Base.targets",
+        "lib/monoandroid90/Xamarin.GooglePlayServices.Auth.Base.dll",
+        "xamarin.googleplayservices.auth.base.71.1600.0.nupkg.sha512",
+        "xamarin.googleplayservices.auth.base.nuspec"
+      ]
+    },
     "Xamarin.GooglePlayServices.Base/71.1610.0": {
       "sha512": "OfCNkkmxU96KkTs94wEL2bbFEuHJWw5rZg70lyF+BAr5t59/+bSc/jyi7wVn3BTJy4NjiFi7NTQDzJYuJg5DJg==",
       "type": "package",
@@ -2201,7 +2305,8 @@
       "Xamarin.Android.Support.v4 >= 28.0.0.3",
       "Xamarin.Essentials >= 1.4.0-pre2",
       "Xamarin.Facebook.Login.Android >= 5.11.2",
-      "Xamarin.Firebase.Auth >= 71.1605.0"
+      "Xamarin.Firebase.Auth >= 71.1605.0",
+      "Xamarin.GooglePlayServices.Auth >= 71.1600.0"
     ]
   },
   "packageFolders": {
@@ -2273,6 +2378,10 @@
           "Xamarin.Firebase.Auth": {
             "target": "Package",
             "version": "[71.1605.0, )"
+          },
+          "Xamarin.GooglePlayServices.Auth": {
+            "target": "Package",
+            "version": "[71.1600.0, )"
           }
         }
       }

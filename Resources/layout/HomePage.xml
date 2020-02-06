@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:facebook="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -6,8 +6,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
+    >
+    
 
     <LinearLayout
         android:layout_width="270.0dp"
@@ -38,29 +38,42 @@
         android:layout_marginRight="0.0dp"
         android:layout_marginBottom="183.0dp"
         android:id="@+id/linearLayout1">
+        <ImageView
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+        android:id="@+id/image"/>
+        <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/user_name"/>
+         <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/mail_id"/>
+        
         <com.facebook.login.widget.LoginButton
                         
              android:id="@+id/LoginWithFB"      
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"                                            
               android:text="Login Using FaceBook"
-        android:textColor="@android:color/white"/>
-        <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/user_name"
-               android:text="User Name: "/>
-         <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/mail_id"
-              android:text="Email ID: "/>
-         <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/pic"
-               android:text="Profile pic: "/>
-
+        android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"
+        />
+        <Button
+            android:id="@+id/LoginWithGgl"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:text="SignIn with Google"
+            android:textColor="@android:color/white"
+            android:background="#1b7ced"
+            android:textSize="12dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textStyle="bold"
+           
+        />
     </LinearLayout>
+    
 
 </LinearLayout>

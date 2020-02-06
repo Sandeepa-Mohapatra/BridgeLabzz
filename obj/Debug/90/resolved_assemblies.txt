@@ -62,6 +62,9 @@ C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\android\assets\Xamar
 C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\android\assets\Xamarin.Firebase.Auth.Interop.dll
 C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\android\assets\Xamarin.Firebase.Common.dll
 C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\android\assets\Xamarin.Google.AutoValue.Annotations.dll
+C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\android\assets\Xamarin.GooglePlayServices.Auth.Api.Phone.dll
+C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\android\assets\Xamarin.GooglePlayServices.Auth.Base.dll
+C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\android\assets\Xamarin.GooglePlayServices.Auth.dll
 C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\android\assets\Xamarin.GooglePlayServices.Base.dll
 C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\android\assets\Xamarin.GooglePlayServices.Basement.dll
 C:\Users\BridgeLabs\source\repos\XamarinNative\obj\Debug\90\android\assets\Xamarin.GooglePlayServices.Flags.dll
