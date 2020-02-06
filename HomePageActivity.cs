@@ -154,12 +154,19 @@ namespace XamarinNative
                 usingfirebase = true;
                 LoginResult loginResult = result as LoginResult;
                 var credentials = FacebookAuthProvider.GetCredential(loginResult.AccessToken.Token);
+<<<<<<< HEAD
                 firebaseauth.SignInWithCredential(credentials).AddOnSuccessListener(this).AddOnFailureListener(this);               
                 user_name.Text = firebaseauth.CurrentUser.DisplayName;
                 mail_id.Text = firebaseauth.CurrentUser.Email;               
                 var imageBitmap = GetImageBitmapFromUrl("http://graph.facebook.com" + firebaseauth.CurrentUser.PhotoUrl.Path);
                 img.SetImageBitmap(imageBitmap);
 
+=======
+                firebaseauth.SignInWithCredential(credentials).AddOnSuccessListener(this).AddOnFailureListener(this);
+                user_name.Text = firebaseauth.CurrentUser.DisplayName;
+                mail_id.Text = firebaseauth.CurrentUser.Email;
+                pic.Text =firebaseauth.CurrentUser.PhotoUrl.Path;
+>>>>>>> d94697ce73bdeeadca3f2366ce7d1a44a5784f80
             }
             else
             {
