@@ -30,28 +30,28 @@ namespace FundooWalkin
         {
             users.Add(new User()
             {
-                Name = "Snigdha",
-                Department = "Xamarin Android & Xamarin Forms Development",
-                Details = "Virendra has over 2 years of experience developing mobile applications,"
+                Name = "Poonam Yadav",
+                MailId = "poonamyadav@bridgelabz.com",
+                Location = "Mumbai,"
             });
             users.Add(new User()
             {
-                Name = "aaa",
-                Department = "Xamarin Android & Xamarin Forms Development",
-                Details = "Virendra has over 2 years of experience developing mobile applications,"
+                Name = "Poonam Yadav",
+                MailId = "poonamyadav@bridgelabz.com",
+                Location = "Mumbai,"
             });
 
             users.Add(new User()
             {
-                Name = "Sanna",
-                Department = "Xamarin Android & Xamarin Forms Development",
-                Details = "Virendra has over 2 years of experience developing mobile applications,"
+                Name = "Poonam Yadav",
+                MailId = "poonamyadav@bridgelabz.com",
+                Location = "Mumbai,"
             });
             users.Add(new User()
             {
-                Name = "sayuu",
-                Department = "Xamarin Android & Xamarin Forms Development",
-                Details = "Virendra has over 2 years of experience developing mobile applications,"
+                Name = "Poonam Yadav",
+                MailId = "poonamyadav@bridgelabz.com",
+                Location = "Mumbai,"
             });
            
         }

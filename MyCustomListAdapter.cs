@@ -52,18 +52,17 @@ namespace FundooWalkin
 
                
                 var name = view.FindViewById<TextView>(Resource.Id.nameTextView);
-                var department = view.FindViewById<TextView>(Resource.Id.departmentTextView);
-
-                view.Tag = new ViewHolder() { Name = name, Department = department };
+                var mail = view.FindViewById<TextView>(Resource.Id.departmentTextView);
+                var location = view.FindViewById<TextView>(Resource.Id.locationTextView);
+                view.Tag = new ViewHolder() { Name = name, MailId = mail ,Location=location};
             }
 
             var holder = (ViewHolder)view.Tag;
 
            
             holder.Name.Text = users[position].Name;
-            holder.Department.Text = users[position].Department;
-
-
+            holder.MailId.Text = users[position].MailId;
+            holder.Location.Text = users[position].Location;
             return view;
 
         }

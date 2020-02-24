@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
-    android:orientation="horizontal"  
+    android:orientation="vertical"  
     android:layout_width="fill_parent"  
     android:layout_height="fill_parent"  
     android:minWidth="25px"  
     android:minHeight="25px"  
     android:paddingBottom="4dp">  
-    
+    <LinearLayout
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:outlineProvider="background"
+        android:background="@drawable/listbackground"
+        android:layout_margin="10dp"
+        android:padding="20dp">
     <TextView  
         android:id="@+id/nameTextView"           
         android:text="Name"  
         android:textAppearance="?android:attr/textAppearanceLarge"  
         android:layout_width="wrap_content"  
         android:layout_height="wrap_content"  
-        android:paddingLeft="5dp" />  
+        android:paddingLeft="5dp"/>  
     <TextView  
         android:id="@+id/departmentTextView"
         android:layout_below="@id/nameTextView"  
-        android:text="Department"  
+        android:text="MailId"  
+        android:textAppearance="?android:attr/textAppearanceSmall"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:paddingLeft="5dp" /> 
+     <TextView  
+        android:id="@+id/locationTextView"
+        android:layout_below="@id/nameTextView"  
+        android:text="Location"  
         android:textAppearance="?android:attr/textAppearanceSmall"  
         android:layout_width="wrap_content"  
         android:layout_height="wrap_content"  
         android:paddingLeft="5dp" />  
+</LinearLayout>
 </RelativeLayout>   

@@ -1,3 +1,7 @@
+C:\Users\BridgeLabs\source\repos\FundooWalkin\bin\Debug\FundooWalkin.dll
+C:\Users\BridgeLabs\source\repos\FundooWalkin\bin\Debug\FundooWalkin.pdb
+C:\Users\BridgeLabs\source\repos\FundooWalkin\bin\Debug\com.fellowship.fundoowalkin.apk
+C:\Users\BridgeLabs\source\repos\FundooWalkin\bin\Debug\com.fellowship.fundoowalkin-Signed.apk
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\build.props
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\adb.props
@@ -28,10 +32,6 @@ C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\flata\27f568ec9d12f26
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\flata\73f22e168bf9b6d6f79822e5e40a77035ef35270.flata
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\flata\abaf1e02790521f442f766903478204cee690a63.flata
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\flata\f36682d65e9717a0a89994236cd19798134589c3.flata
-C:\Users\BridgeLabs\source\repos\FundooWalkin\bin\Debug\FundooWalkin.dll
-C:\Users\BridgeLabs\source\repos\FundooWalkin\bin\Debug\FundooWalkin.pdb
-C:\Users\BridgeLabs\source\repos\FundooWalkin\bin\Debug\com.fellowship.fundoowalkin.apk
-C:\Users\BridgeLabs\source\repos\FundooWalkin\bin\Debug\com.fellowship.fundoowalkin-Signed.apk
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\flata\compiled.flata
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\R.txt
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\R.cs.flag
@@ -77,6 +77,8 @@ C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\res\layout\spinner_it
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\res\drawable\circle.xml
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\res\drawable\roundedtextview.xml
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\res\drawable\textview.xml
+C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\res\drawable\listbackground.xml
+C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\res\drawable\bodytextbackground.xml
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\uploadflags.txt
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\resolvedassemblies.hash
 C:\Users\BridgeLabs\source\repos\FundooWalkin\obj\Debug\90\linksrc\FundooWalkin.dll

@@ -15,6 +15,7 @@ namespace FundooWalkin
     public class ViewHolder : Java.Lang.Object
     {
         public TextView Name { get; set; }
-        public TextView Department { get; set; }
+        public TextView MailId { get; set; }
+        public TextView Location { get; set; }
     }
 }
