@@ -23,10 +23,10 @@ namespace FundooWalkin
             SetContentView(Resource.Layout.Demolayout);
             //LoginBtn = (Button)FindViewById(Resource.Id.Loginbutton);
             //LoginBtn.Click += LoginBtn_Click;
-            date = FindViewById<DatePicker>(Resource.Id.date);
-            Btn = FindViewById<Button>(Resource.Id.btn);
-            Btn.Click += Btn_Click;
-            txt = FindViewById<TextView>(Resource.Id.text);
+            //date = FindViewById<DatePicker>(Resource.Id.date);
+           // Btn = FindViewById<Button>(Resource.Id.btn);
+            //Btn.Click += Btn_Click;
+          //  txt = FindViewById<TextView>(Resource.Id.text);
            // txt.Text = date.DateTime.Date.ToString("dd/MM/yyyy");
 
         }

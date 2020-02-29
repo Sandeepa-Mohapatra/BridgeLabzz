@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
- 
-   <TextView
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-        android:background="@drawable/button"
-        android:gravity="center"
-    android:id="@+id/text"/>
-    <Button
-        android:layout_width="204.5dp"
-        android:layout_height="62.0dp"
-        android:text="date"
-    android:id="@+id/btn"/>
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+  
+    >
+    
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="81.5dp"
+        android:background="@drawable/buttomrounded"
+        android:orientation="vertical"/>
+       
 </LinearLayout>
